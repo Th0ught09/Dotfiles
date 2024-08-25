@@ -2,7 +2,7 @@
     "layer": "bottom",
     "position": "bottom",
     "height": 30,
-    "width": 1280,
+    "width": 1580,
     "spacing": 4, 
     "margin-top": -10,
     "margin-bottom": 5,
@@ -19,6 +19,8 @@
         "sway/window"
     ],
     "modules-right": [
+        "custom/cat",
+        "custom/dog",
        // "keyboard-state",
         "custom/pomo",
         "pulseaudio",
@@ -28,7 +30,7 @@
         "temperature",
         "battery",
         "clock",
-        "tray"
+        "tray",
     ],
     // Modules configuration
      "sway/workspaces": {
@@ -105,6 +107,15 @@
         "exec": "pomodoro status",
         "interval": 1
       },
+
+    "custom/cat":{
+        "format":"🐈"
+
+      },
+      "custom/dog":{
+        "format":"🐕"
+      },
+
     "tray": {
         // "icon-size": 21,
         "spacing": 10

@@ -44,3 +44,11 @@ blue    = '#83a598'
 magenta = '#d3869b'
 cyan    = '#8ec07c'
 white   = '#ebdbb2'
+
+[selection]
+save_to_clipboard = true
+
+[window]
+padding = { x = 10 , y = 4 }
+dynamic_padding = true
+opacity = 0.85

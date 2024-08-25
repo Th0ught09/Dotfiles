@@ -1,23 +1,7 @@
-eval "$(starship init zsh)"
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-
 . "$HOME/.cargo/env"
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
-
-# execute waybar
-# if [[ -z $WAYBAR ]]; then
-#   export WAYBAR=1
-#   waybar
-# fi
-
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-
-# Path to your oh-my-zsh installation.
 
 ZSH_THEME="robbyrussell"
 
@@ -37,27 +21,17 @@ COMPLETION_WAITING_DOTS="true"
 
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-# Which plugins would you like to load?
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(git z fzf starship)
+plugins=(git z fzf )
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
 # ENVIRONMENT VARIABLES
 
+export WAYLAND_DISPLAY=wayland-1
+export CALIBRE_USE_DARK_PALETTE=0
 export EDITOR=nvim
 export ZSH="$HOME/.oh-my-zsh"
-export PATH="$PATH:/home/kirkm/.local/share/JetBrains/Toolbox/scripts:/home/kirkm/bin"
+export PATH="$PATH:/home/kirkm/.local/share/JetBrains/Toolbox/scripts:/home/kirkm/bin:/home/kirkm/.dotnet/tools:/home/kirkm/.local/bin"
 
 # ALIASES
 
@@ -69,12 +43,15 @@ alias zj="zellij"
 alias clear="clear; tput cup $LINES"
 alias ls="lsd"
 alias uni="vi ~/Uni"
+alias update="sudo dnf update && sudo dnf upgrade"
+alias rw="/home/kirkm/.local/share/Steam/steamapps/common/RimWorld/RimWorldLinux" 
 
 # FUNCTIONS
 
-cd(){
-    echo "Time to use z"
-  }
+# cd(){
+#     echo "Time to use z"
+#   }
+
 
 # SOURCING
 
@@ -85,8 +62,14 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 # OPTIONS
 
 set -o vi
-pokemon-colorscripts -r --no-title
+
 tput cup $LINES
+pokemon-colorscripts -r --no-title
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
-lisgd -g "3,RL,swaymsg workspace next" -d /dev/input/by-path/platform-AMDI0010:00-event -r 45 -m 1200 -t 100 &
-lisgd -g "3,LR,swaymsg workspace prev" -d /dev/input/by-path/platform-AMDI0010:00-event -r 45 -m 1200 -t 100 &
+# lisgd -g "3,RL,swaymsg workspace next" -d /dev/input/by-path/platform-AMDI0010:00-event -r 45 -m 1200 -t 100 &
+# lisgd -g "3,LR,swaymsg workspace prev" -d /dev/input/by-path/platform-AMDI0010:00-event -r 45 -m 1200 -t 100 &
+# xmodmap ~/.Xmodmap
+
+if [[ -z $TMUX ]] then
+  tmux
+fi

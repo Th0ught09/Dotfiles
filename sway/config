@@ -22,6 +22,8 @@ set $menu rofi -show drun
 # on the original workspace that the command was run on.
 
 exec waybar
+exec mako
+exec pulseaudio --daemonize
 
 ### Output configuration
 #
@@ -36,6 +38,8 @@ output * bg ~/.config/sway/background.jpg fill
 
     # Start your launcher
     bindsym $mod+d exec $menu
+
+    bindsym Caps_Lock Escape
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -151,30 +155,6 @@ output * bg ~/.config/sway/background.jpg fill
     bindsym $mod+Shift+Ctrl+9 move container to workspace 9b
     bindsym $mod+Shift+Ctrl+0 move container to workspace 10b
 
-    # Switch to workspace
-    # bindsym $mod+1 exec /home/kirkm/.config/sway/monitor.sh 1 $primary_outpt 
-    # bindsym $mod+2 exec /home/kirkm/.config/sway/monitor.sh 2 $primary_outpt
-    # bindsym $mod+3 exec /home/kirkm/.config/sway/monitor.sh 3 $primary_outpt 
-    # bindsym $mod+4 exec /home/kirkm/.config/sway/monitor.sh 4 $primary_outpt
-    # bindsym $mod+5 exec /home/kirkm/.config/sway/monitor.sh 5 $primary_outpt 
-    # bindsym $mod+6 exec /home/kirkm/.config/sway/monitor.sh 6 $secondary_output 
-    # bindsym $mod+7 exec /home/kirkm/.config/sway/monitor.sh 7 $secondary_output 
-    # bindsym $mod+8 exec /home/kirkm/.config/sway/monitor.sh 8 $secondary_output
-    # bindsym $mod+9 exec /home/kirkm/.config/sway/monitor.sh 9 $secondary_output 
-    # bindsym $mod+0 exec /home/kirkm/.config/sway/monitor.sh 10 $secondary_output 
-    # # Move focused container to workspace
-    # bindsym $mod+Shift+1 move container to workspace number 1 ; exec /home/kirkm/.config/sway/monitor.sh 1 $primary_outpt
-    # bindsym $mod+Shift+2 move container to workspace number 2 ; exec /home/kirkm/.config/sway/monitor.sh 2 $primary_outpt
-    # bindsym $mod+Shift+3 move container to workspace number 3 ; exec /home/kirkm/.config/sway/monitor.sh 3 $primary_outpt
-    # bindsym $mod+Shift+4 move container to workspace number 4 ; exec /home/kirkm/.config/sway/monitor.sh 4 $primary_outpt
-    # bindsym $mod+Shift+5 move container to workspace number 5 ; exec /home/kirkm/.config/sway/monitor.sh 5 $primary_outpt
-    # bindsym $mod+Shift+6 move container to workspace number 6 ; exec /home/kirkm/.config/sway/monitor.sh 6 $secondary_output
-    # bindsym $mod+Shift+7 move container to workspace number 7 ; exec /home/kirkm/.config/sway/monitor.sh 7 $secondary_output
-    # bindsym $mod+Shift+8 move container to workspace number 8 ; exec /home/kirkm/.config/sway/monitor.sh 8 $secondary_output
-    # bindsym $mod+Shift+9 move container to workspace number 9 ; exec /home/kirkm/.config/sway/monitor.sh 9 $secondary_output
-    # bindsym $mod+Shift+0 move container to workspace number 10 ; exec /home/kirkm/.config/sway/monitor.sh 10 $secondary_output 
-    # Note: workspaces can have any name you want, not just numbers.
-    # We just use 1-10 as the default.
 #
 # Layout stuff:
 #
@@ -198,6 +178,10 @@ output * bg ~/.config/sway/background.jpg fill
 
     # Move focus to the parent container
     bindsym $mod+a focus parent
+
+    # Rotate Screen
+    bindsym $mod+Shift+r exec wlr-randr --output eDP-1 --transform 90
+    bindsym $mod+Shift+n exec wlr-randr --output eDP-1 --transform normal
 #
 # Scratchpad:
 #
@@ -225,20 +209,24 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 
-default_border pixel 2
+# Borders and whatnot
+default_border pixel 6
+# client.focused
 
-# corner_radius 20
 
 bindsym $mod+r mode "resize"
 # Set keyboard to gb
 input type:keyboard {
     xkb_layout gb
+    xkb_file "~/.layout.xkb"
 }
 # Pomodoro stuff
 bindsym $mod+Control+p exec pomodoro start
 bindsym $mod+Control+o exec pomodoro finish
 
 # Finger gestures
+bindgesture swipe:right workspace prev
+bindgesture swipe:left workspace next
 
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
