@@ -1,9 +1,9 @@
 . "$HOME/.cargo/env"
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+#   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+# fi
 
-ZSH_THEME="robbyrussell"
+# ZSH_THEME="robbyrussell"
 
 # Uncomment the following line to use case-sensitive completion.
 CASE_SENSITIVE="true"
@@ -21,12 +21,18 @@ COMPLETION_WAITING_DOTS="true"
 
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-plugins=(git z fzf )
+plugins=(git fzf 1password zoxide vi-mode sudo rust conda-env alias-finder)
+
+zstyle ':omz:plugins:alias-finder' autoload yes # disabled by default
+zstyle ':omz:plugins:alias-finder' longer yes # disabled by default
+zstyle ':omz:plugins:alias-finder' exact yes # disabled by default
+zstyle ':omz:plugins:alias-finder' cheaper yes # disabled by default
 
 source $ZSH/oh-my-zsh.sh
 
 # ENVIRONMENT VARIABLES
 
+export XDG_CURRENT_DESKTOP=Sway
 export WAYLAND_DISPLAY=wayland-1
 export CALIBRE_USE_DARK_PALETTE=0
 export EDITOR=nvim
@@ -55,13 +61,11 @@ alias rw="/home/kirkm/.local/share/Steam/steamapps/common/RimWorld/RimWorldLinux
 
 # SOURCING
 
-source ~/powerlevel10k/powerlevel10k.zsh-theme
-
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # OPTIONS
 
-set -o vi
+# set -o vi
 
 tput cup $LINES
 pokemon-colorscripts -r --no-title
@@ -73,3 +77,5 @@ typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 if [[ -z $TMUX ]] then
   tmux
 fi
+
+eval "$(starship init zsh)"

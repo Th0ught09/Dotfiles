@@ -14,6 +14,22 @@ style = "Italic"
 family = "IosevkaTerm Nerd Font"
 style = "Regular"
 
+# [font.bold]
+# family = "MesloLGS NF"
+# style = "Bold"
+#
+# [font.bold_italic]
+# family = "MesloLGS NF"
+# style = "Bold Italic"
+#
+# [font.italic]
+# family = "MesloLGS NF Ita"
+# style = "Italic"
+
+# [font.normal]
+# family = "MesloLGS NF"
+# style = "Regular"
+
 # Colors (Gruvbox dark)
 
 # Default colors

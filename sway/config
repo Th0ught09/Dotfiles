@@ -211,8 +211,9 @@ mode "resize" {
 
 # Borders and whatnot
 default_border pixel 6
-# client.focused
 
+# Flameshot
+bindsym $mod+Shift+s exec flameshot gui
 
 bindsym $mod+r mode "resize"
 # Set keyboard to gb
@@ -229,6 +230,7 @@ bindgesture swipe:right workspace prev
 bindgesture swipe:left workspace next
 
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+# Audio
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 
