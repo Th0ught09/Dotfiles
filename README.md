@@ -20,10 +20,10 @@ Required for the dotfiles to work, these are avaliable in most package managers
 
 A bit more hassle to install but adds some nice features
 
-[starship](https://starship.rs/installing/)
-[openpomodoro-cli](https://github.com/open-pomodoro/openpomodoro-cli)
-[pokemon-colorscripts](https://github.com/Findarato/pokemon-colorscripts)
-`flameshot`
+- [starship](https://starship.rs/installing/)
+- [openpomodoro-cli](https://github.com/open-pomodoro/openpomodoro-cli)
+- [pokemon-colorscripts](https://github.com/Findarato/pokemon-colorscripts)
+- `flameshot`
 
 ## Install
 
