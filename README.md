@@ -53,6 +53,6 @@ done
 
 ## Screenshots
 
-![[Plain.png]]
-![[term.png]]
-![[productive.png]
+![Plain View](Plain.png)
+![Terminal View](term.png)
+![Productive view](productive.png)
