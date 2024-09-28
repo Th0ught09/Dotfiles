@@ -55,4 +55,4 @@ done
 
 ![Plain View](Plain.png)
 ![Terminal View](term.png)
-![Productive view](productive.png)
+![Productive view](productive.jpg)
