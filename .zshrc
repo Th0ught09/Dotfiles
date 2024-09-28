@@ -51,12 +51,24 @@ alias ls="lsd"
 alias uni="vi ~/Uni"
 alias update="sudo dnf update && sudo dnf upgrade"
 alias rw="/home/kirkm/.local/share/Steam/steamapps/common/RimWorld/RimWorldLinux" 
+alias ca="conda activate"
+alias ac="conda deactivate"
 
 # FUNCTIONS
 
 # cd(){
 #     echo "Time to use z"
 #   }
+#
+# function pip(){
+#     if [[ -z $CONDA_PREFIX ]]
+#       then
+#         echo "do not install python packages outside of a conda env!!"
+#         return
+#     else
+#       command pip $@
+#     fi
+# }
 
 
 # SOURCING
