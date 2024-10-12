@@ -33,7 +33,7 @@ source $ZSH/oh-my-zsh.sh
 # ENVIRONMENT VARIABLES
 
 export XDG_CURRENT_DESKTOP=Sway
-export WAYLAND_DISPLAY=wayland-1
+export WAYLAND_DISPLAY=wayland-0
 export CALIBRE_USE_DARK_PALETTE=0
 export EDITOR=nvim
 export ZSH="$HOME/.oh-my-zsh"
