@@ -61,13 +61,19 @@ output * bg ~/.config/sway/background.jpg fill
 #
 # Moving around:
     # Set monitors
-    set $mon1 eDP-1
-    set $mon2 HDMI-A-4
+    set $mon1 HDMI-A-2
+    set $mon2 HDMI-A-1
+
+    # Position
+    output $mon1 pos 0 0
+    output $mon2 pos 1920 0
+
     # Move your focus around
     bindsym $mod+$left focus left
     bindsym $mod+$down focus down
     bindsym $mod+$up focus up
     bindsym $mod+$right focus right
+
     # Or use $mod+[up|down|left|right]
     bindsym $mod+Left focus left
     bindsym $mod+Down focus down
@@ -79,6 +85,7 @@ output * bg ~/.config/sway/background.jpg fill
     bindsym $mod+Shift+$down move down
     bindsym $mod+Shift+$up move up
     bindsym $mod+Shift+$right move right
+
     # Ditto, with arrow keys
     bindsym $mod+Shift+Left move left
     bindsym $mod+Shift+Down move down
@@ -219,7 +226,6 @@ bindsym $mod+r mode "resize"
 # Set keyboard to gb
 input type:keyboard {
     xkb_layout gb
-    xkb_file "~/.layout.xkb"
 }
 # Pomodoro stuff
 bindsym $mod+Control+p exec pomodoro start
