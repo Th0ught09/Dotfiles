@@ -1,9 +1,9 @@
 return {
   -- add gruvbox
-  { 
-    "ellisonleao/gruvbox.nvim", 
+  {
+    "ellisonleao/gruvbox.nvim",
     opts = {
-      transparent_mode = true;
+      transparent_mode = true,
     },
   },
 
@@ -125,6 +125,11 @@ return {
         "shellcheck",
         "shfmt",
         "flake8",
+        "python-lsp-server",
+        "rust-analyzer",
+        "java-language-server",
+        "vim-language-server",
+        "clangd",
       },
     },
   },
@@ -132,6 +137,10 @@ return {
     "hrsh7th/nvim-cmp",
     dependencies = {
       "hrsh7th/cmp-emoji",
+    },
+    sources = {
+      -- ...
+      { name = "codeium" }
     },
     ---@param opts cmp.ConfigSchema
     opts = function(_, opts)
@@ -170,5 +179,16 @@ return {
         end, { "i", "s" }),
       })
     end,
+  },
+  {
+    "Exafunction/codeium.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "hrsh7th/nvim-cmp",
+    },
+    config = function()
+      require("codeium").setup({
+      })
+    end
   },
 }
