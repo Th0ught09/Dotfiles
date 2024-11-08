@@ -10,43 +10,6 @@ return {
   -- Configure LazyVim to load gruvbox
   {
     "rcarriga/nvim-notify",
-    keys = {
-      {
-        "<leader>un",
-        function()
-          require("notify").dismiss({ silent = true, pending = true })
-        end,
-        desc = "Dismiss All Notifications",
-      },
-      {
-        "<leader>uu",
-        function()
-          require("notify").history()
-        end,
-        desc = "Show all notifications",
-      },
-    },
-    opts = {
-      stages = "static",
-      timeout = 1200,
-      max_height = function()
-        return math.floor(vim.o.lines * 0.75)
-      end,
-      max_width = function()
-        return math.floor(vim.o.columns * 0.75)
-      end,
-      on_open = function(win)
-        vim.api.nvim_win_set_config(win, { zindex = 100 })
-      end,
-    },
-    init = function()
-      -- when noice is not enabled, install notify on VeryLazy
-      if not LazyVim.has("noice.nvim") then
-        LazyVim.on_very_lazy(function()
-          vim.notify = require("notify")
-        end)
-      end
-    end,
   },
   {
     "LazyVim/LazyVim",
@@ -188,6 +151,93 @@ return {
       vim.keymap.set("i", "<c-x>", function()
         return vim.fn["codeium#Clear"]()
       end, { expr = true, silent = true })
+    end,
+  },
+  {
+    "mfussenegger/nvim-dap",
+    dependencies = {
+      "rcarriga/nvim-dap-ui",
+      "theHamsta/nvim-dap-virtual-text",
+      "mfussenegger/nvim-dap-python",
+      "nvim-telescope/telescope-dap.nvim",
+    },
+    config = function()
+      require("dap").adapters.gdb = {
+        type = "executable",
+        command = "/usr/bin/gdb", -- Path to gdb, adjust if necessary
+        name = "gdb",
+      }
+      require("dap").configurations.c = {
+        {
+          name = "Launch file",
+          type = "gdb",
+          request = "launch",
+          program = "${fileDirname}/${fileBasenameNoExtension}",
+          args = {},
+          cwd = "${workspaceFolder}",
+          target = "exec",
+        },
+      }
+    end,
+    keys = {
+      {
+        "<leader>db",
+        function()
+          require("dap").toggle_breakpoint()
+        end,
+      },
+      {
+        "<leader>dc",
+        function()
+          require("dap").continue()
+        end,
+      },
+      {
+        "<leader>di",
+        function()
+          require("dap").step_into()
+        end,
+      },
+      {
+        "<leader>do",
+        function()
+          require("dap").step_over()
+        end,
+      },
+      {
+        "<leader>dO",
+        function()
+          require("dap").step_out()
+        end,
+      },
+    },
+  },
+  {
+    "folke/noice.nvim",
+    event = "VeryLazy",
+    opts = {
+      -- add any options here
+    },
+    dependencies = {
+      -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+      "MunifTanjim/nui.nvim",
+      -- OPTIONAL:
+      --   `nvim-notify` is only needed, if you want to use the notification view.
+      --   If not available, we use `mini` as the fallback
+      "rcarriga/nvim-notify",
+    },
+  },
+  {
+    "MunifTanjim/nui.nvim",
+    event = "VeryLazy",
+  },
+  {
+    "lervag/vimtex",
+    lazy = false, -- we don't want to lazy load VimTeX
+    -- tag = "v2.15", -- uncomment to pin to a specific release
+    init = function()
+      -- VimTeX configuration goes here, e.g.
+      vim.g.vimtex_view_method = "zathura"
     end,
   },
 }
