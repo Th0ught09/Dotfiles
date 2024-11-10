@@ -37,7 +37,7 @@ export WAYLAND_DISPLAY=wayland-0
 export CALIBRE_USE_DARK_PALETTE=0
 export EDITOR=nvim
 export ZSH="$HOME/.oh-my-zsh"
-export PATH="$PATH:/home/kirkm/.local/share/JetBrains/Toolbox/scripts:/home/kirkm/bin:/home/kirkm/.dotnet/tools:/home/kirkm/.local/bin"
+export PATH="$PATH:/home/kirkm/.local/share/JetBrains/Toolbox/scripts::/home/kirkm/.dotnet/tools:/home/kirkm/.local/bin"
 
 # ALIASES
 
@@ -53,6 +53,8 @@ alias update="sudo dnf update && sudo dnf upgrade"
 alias rw="/home/kirkm/.local/share/Steam/steamapps/common/RimWorld/RimWorldLinux" 
 alias ca="conda activate"
 alias ac="conda deactivate"
+alias srch="dnf search"
+alias install="sudo dnf install"
 
 # FUNCTIONS
 
