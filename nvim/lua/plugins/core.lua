@@ -153,65 +153,65 @@ return {
       end, { expr = true, silent = true })
     end,
   },
-  {
-    "mfussenegger/nvim-dap",
-    dependencies = {
-      "rcarriga/nvim-dap-ui",
-      "theHamsta/nvim-dap-virtual-text",
-      "mfussenegger/nvim-dap-python",
-      "nvim-telescope/telescope-dap.nvim",
-    },
-    config = function()
-      require("dap").adapters.gdb = {
-        type = "executable",
-        command = "/usr/bin/gdb", -- Path to gdb, adjust if necessary
-        name = "gdb",
-      }
-      require("dap").configurations.c = {
-        {
-          name = "Launch file",
-          type = "gdb",
-          request = "launch",
-          program = "${fileDirname}/${fileBasenameNoExtension}",
-          args = {},
-          cwd = "${workspaceFolder}",
-          target = "exec",
-        },
-      }
-    end,
-    keys = {
-      {
-        "<leader>db",
-        function()
-          require("dap").toggle_breakpoint()
-        end,
-      },
-      {
-        "<leader>dc",
-        function()
-          require("dap").continue()
-        end,
-      },
-      {
-        "<leader>di",
-        function()
-          require("dap").step_into()
-        end,
-      },
-      {
-        "<leader>do",
-        function()
-          require("dap").step_over()
-        end,
-      },
-      {
-        "<leader>dO",
-        function()
-          require("dap").step_out()
-        end,
-      },
-    },
-  },
+  -- {
+  --   "mfussenegger/nvim-dap",
+  --   dependencies = {
+  --     "rcarriga/nvim-dap-ui",
+  --     "theHamsta/nvim-dap-virtual-text",
+  --     "mfussenegger/nvim-dap-python",
+  --     "nvim-telescope/telescope-dap.nvim",
+  --   },
+  --   config = function()
+  --     require("dap").adapters.gdb = {
+  --       type = "executable",
+  --       command = "/usr/bin/gdb", -- Path to gdb, adjust if necessary
+  --       name = "gdb",
+  --     }
+  --     require("dap").configurations.c = {
+  --       {
+  --         name = "Launch file",
+  --         type = "gdb",
+  --         request = "launch",
+  --         program = "${fileDirname}/${fileBasenameNoExtension}",
+  --         args = {},
+  --         cwd = "${workspaceFolder}",
+  --         target = "exec",
+  --       },
+  --     }
+  --   end,
+  --   keys = {
+  --     {
+  --       "<leader>db",
+  --       function()
+  --         require("dap").toggle_breakpoint()
+  --       end,
+  --     },
+  --     {
+  --       "<leader>dc",
+  --       function()
+  --         require("dap").continue()
+  --       end,
+  --     },
+  --     {
+  --       "<leader>di",
+  --       function()
+  --         require("dap").step_into()
+  --       end,
+  --     },
+  --     {
+  --       "<leader>do",
+  --       function()
+  --         require("dap").step_over()
+  --       end,
+  --     },
+  --     {
+  --       "<leader>dO",
+  --       function()
+  --         require("dap").step_out()
+  --       end,
+  --     },
+  --   },
+  -- },
   {
     "folke/noice.nvim",
     event = "VeryLazy",
@@ -242,5 +242,48 @@ return {
   },
   {
     "dpezto/gnuplot.vim",
+  },
+  -- { "tpope/vim-surround" },
+  -- {
+  --   "kylechui/nvim-surround",
+  --   version = "*", -- Use for stability; omit to use `main` branch for the latest features
+  --   event = "VeryLazy",
+  --   config = function()
+  --     require("nvim-surround").setup({
+  --       -- Configuration here, or leave empty to use defaults
+  --     })
+  --   end,
+  -- },
+  {
+    "echasnovski/mini.surround",
+    recommended = true,
+    keys = function(_, keys)
+      -- Populate the keys based on the user's options
+      local opts = LazyVim.opts("mini.surround")
+      local mappings = {
+        { opts.mappings.add, desc = "Add Surrounding", mode = { "n", "v" } },
+        { opts.mappings.delete, desc = "Delete Surrounding" },
+        { opts.mappings.find, desc = "Find Right Surrounding" },
+        { opts.mappings.find_left, desc = "Find Left Surrounding" },
+        { opts.mappings.highlight, desc = "Highlight Surrounding" },
+        { opts.mappings.replace, desc = "Replace Surrounding" },
+        { opts.mappings.update_n_lines, desc = "Update `MiniSurround.config.n_lines`" },
+      }
+      mappings = vim.tbl_filter(function(m)
+        return m[1] and #m[1] > 0
+      end, mappings)
+      return vim.list_extend(mappings, keys)
+    end,
+    opts = {
+      mappings = {
+        add = "gsa", -- Add surrounding in Normal and Visual modes
+        delete = "gsd", -- Delete surrounding
+        find = "gsf", -- Find surrounding (to the right)
+        find_left = "gsF", -- Find surrounding (to the left)
+        highlight = "gsh", -- Highlight surrounding
+        replace = "gsr", -- Replace surrounding
+        update_n_lines = "gsn", -- Update `n_lines`
+      },
+    },
   },
 }
