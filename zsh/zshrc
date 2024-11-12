@@ -42,7 +42,7 @@ export PATH="$PATH:/home/kirkm/.local/share/JetBrains/Toolbox/scripts::/home/kir
 # ALIASES
 
 alias vi="nvim"
-alias entry="vi ~/Uni/Essentials/Diary/$(date -u +%Y-%m-%d.md)"
+alias entry="vi ~/Uni/Diary/$(date -u +%Y-%m-%d.md)"
 alias zrc="vi ~/.zshrc"
 alias src="source ~/.zshrc"
 alias zj="zellij"
