@@ -35,9 +35,9 @@ style = "Regular"
 # Default colors
 [colors.primary]
 # hard contrast background = = '#1d2021'
-background = '#282828'
+background = '#fbf1c7'
 # soft contrast background = = '#32302f'
-foreground = '#ebdbb2'
+foreground = '#3c3836'
 
 # Normal colors
 [colors.normal]

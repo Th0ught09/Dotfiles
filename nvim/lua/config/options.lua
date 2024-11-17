@@ -12,6 +12,7 @@ vim.o.tabstop = 4
 vim.o.shiftwidth = 4
 vim.o.expandtab = true
 vim.o.foldmethod = "manual"
+vim.o.background = "light"
 -- vim.o.nnoremap = "<C-w> "
 vim.o.clipboard = {
   name = "xclip",
