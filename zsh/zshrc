@@ -22,11 +22,6 @@ zstyle ':omz:plugins:alias-finder' longer yes # disabled by default
 zstyle ':omz:plugins:alias-finder' exact yes # disabled by default
 zstyle ':omz:plugins:alias-finder' cheaper yes # disabled by default
 
-# SOURCING
-
-source $ZSH/oh-my-zsh.sh
-source <(fzf --zsh)
-. "$HOME/.cargo/env"
 
 # ENVIRONMENT VARIABLES
 
@@ -38,14 +33,21 @@ export FZF_DEFAULT_OPTS="--tmux center"
 export ZSH="$HOME/.oh-my-zsh"
 export PATH="$PATH:/home/kirkm/.local/share/JetBrains/Toolbox/scripts::/home/kirkm/.dotnet/tools:/home/kirkm/.local/bin"
 
+# SOURCING
+
+source $ZSH/oh-my-zsh.sh
+source <(fzf --zsh)
+. "$HOME/.cargo/env"
+
 # ALIASES
 
+alias ta="tmux attach -d -t"
 alias vi="nvim"
-alias entry="vi ~/Uni/Essentials/Diary/$(date -u +%Y-%m-%d.md)"
+alias entry="vi ~/Uni/Diary/$(date -u +%Y-%m-%d.md)"
 alias zrc="vi ~/.config/zsh/zshrc"
 alias src="source ~/.zshrc"
 alias zj="zellij"
-alias clear="clear; tput cup $LINES"
+alias clear="clear; tput cup $LINES; pokemon-colorscripts -r --no-title"
 alias ls="lsd"
 alias uni="vi ~/Uni"
 alias update="sudo dnf update && sudo dnf upgrade"
@@ -54,6 +56,7 @@ alias ca="conda activate"
 alias ac="conda deactivate"
 alias srch="dnf search"
 alias install="sudo dnf install"
+alias zra="zrc +43"
 
 # FUNCTIONS
 
@@ -81,11 +84,16 @@ set -o vi
 
 tput cup $LINES
 pokemon-colorscripts -r --no-title
-typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
-if [[ -z $TMUX ]] then
-  tmux
+# typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+# if [[ -z $TMUX ]] then
+#   tmux
+# fi
+if [[ $PC -eq "desktop" && -z $XR ]]; then
+    xrandr --output DisplayPort-1 --right-of HDMI-A-3 --primary --output HDMI-A-3
+    export XR=1
 fi
 eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"
 # lisgd -g "3,RL,swaymsg workspace next" -d /dev/input/by-path/platform-AMDI0010:00-event -r 45 -m 1200 -t 100 &
 # lisgd -g "3,LR,swaymsg workspace prev" -d /dev/input/by-path/platform-AMDI0010:00-event -r 45 -m 1200 -t 100 &
 # xmodmap ~/.Xmodmap

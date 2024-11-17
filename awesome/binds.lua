@@ -76,7 +76,7 @@ local globalkeys = gears.table.join(
 		awful.spawn("systemctl suspend")
 	end, { description = "Suspend", group = "system" }),
 	awful.key({ modkey, "Shift" }, "o", function()
-		awful.spawn("xscreensaver-command -lock")
+		awful.spawn("i3lock -i ~/.config/awesome/background.png")
 	end, { description = "Lock", group = "system" }),
 
 	awful.key({ modkey, "Control" }, "n", function()
