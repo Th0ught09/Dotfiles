@@ -41,6 +41,7 @@ source <(fzf --zsh)
 
 # ALIASES
 
+alias zt="zathura"
 alias ta="tmux attach -d -t"
 alias vi="nvim"
 alias entry="vi ~/Uni/Diary/$(date -u +%Y-%m-%d.md)"

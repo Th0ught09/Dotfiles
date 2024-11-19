@@ -1,4 +1,6 @@
-# set recolor
-# set recolor-lightcolor \#2E2E2E
-# set recolor-keephue
-# set default-bg \#222230
+set recolor
+set recolor-lightcolor \#fbf1c7
+set recolor-darkcolor \#3c3836
+set recolor-keephue
+set default-bg \#fbf1c7
+set default-fg \#3c3836
