@@ -21,12 +21,6 @@ local menubar = require("menubar")
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
 
--- local cairo = require("lgi").cairo
--- local img = cairo.ImageSurface.create(cairo.Format.ARGB32, 50, 50)
---
--- -- Create a context
--- local cr = cairo.Context(img)
-
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
@@ -60,22 +54,25 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init("/home/kirkm/.config/awesome/themes/zenburn/theme.lua")
+beautiful.init("/home/kirkm/.config/awesome/themes/sky/theme.lua")
 awful.spawn.with_shell("picom --config ~/.config/picom/picom.conf")
+if os.getenv("PC") == "desktop" then
+	naughty.notify({ text = "Works!" })
+	awful.spawn.with_shell("xrandr --output DisplayPort-1 --right-of HDMI-A-3 --primary --output HDMI-A-3")
+	awful.spawn.with_shell("alacritty")
+end
+-- awful.spawn("alacritty")
+-- awful.spawn.with.shell("firefox")
+-- awful.spawn.with.shell("")
 
 -- This is used later as the default terminal and editor to run.
 local terminal = "alacritty"
-local editor = "nvim"
-local editor_cmd = terminal .. " -e " .. editor
-
-local modkey = "Mod4"
-
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
 	awful.layout.suit.tile,
-	awful.layout.suit.tile.left,
-	awful.layout.suit.fair,
-	awful.layout.suit.max,
+	-- awful.layout.suit.tile.left,
+	-- awful.layout.suit.fair,
+	-- awful.layout.suit.max,
 	awful.layout.suit.max.fullscreen,
 }
 -- }}}
@@ -103,7 +100,8 @@ awful.screen.connect_for_each_screen(function(s)
 	set_wallpaper(s)
 
 	-- Each screen has its own tag table.
-	local names = { "1", "2", "💻", "4", "5", "6", "7", "8", "9" }
+	local names = { "1", "2", "3", "4", "5", "6", "7", "8", "9" }
+	-- "💻"
 	local l = awful.layout.suit -- Just to save some typing: use an alias.
 	local layouts = { l.tile, l.floating, l.fair, l.max, l.floating, l.tile.left, l.floating }
 	awful.tag(names, s, layouts)
@@ -177,8 +175,8 @@ end)
 
 -- {{{ Mouse bindings
 local mouse_buttons = require("bindings.mouse")
-
 root.buttons(mouse_buttons)
+
 local globalkeys = require("bindings.globals")
 root.keys(globalkeys)
 

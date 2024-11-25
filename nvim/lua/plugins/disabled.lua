@@ -7,4 +7,5 @@ return {
   -- { "rcarriga/nvim-notify", enabled = false },
   -- { "folke/noice.nvim", enabled = false },
   -- { "folke/flash.nvim", enabled = false },
+  { "Exafunction/codeium.vim", enabled = false },
 }
