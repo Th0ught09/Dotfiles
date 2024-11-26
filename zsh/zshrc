@@ -59,6 +59,7 @@ alias ac="conda deactivate"
 alias srch="dnf search"
 alias install="sudo dnf install"
 alias zra="zrc +43"
+alias net="speedtest-cli --simple"
 
 # FUNCTIONS
 

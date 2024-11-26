@@ -8,4 +8,5 @@ return {
   -- { "folke/noice.nvim", enabled = false },
   -- { "folke/flash.nvim", enabled = false },
   { "Exafunction/codeium.vim", enabled = false },
+  -- { "epwalsh/obsidian.nvim", enabled = false },
 }
