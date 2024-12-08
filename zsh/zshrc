@@ -59,14 +59,15 @@ alias ac="conda deactivate"
 alias srch="dnf search"
 alias install="sudo dnf install"
 alias zra="zrc +43"
+alias gdb="gdb -q"
 
 # FUNCTIONS
 
 # Force use z
-# cd(){
-#     echo "Time to use z"
-#   }
-#
+cd(){
+    echo "Time to use z/fzf"
+  }
+
 # Don't install python packages outside of a conda env
 function pip(){
     if [[ -z $CONDA_PREFIX || $CONDA_PREFIX == "/usr" ]]
@@ -77,6 +78,9 @@ function pip(){
       command pip $@
     fi
 }
+
+# Quick search into language dir
+function lr () { z Lang $1 }
 
 # SETTINGS  
 
@@ -91,7 +95,7 @@ pokemon-colorscripts -r --no-title
 #   tmux
 # fi
 if [[ $PC -eq "desktop" && -z $XR ]]; then
-    xrandr --output DisplayPort-1 --right-of HDMI-A-3 --primary --output HDMI-A-3
+    xrandr --output DisplayPort-0 --right-of HDMI-A-0 --primary --output HDMI-A-0
     export XR=1
 fi
 eval "$(starship init zsh)"
