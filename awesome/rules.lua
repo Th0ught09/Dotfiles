@@ -57,12 +57,5 @@ return {
 		properties = { titlebars_enabled = false },
 	},
 
-	-- { rule = { class = "Alacritty" }, properties = { tag = "4", screen = "HDMI-A-3" } },
-	-- { rule = { class = "Alacritty" }, properties = { screen = "DisplayPort-1", tag = "3" } },
-	{ rule = { class = "Proton Mail" }, properties = { screen = "DisplayPort-0", tag = "9" } },
-	{ rule = { class = "org.mozilla.firefox" }, properties = { screen = "HDMI-A-0", tag = "1" } },
-	{ rule = { class = "obsidian" }, properties = { screen = "HDMI-A-0", tag = "7" } },
-	{ rule = { class = "discord" }, properties = { screen = "HDMI-A-0", tag = "9" } },
-	-- -- Set Firefox to always map on the tag named "2" on screen 1.
-	-- { rule = { class = "Firefox" }, properties = { screen = 1, tag = "1" } },
+	require("pc_rules"),
 }
