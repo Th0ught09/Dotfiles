@@ -49,8 +49,16 @@ alias entry="vi ~/Uni/Diary/$(date -u +%Y-%m-%d.md)"
 alias zrc="vi ~/.config/zsh/zshrc"
 alias src="source ~/.zshrc"
 alias zj="zellij"
+<<<<<<< HEAD
 alias clear="clear; tput cup $LINES; pokemon-colorscripts -r --no-title"
 alias ls="exa --icons"
+||||||| 536df1a
+alias clear="clear; tput cup $LINES"
+alias ls="lsd"
+=======
+alias clear="clear; tput cup $LINES; pokemon-colorscripts -r --no-title"
+alias ls="lsd"
+>>>>>>> 2592ce6c67dcaf49f38b22a9f191d45041e47e41
 alias uni="vi ~/Uni"
 alias update="sudo dnf update && sudo dnf upgrade"
 alias rw="/home/kirkm/.local/share/Steam/steamapps/common/RimWorld/RimWorldLinux" 
@@ -58,15 +66,22 @@ alias ca="conda activate"
 alias ac="conda deactivate"
 alias srch="dnf search"
 alias install="sudo dnf install"
+<<<<<<< HEAD
 alias zra="zrc +43"
+||||||| 536df1a
+=======
+alias zra="zrc +43"
+alias nets="speedtest-cli --simple"
+alias gdb="gdb -q"
+>>>>>>> 2592ce6c67dcaf49f38b22a9f191d45041e47e41
 
 # FUNCTIONS
 
 # Force use z
-# cd(){
-#     echo "Time to use z"
-#   }
-#
+cd(){
+    echo "Time to use z/fzf"
+  }
+
 # Don't install python packages outside of a conda env
 function pip(){
     if [[ -z $CONDA_PREFIX || $CONDA_PREFIX == "/usr" ]]
@@ -77,6 +92,9 @@ function pip(){
       command pip $@
     fi
 }
+
+# Quick search into language dir
+function lr () { z Lang $1 }
 
 # SETTINGS  
 
@@ -91,7 +109,7 @@ pokemon-colorscripts -r --no-title
 #   tmux
 # fi
 if [[ $PC -eq "desktop" && -z $XR ]]; then
-    xrandr --output DisplayPort-1 --right-of HDMI-A-3 --primary --output HDMI-A-3
+    xrandr --output DisplayPort-0 --right-of HDMI-A-0 --primary --output HDMI-A-0
     export XR=1
 fi
 eval "$(starship init zsh)"

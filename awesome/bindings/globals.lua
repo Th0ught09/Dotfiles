@@ -101,10 +101,21 @@ local globals = gears.table.join(
 			exe_callback = awful.util.eval,
 			history_path = awful.util.get_cache_dir() .. "/history_eval",
 		})
-	end, { description = "lua execute prompt", group = "awesome" })
+	end, { description = "lua execute prompt", group = "awesome" }),
+	awful.key({ modkey }, "s", function()
+		awful.spawn("flameshot gui")
+	end, { description = "flameshow", group = "awesome" }),
+
+	-- awful.key({ modkey, "Shift" }, "s", function()
+	-- awful.spawn("flameshot screen -n 0 -p ~/Games/RimSS/$(date -u +%Y-%m-%dT%H-%M)")
+	-- 	awful.spawn("flameshot screen -n 1 -p /home/kirkm/Games/RimSS/")
+	-- end, { description = "Rimworld Screenshot", group = "awesome" })
 	-- Menubar
 	-- awful.key({ modkey }, "p", function() menubar.show() end,
 	--   { description = "show the menubar", group = "launcher" })
+	awful.key({ modkey, "Shift" }, "f", function()
+		awful.spawn("alacritty -e ranger")
+	end)
 )
 
 for i = 1, 9 do
