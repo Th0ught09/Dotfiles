@@ -56,11 +56,6 @@ end
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init("/home/kirkm/.config/awesome/themes/sky/theme.lua")
 awful.spawn.with_shell("picom --config ~/.config/picom/picom.conf")
-if os.getenv("PC") == "desktop" then
-	naughty.notify({ text = "Works!" })
-	awful.spawn.with_shell("xrandr --output DisplayPort-1 --right-of HDMI-A-3 --primary --output HDMI-A-3")
-	awful.spawn.with_shell("alacritty")
-end
 -- awful.spawn("alacritty")
 -- awful.spawn.with.shell("firefox")
 -- awful.spawn.with.shell("")

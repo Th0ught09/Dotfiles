@@ -223,12 +223,13 @@ return {
       keys[#keys + 1] = { "H", "<cmd>echo 'hello'<cr>" }
     end,
   },
-  {
-    "karb94/neoscroll.nvim",
-    config = function()
-      require("neoscroll").setup({})
-    end,
-  },
+  { "akinsho/toggleterm.nvim", version = "*", config = true },
+  -- {
+  --   "karb94/neoscroll.nvim",
+  --   config = function()
+  --     require("neoscroll").setup({})
+  --   end,
+  -- },
   -- {
   --   "mfussenegger/nvim-dap",
   --   dependencies = {
