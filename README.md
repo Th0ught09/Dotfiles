@@ -1,6 +1,7 @@
 # Swaybox
 
 Welcome to my dotfiles! A mix of blue and pink for background colors and gruvbox light for everything productive. Currently a work in progress but wanted to share what I had :) \\
+Sway was previously used but I main drive awesome now, however the sway, `waybar` and `mako` dotfiles are still included for those interested
 
 ## Dependancies
 
@@ -10,7 +11,7 @@ Required for the dotfiles to work, these are available in most package managers
 
 #### Debian based distros (Ubuntu etc.)
 
-`sudo apt install tmux alacritty mako neovim rofi sway waybar`
+`sudo apt install tmux alacritty neovim rofi`
 
 #### Red had distros (Fedora, RHEL etc.)
 
@@ -25,8 +26,7 @@ A bit more hassle to install but adds some nice features
 
 ## Install
 
-This install will back up all previous dotfiles so not to worry
-
+Experimental, do not run this script yet
 ```
 git clone git@github.com:Th0ught09/Dotfiles.git
 cd ~/.config
@@ -46,4 +46,4 @@ done
 ## Screenshots
 
 ![Plain View](plain.png)
-![Terminal View](term.png)
+![Terminal View](terminal.png)
