@@ -38,7 +38,7 @@ export DOOMDIR=~/.doom.d
 
 source $ZSH/oh-my-zsh.sh
 source <(fzf --zsh)
-. "$HOME/.cargo/env"
+# . "$HOME/.cargo/env"
 
 # ALIASES
 
@@ -48,32 +48,18 @@ alias vi="nvim"
 alias entry="vi ~/Uni/Diary/$(date -u +%Y-%m-%d.md)"
 alias zrc="vi ~/.config/zsh/zshrc"
 alias src="source ~/.zshrc"
-alias zj="zellij"
-<<<<<<< HEAD
-alias clear="clear; tput cup $LINES; pokemon-colorscripts -r --no-title"
 alias ls="exa --icons"
-||||||| 536df1a
 alias clear="clear; tput cup $LINES"
-alias ls="lsd"
-=======
-alias clear="clear; tput cup $LINES; pokemon-colorscripts -r --no-title"
-alias ls="lsd"
->>>>>>> 2592ce6c67dcaf49f38b22a9f191d45041e47e41
 alias uni="vi ~/Uni"
 alias update="sudo dnf update && sudo dnf upgrade"
 alias rw="/home/kirkm/.local/share/Steam/steamapps/common/RimWorld/RimWorldLinux" 
 alias ca="conda activate"
 alias ac="conda deactivate"
-alias srch="dnf search"
+alias srch="nix-env -qaP"
 alias install="sudo dnf install"
-<<<<<<< HEAD
-alias zra="zrc +43"
-||||||| 536df1a
-=======
 alias zra="zrc +43"
 alias nets="speedtest-cli --simple"
 alias gdb="gdb -q"
->>>>>>> 2592ce6c67dcaf49f38b22a9f191d45041e47e41
 
 # FUNCTIONS
 
@@ -98,20 +84,20 @@ function lr () { z Lang $1 }
 
 # SETTINGS  
 
-set -o vi
+set -o emacs
 
 # COMMANDS
 
 tput cup $LINES
-pokemon-colorscripts -r --no-title
+# pokemon-colorscripts -r
 # typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 # if [[ -z $TMUX ]] then
 #   tmux
 # fi
-if [[ $PC -eq "desktop" && -z $XR ]]; then
-    xrandr --output DisplayPort-0 --right-of HDMI-A-0 --primary --output HDMI-A-0
-    export XR=1
-fi
+# if [[ $PC -eq "desktop" && -z $XR ]]; then
+#     xrandr --output DisplayPort-0 --right-of HDMI-A-0 --primary --output HDMI-A-0
+#     export XR=1
+# fi
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 # lisgd -g "3,RL,swaymsg workspace next" -d /dev/input/by-path/platform-AMDI0010:00-event -r 45 -m 1200 -t 100 &
