@@ -13,7 +13,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # PLUGINS
 
-plugins=(git fzf 1password zoxide vi-mode sudo rust conda-env alias-finder)
+plugins=(git fzf 1password zoxide vi-mode sudo rust alias-finder)
 
 # ZSTYLES
 
@@ -42,13 +42,14 @@ source <(fzf --zsh)
 
 # ALIASES
 
+alias nv="sudo vi /etc/nixos/configuration.nix"
 alias zt="zathura"
 alias ta="tmux attach -d -t"
 alias vi="nvim"
 alias entry="vi ~/Uni/Diary/$(date -u +%Y-%m-%d.md)"
 alias zrc="vi ~/.config/zsh/zshrc"
 alias src="source ~/.zshrc"
-alias ls="exa --icons"
+alias ls="eza --icons"
 alias clear="clear; tput cup $LINES"
 alias uni="vi ~/Uni"
 alias update="sudo dnf update && sudo dnf upgrade"

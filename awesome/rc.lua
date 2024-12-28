@@ -58,7 +58,6 @@ beautiful.init("/home/kirkm/.config/awesome/themes/sky/theme.lua")
 awful.spawn.with_shell("picom --config ~/.config/picom/picom.conf")
 -- awful.spawn("alacritty")
 -- awful.spawn.with.shell("firefox")
--- awful.spawn.with.shell("")
 
 -- This is used later as the default terminal and editor to run.
 local terminal = "alacritty"
@@ -141,15 +140,25 @@ awful.screen.connect_for_each_screen(function(s)
 	})
 
 	-- Create the wibox
-	local new_shape = function(cr, width, height)
-		gears.shape.rounded_rect(cr, width, height, 5)
-	end
 	-- s.mywibox = awful.wibar({ position = "bottom", screen = s })
-	s.mywibox = awful.wibar({ position = "bottom", screen = s, shape = new_shape, opacity = 0.8 })
+	s.mywibox = awful.wibar({ 
+    position = "bottom",
+    screen = s,
+    opacity = 0.8,
+    type = "dock",
+    -- margins = {
+    --   top = 12,
+    --   bottom = 5,
+    --   left = 10,
+    --   right = 10
+    -- },
+    margins = 24,
+  })
 
 	-- Add widgets to the wibox
 	s.mywibox:setup({
 		layout = wibox.layout.align.horizontal,
+    expand = "none",
 		{ -- Left widgets
 			layout = wibox.layout.fixed.horizontal,
 			-- mylauncher,
@@ -164,6 +173,7 @@ awful.screen.connect_for_each_screen(function(s)
 			mytextclock,
 			s.mylayoutbox,
 		},
+    bottom = 10,
 	})
 end)
 -- }}}
