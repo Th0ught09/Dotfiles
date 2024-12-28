@@ -146,19 +146,12 @@ awful.screen.connect_for_each_screen(function(s)
     screen = s,
     opacity = 0.8,
     type = "dock",
-    -- margins = {
-    --   top = 12,
-    --   bottom = 5,
-    --   left = 10,
-    --   right = 10
-    -- },
     margins = 24,
   })
 
 	-- Add widgets to the wibox
 	s.mywibox:setup({
 		layout = wibox.layout.align.horizontal,
-    expand = "none",
 		{ -- Left widgets
 			layout = wibox.layout.fixed.horizontal,
 			-- mylauncher,
@@ -173,7 +166,6 @@ awful.screen.connect_for_each_screen(function(s)
 			mytextclock,
 			s.mylayoutbox,
 		},
-    bottom = 10,
 	})
 end)
 -- }}}
