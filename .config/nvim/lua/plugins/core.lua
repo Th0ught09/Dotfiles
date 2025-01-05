@@ -1,16 +1,4 @@
 return {
-  -- add gruvbox
-  {
-    "ellisonleao/gruvbox.nvim",
-    opts = {
-      transparent_mode = true,
-    },
-  },
-
-  -- Configure LazyVim to load gruvbox
-  {
-    "rcarriga/nvim-notify",
-  },
   {
     "LazyVim/LazyVim",
     opts = {
@@ -34,52 +22,13 @@ return {
           path = "~/Uni",
         },
       },
-
-      -- see below for full list of options 👇
     },
   },
 
   {
     "nvim-lua/plenary.nvim",
-    "nvim-treesitter/nvim-treesitter",
   },
-  {
-    "nvim-telescope/telescope.nvim",
-    requires = { { "nvim-lua/plenary.nvim" } },
-    keys = {
-      -- add a keymap to browse plugin files
-      -- stylua: ignore
-      {
-        "<leader>fp",
-        function() require("telescope.builtin").find_files({ cwd = require("lazy.core.config").options.root }) end,
-        desc = "Find Plugin File",
-      },
-      {
-        "<leader>fl",
-        function()
-          require("telescope").load_extension("notify")
-        end,
-        desc = "Load notify telescope",
-      },
-    },
-    -- change some options
-    opts = {
-      defaults = {
-        lazy = false,
-        layout_strategy = "horizontal",
-        layout_config = { prompt_position = "top" },
-        sorting_strategy = "ascending",
-        winblend = 0,
-      },
-    },
-  },
-  {
-    "nvim-lualine/lualine.nvim",
-    event = "VeryLazy",
-    opts = function(_, opts)
-      table.insert(opts.sections.lualine_x, "😄")
-    end,
-  },
+
   {
     "williamboman/mason.nvim",
     opts = {
@@ -134,56 +83,15 @@ return {
       })
     end,
   },
-  {
-    "Exafunction/codeium.vim",
-    config = function()
-      -- Change '<C-g>' here to any keycode you like.
-      vim.keymap.set("i", "<C-g>", function()
-        return vim.fn["codeium#Accept"]()
-      end, { expr = true, silent = true })
-      vim.keymap.set("i", "<c-;>", function()
-        return vim.fn["codeium#CycleCompletions"](1)
-      end, { expr = true, silent = true })
-      vim.keymap.set("i", "<c-,>", function()
-        return vim.fn["codeium#CycleCompletions"](-1)
-      end, { expr = true, silent = true })
-      vim.keymap.set("i", "<c-x>", function()
-        return vim.fn["codeium#Clear"]()
-      end, { expr = true, silent = true })
-    end,
-  },
-  {
-    "folke/noice.nvim",
-    event = "VeryLazy",
-    opts = {
-      -- add any options here
-    },
-    dependencies = {
-      "MunifTanjim/nui.nvim",
-      "rcarriga/nvim-notify",
-    },
-  },
-  {
-    "folke/noice.nvim",
-    event = "VeryLazy",
-    opts = {
-      -- add any options here
-    },
-    dependencies = {
-      "MunifTanjim/nui.nvim",
-      "rcarriga/nvim-notify",
-    },
-  },
+
   {
     "MunifTanjim/nui.nvim",
     event = "VeryLazy",
   },
   {
     "lervag/vimtex",
-    lazy = false, -- we don't want to lazy load VimTeX
-    -- tag = "v2.15", -- uncomment to pin to a specific release
+    lazy = false,
     init = function()
-      -- VimTeX configuration goes here, e.g.
       vim.g.vimtex_view_method = "zathura"
     end,
   },
@@ -194,7 +102,6 @@ return {
     "echasnovski/mini.surround",
     recommended = true,
     keys = function(_, keys)
-      -- Populate the keys based on the user's options
       local opts = LazyVim.opts("mini.surround")
       local mappings = {
         { opts.mappings.add, desc = "Add Surrounding", mode = { "n", "v" } },
@@ -212,13 +119,13 @@ return {
     end,
     opts = {
       mappings = {
-        add = "gsa", -- Add surrounding in Normal and Visual modes
-        delete = "gsd", -- Delete surrounding
-        find = "gsf", -- Find surrounding (to the right)
-        find_left = "gsF", -- Find surrounding (to the left)
-        highlight = "gsh", -- Highlight surrounding
-        replace = "gsr", -- Replace surrounding
-        update_n_lines = "gsn", -- Update `n_lines`
+        add = "gsa", 
+        delete = "gsd", 
+        find = "gsf", 
+        find_left = "gsF",
+        highlight = "gsh", 
+        replace = "gsr", 
+        update_n_lines = "gsn",
       },
     },
   },
