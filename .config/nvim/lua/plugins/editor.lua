@@ -1,51 +1,57 @@
 return {
-
-  { "nvim-treesitter/nvim-treesitter" },
-
   {
-    "nvim-telescope/telescope.nvim",
-    requires = { { "nvim-lua/plenary.nvim" } },
-    keys = {
-      {
-        "<leader>fp",
-        function() require("telescope.builtin").find_files({ cwd = require("lazy.core.config").options.root }) end,
-        desc = "Find Plugin File",
-      },
-      {
-        "<leader>fl",
-        function()
-          require("telescope").load_extension("notify")
-        end,
-        desc = "Load notify telescope",
-      },
-    },
+    "nvim-treesitter/nvim-treesitter" ,
     opts = {
-      defaults = {
-        lazy = false,
-        layout_strategy = "horizontal",
-        layout_config = { prompt_position = "top" },
-        sorting_strategy = "ascending",
-        winblend = 0,
+      ensure_installed = {
+        "bash",
+        "html",
+        "javascript",
+        "json",
+        "lua",
+        "markdown",
+        "markdown_inline",
+        "python",
+        "query",
+        "regex",
+        "tsx",
+        "vim",
+        "yaml",
       },
     },
   },
-
   {
-    "Exafunction/codeium.vim",
-    config = function()
-      vim.keymap.set("i", "<C-g>", function()
-        return vim.fn["codeium#Accept"]()
-      end, { expr = true, silent = true })
-      vim.keymap.set("i", "<c-;>", function()
-        return vim.fn["codeium#CycleCompletions"](1)
-      end, { expr = true, silent = true })
-      vim.keymap.set("i", "<c-,>", function()
-        return vim.fn["codeium#CycleCompletions"](-1)
-      end, { expr = true, silent = true })
-      vim.keymap.set("i", "<c-x>", function()
-        return vim.fn["codeium#Clear"]()
-      end, { expr = true, silent = true })
+    "williamboman/mason.nvim",
+    opts = {
+      ensure_installed = {
+        "stylua",
+        "shellcheck",
+        "shfmt",
+        "flake8",
+      },
+    },
+  },
+  {
+    "stevearc/conform.nvim",
+    optional = true,
+    ---@param opts ConformOpts
+    opts = function(_, opts)
+      opts.formatters_by_ft = opts.formatters_by_ft or {}
+      for _, ft in ipairs(supported) do
+        opts.formatters_by_ft[ft] = opts.formatters_by_ft[ft] or {}
+        table.insert(opts.formatters_by_ft[ft], "prettier")
+      end
+
+      opts.formatters = opts.formatters or {}
+      opts.formatters.prettier = {
+        condition = function(_, ctx)
+          return M.has_parser(ctx) and (vim.g.lazyvim_prettier_needs_config ~= true or M.has_config(ctx))
+        end,
+      }
     end,
   },
-
+  {
+  "ibhagwan/fzf-lua",
+  dependencies = { "nvim-tree/nvim-web-devicons" },
+  opts = {}
+  }
 }

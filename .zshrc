@@ -1,10 +1,3 @@
-source ~/.config/zsh/zshrc
-
-# if [[ -z $TMUX ]]; then
-#   tmux
-# fi
-#
-
 export DISPLAY=:0
 
 # OPTS
@@ -16,7 +9,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # PLUGINS
 
-plugins=(git fzf 1password zoxide vi-mode sudo rust alias-finder zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git fzf 1password zoxide vi-mode sudo alias-finder zsh-autosuggestions zsh-syntax-highlighting)
 
 # ZSTYLES
 
@@ -34,14 +27,13 @@ export CALIBRE_USE_DARK_PALETTE=0
 export EDITOR=nvim
 # export FZF_DEFAULT_OPTS="--tmux center"
 export ZSH="$HOME/.oh-my-zsh"
-export PATH="$PATH:/home/kirkm/.local/share/JetBrains/Toolbox/scripts::/home/kirkm/.dotnet/tools:/home/kirkm/.local/bin"
+# export PATH="$PATH:/home/kirkm/.local/share/JetBrains/Toolbox/scripts:/home/kirkm/.dotnet/tools:/home/kirkm/.local/bin"
 export DOOMDIR=~/.doom.d
 
 # SOURCING
 
 source $ZSH/oh-my-zsh.sh
 source <(fzf --zsh)
-# . "$HOME/.cargo/env"
 
 # ALIASES
 
@@ -62,7 +54,7 @@ alias ac="conda deactivate"
 alias srch="nix-env -qaP"
 alias install="sudo dnf install"
 alias zra="zrc +43"
-alias nets="speedtest-cli --simple"
+alias netsp="speedtest-cli --simple"
 alias gdb="gdb -q"
 
 # FUNCTIONS

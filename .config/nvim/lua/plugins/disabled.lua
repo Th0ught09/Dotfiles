@@ -5,5 +5,6 @@ return {
   { "ibhagwan/fzf-lua", enabled = false },
   { "stevearc/conform.nvim", enabled = false },
   { "Exafunction/codeium.vim", enabled = false },
+  { "karb94/neoscroll.nvim", enabled = false },
 
 }
