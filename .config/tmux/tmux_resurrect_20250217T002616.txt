@@ -1,0 +1,47 @@
+pane	9	1	1	:*	1	nixos	:/home/kirkm	1	zsh	:
+pane	ADS	1	0	:-	1	nixos	:/home/kirkm	1	zsh	:
+pane	ADS	2	1	:*	1	nixos	:/home/kirkm/Uni/CurrSem/ADS/Labs/Code	1	zsh	:
+pane	AI	1	1	:*	1	nixos	:/home/kirkm	1	zsh	:
+pane	Cmake	1	1	:*	1	nixos	:/home/kirkm	1	zsh	:
+pane	Cmake	1	1	:*	2	nixos	:/home/kirkm	0	zsh	:
+pane	Configs	1	1	:*Z	1	nixos	:/home/kirkm	0	zsh	:
+pane	Configs	1	1	:*Z	2	nixos	:/home/kirkm	1	zsh	:
+pane	Configs	2	0	:-	1	nixos	:/home/kirkm/Dotfiles/.config/nvim/lua/plugins	1	zsh	:
+pane	Configs	2	0	:-	2	nixos	:/home/kirkm/Dotfiles/.config/nvim/lua/plugins	0	zsh	:
+pane	Configs	3	0	:	1	nixos	:/home/kirkm/Dotfiles	1	zsh	:
+pane	Configs	3	0	:	2	nixos	:/home/kirkm/Dotfiles	0	zsh	:
+pane	General	1	0	:-Z	1	nixos	:/home/kirkm/Uni	1	zsh	:
+pane	General	1	0	:-Z	2	nixos	:/home/kirkm	0	zsh	:
+pane	General	2	1	:*	1	nixos	:/home/kirkm	0	zsh	:
+pane	General	2	1	:*	2	nixos	:/home/kirkm/Uni	1	zsh	:
+pane	Haskell	1	0	:-	1	nixos	:/home/kirkm/Uni/Languages/Haskell/Practice/Data	1	zsh	:
+pane	Haskell	1	0	:-	2	nixos	:/home/kirkm/Uni/Languages/Haskell/Practice/Data	0	zsh	:
+pane	Haskell	2	1	:*	1	nixos	:/home/kirkm/Books	0	zsh	:
+pane	Haskell	2	1	:*	2	nixos	:/home/kirkm/Dotfiles/.config/tmux	1	zsh	:
+pane	Haskell	3	0	:	1	nixos	:/home/kirkm	0	zsh	:
+pane	Haskell	3	0	:	2	nixos	:/home/kirkm	1	zsh	:
+pane	Haskell	4	0	:	1	nixos	:/home/kirkm	1	zsh	:
+pane	Haskell	4	0	:	2	nixos	:/home/kirkm	0	zsh	:
+pane	Logic	1	1	:*	1	nixos	:/home/kirkm/Uni/Languages/Haskell/Practice	1	zsh	:
+pane	RISC-V	1	1	:*	1	nixos	:/home/kirkm/Uni/Languages/RISC-V/Practice	1	zsh	:
+pane	Spawns	1	1	:*	1	/home/kirkm/Music/videoplayback.mp3	:/home/kirkm	0	zsh	:
+pane	Spawns	1	1	:*	2	nixos	:/home/kirkm	1	zsh	:
+pane	Spawns	1	1	:*	3	nixos	:/mnt	0	zsh	:
+window	9	1	:zsh	1	:*	c2de,233x55,0,0,1	:
+window	ADS	1	:pdfs	0	:-	c2df,233x55,0,0,2	off
+window	ADS	2	:zsh	1	:*	c2e0,233x55,0,0,3	:
+window	AI	1	:zsh	1	:*	c2e1,233x55,0,0,4	:
+window	Cmake	1	:Step 3	1	:*	25de,233x55,0,0{116x55,0,0,5,116x55,117,0,6}	off
+window	Configs	1	:Configs	1	:*Z	25e1,233x55,0,0{116x55,0,0,7,116x55,117,0,8}	off
+window	Configs	2	:Nvim	0	:-	5346,233x55,0,0{116x55,0,0,9,116x55,117,0,10}	off
+window	Configs	3	:tmux	0	:	0bc2,233x55,0,0{116x55,0,0,11,116x55,117,0,12}	off
+window	General	1	:zsh	0	:-Z	0bc4,233x55,0,0{116x55,0,0,13,116x55,117,0,14}	:
+window	General	2	:zsh	1	:*	0bc6,233x55,0,0{116x55,0,0,15,116x55,117,0,16}	:
+window	Haskell	1	:zsh	0	:-	0bc8,233x55,0,0{116x55,0,0,17,116x55,117,0,18}	:
+window	Haskell	2	:pdfs	1	:*	4bc5,233x55,0,0{116x55,0,0,19,116x55,117,0,20}	off
+window	Haskell	3	:Work	0	:	8bc2,233x55,0,0{116x55,0,0,21,116x55,117,0,22}	off
+window	Haskell	4	:tests	0	:	8bc4,233x55,0,0{116x55,0,0,23,116x55,117,0,24}	off
+window	Logic	1	:slides	1	:*	e1a4,233x55,0,0,25	off
+window	RISC-V	1	:zsh	1	:*	e1a5,233x55,0,0,26	:
+window	Spawns	1	:zsh	1	:*	e0da,233x55,0,0{116x55,0,0,27,116x55,117,0[116x27,117,0,28,116x27,117,28,29]}	:
+state	General	Haskell
