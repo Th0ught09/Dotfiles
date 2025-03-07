@@ -1,0 +1,50 @@
+pane	ADS	1	0	:	1	nixos	:/home/kirkm/Uni/CurrSem/ADS/Labs/Code	1	zsh	:
+pane	ADS	2	1	:*	1	nixos	:/home/kirkm/UniProjects/ADS/lab5/c	0	nvim	:/nix/store/w1jf3xsq43xyg786llp00ngn02xm9dmx-neovim-unwrapped-0.10.4/bin/nvim --cmd lua vim.g.loaded_node_provider=0;vim.g.loaded_perl_provider=0;vim.g.loaded_python_provider=0;vim.g.python3_host_prog='/nix/store/fhzw8ah6s37q2p9pak7d2alzhx0m137h-neovim-0.10.4/bin/nvim-python3';vim.g.loaded_ruby_provider=0 dp.c
+pane	ADS	2	1	:*	2	nixos	:/home/kirkm/UniProjects/ADS/lab5/c	1	gdb	:gdb -q --args dp ../data/easy.20.txt
+pane	ADS	3	0	:-	1	nixos	:/home/kirkm/UniProjects/ADS/lab5/c	1	zsh	:
+pane	ADS2	1	1	:*	1	nixos	:/home/kirkm	0	zsh	:
+pane	ADS2	1	1	:*	2	nixos	:/home/kirkm/.local/share/nvim/mason/bin	1	zsh	:
+pane	ADS2	1	1	:*	3	nixos	:/home/kirkm/MyFlake	0	zsh	:
+pane	Boxes	1	1	:*	1	nixos	:/home/kirkm	1	zsh	:
+pane	Boxes	1	1	:*	2	nixos	:/home/kirkm	0	zsh	:
+pane	Cmake	1	1	:*	1	nixos	:/home/kirkm/Practice/cmake-3.31.3-tutorial-source/Step3	1	zsh	:
+pane	Cmake	1	1	:*	2	nixos	:/home/kirkm/Practice/cmake-3.31.3-tutorial-source/Step3_build	0	zsh	:
+pane	Configs	1	0	:Z	1	nixos	:/home/kirkm	0	zsh	:
+pane	Configs	1	0	:Z	2	nixos	:/home/kirkm	1	zsh	:
+pane	Configs	2	0	:	1	nixos	:/home/kirkm/Dotfiles/.config/nvim/lua	1	zsh	:
+pane	Configs	2	0	:	2	nixos	:/home/kirkm/Dotfiles/.config/nvim	0	zsh	:
+pane	Configs	3	0	:-	1	nixos	:/home/kirkm/Dotfiles	1	zsh	:
+pane	Configs	3	0	:-	2	nixos	:/home/kirkm/Dotfiles	0	zsh	:
+pane	Configs	4	1	:*Z	1	nixos	:/home/kirkm/MyFlake	0	zsh	:
+pane	Configs	4	1	:*Z	2	nixos	:/home/kirkm/MyFlake	1	zsh	:
+pane	Configs	4	1	:*Z	3	nixos	:/home/kirkm/MyFlake	0	zsh	:
+pane	General	1	0	:-Z	1	nixos	:/home/kirkm/Uni	1	zsh	:
+pane	General	1	0	:-Z	2	nixos	:/home/kirkm	0	zsh	:
+pane	General	2	1	:*	1	nixos	:/home/kirkm/UniProjects/HelloMVC	1	zsh	:
+pane	General	2	1	:*	2	nixos	:/home/kirkm/UniProjects/HelloMVC	0	zsh	:
+pane	RISC-V	1	1	:*	1	nixos	:/home/kirkm/Uni/Languages/RISC-V/Practice	1	zsh	:
+pane	SWE	1	0	:-	1	nixos	:/home/kirkm/UniProjects/GP/src/main/java/uk/ac/man/cs/eventlite	1	nvim	:/nix/store/w1jf3xsq43xyg786llp00ngn02xm9dmx-neovim-unwrapped-0.10.4/bin/nvim --cmd lua vim.g.loaded_node_provider=0;vim.g.loaded_perl_provider=0;vim.g.loaded_python_provider=0;vim.g.python3_host_prog='/nix/store/fhzw8ah6s37q2p9pak7d2alzhx0m137h-neovim-0.10.4/bin/nvim-python3';vim.g.loaded_ruby_provider=0 .
+pane	SWE	2	1	:*	1	nixos	:/home/kirkm/UniProjects/GP	0	zsh	:
+pane	SWE	2	1	:*	2	nixos	:/home/kirkm/UniProjects/GP	1	zsh	:
+pane	SWE	3	0	:	1	nixos	:/home/kirkm/UniProjects/GP/src/main/java/uk/ac/man/cs/eventlite	1	zsh	:
+pane	Spawns	1	1	:*	1	/home/kirkm/Music/videoplayback.mp3	:/home/kirkm	0	zsh	:
+pane	Spawns	1	1	:*	2	nixos	:/home/kirkm	1	zsh	:
+pane	Spawns	1	1	:*	3	nixos	:/mnt	0	zsh	:
+window	ADS	1	:pdfs	0	:	d0de,233x49,0,0,1	off
+window	ADS	2	:work	1	:*	7b27,233x49,0,0{116x49,0,0,2,116x49,117,0,27}	off
+window	ADS	3	:debug	0	:-	e8a7,233x49,0,0,28	off
+window	ADS2	1	:zsh	1	:*	f91a,233x49,0,0{116x49,0,0,3,116x49,117,0[116x24,117,0,4,116x24,117,25,5]}	:
+window	Boxes	1	:zsh	1	:*	75a1,233x49,0,0{116x49,0,0,6,116x49,117,0,7}	:
+window	Cmake	1	:Step 3	1	:*	75a4,233x49,0,0{116x49,0,0,8,116x49,117,0,9}	off
+window	Configs	1	:Configs	0	:Z	8021,233x49,0,0{116x49,0,0,10,116x49,117,0,11}	off
+window	Configs	2	:Nvim	0	:	8023,233x49,0,0{116x49,0,0,12,116x49,117,0,13}	off
+window	Configs	3	:tmux	0	:-	8025,233x49,0,0{116x49,0,0,14,116x49,117,0,15}	off
+window	Configs	4	:Nixos	1	:*Z	a139,233x49,0,0{116x49,0,0,16,116x49,117,0[116x24,117,0,17,116x24,117,25,18]}	off
+window	General	1	:zsh	0	:-Z	c025,233x49,0,0{116x49,0,0,19,116x49,117,0,20}	:
+window	General	2	:zsh	1	:*	0022,233x49,0,0{116x49,0,0,21,116x49,117,0,22}	:
+window	RISC-V	1	:zsh	1	:*	e8a2,233x49,0,0,23	:
+window	SWE	1	:nvim	0	:-	e8a8,233x49,0,0,29	:
+window	SWE	2	:Run	1	:*	0022,233x49,0,0{116x49,0,0,30,116x49,117,0,32}	off
+window	SWE	3	:zsh	0	:	68a1,233x49,0,0,31	:
+window	Spawns	1	:zsh	1	:*	9137,233x49,0,0{116x49,0,0,24,116x49,117,0[116x24,117,0,25,116x24,117,25,26]}	:
+state	SWE	Configs

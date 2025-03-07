@@ -3,7 +3,7 @@
 -- Add any additional options here
 vim.opt.hidden = true
 vim.o.grepprg = "rg --vimgrep --smart-case --follow"
-vim.g.lazyvim_picker = "fzf"
+-- vim.g.lazyvim_picker = "fzf"
 vim.o.scrolloff = 8
 vim.o.tabstop = 2
 vim.o.shiftwidth = 2

@@ -1,6 +1,6 @@
 return {
   {
-    "nvim-treesitter/nvim-treesitter" ,
+    "nvim-treesitter/nvim-treesitter",
     opts = {
       ensure_installed = {
         "bash",
@@ -50,8 +50,8 @@ return {
     end,
   },
   {
-  "ibhagwan/fzf-lua",
-  dependencies = { "nvim-tree/nvim-web-devicons" },
-  opts = {}
+    "ibhagwan/fzf-lua",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    opts = {}
   }
 }

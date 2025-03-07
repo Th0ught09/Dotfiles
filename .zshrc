@@ -24,11 +24,12 @@ zstyle ':omz:plugins:alias-finder' cheaper yes # disabled by default
 # export XDG_CURRENT_DESKTOP=Sway
 # export WAYLAND_DISPLAY=wayland-0
 export CALIBRE_USE_DARK_PALETTE=0
-export EDITOR=nvim
-# export FZF_DEFAULT_OPTS="--tmux center"
+export EDITOR=vim
+export FZF_DEFAULT_OPTS="--tmux center"
 export ZSH="$HOME/.oh-my-zsh"
 # export PATH="$PATH:/home/kirkm/.local/share/JetBrains/Toolbox/scripts:/home/kirkm/.dotnet/tools:/home/kirkm/.local/bin"
 export DOOMDIR=~/.doom.d
+export LD_LIBRARY_PATH=/opt/lampp:/home/kirkm/.local/share/nvim/mason/bin:/home/kirkm/Programs:$LD_LIBRARY_PATH
 
 # SOURCING
 
@@ -89,6 +90,7 @@ xrandr --output HDMI-A-0 --primary --output DisplayPort-1 --right-of HDMI-A-0
 tput cup $LINES
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
+eval "$(thefuck --alias)"
 
 
 # >>> conda initialize >>>
@@ -97,7 +99,7 @@ if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
     if [ -f "/home/kirkm/.conda/etc/profile.d/conda.sh" ]; then
-        . "/home/kirkm/.conda/etc/profile.d/conda.sh"
+# . "/home/kirkm/.conda/etc/profile.d/conda.sh"  # commented out by conda initialize
     else
         export PATH="/home/kirkm/.conda/bin:$PATH"
     fi

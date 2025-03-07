@@ -25,12 +25,8 @@ return {
   },
 
   {
-    "nvim-lua/plenary.nvim", 
+    "nvim-lua/plenary.nvim",
     "akinsho/toggleterm.nvim"
-  },
-  {
-    "MunifTanjim/nui.nvim",
-    event = "VeryLazy",
   },
 
   {
@@ -47,12 +43,12 @@ return {
     keys = function(_, keys)
       local opts = LazyVim.opts("mini.surround")
       local mappings = {
-        { opts.mappings.add, desc = "Add Surrounding", mode = { "n", "v" } },
-        { opts.mappings.delete, desc = "Delete Surrounding" },
-        { opts.mappings.find, desc = "Find Right Surrounding" },
-        { opts.mappings.find_left, desc = "Find Left Surrounding" },
-        { opts.mappings.highlight, desc = "Highlight Surrounding" },
-        { opts.mappings.replace, desc = "Replace Surrounding" },
+        { opts.mappings.add,            desc = "Add Surrounding",                     mode = { "n", "v" } },
+        { opts.mappings.delete,         desc = "Delete Surrounding" },
+        { opts.mappings.find,           desc = "Find Right Surrounding" },
+        { opts.mappings.find_left,      desc = "Find Left Surrounding" },
+        { opts.mappings.highlight,      desc = "Highlight Surrounding" },
+        { opts.mappings.replace,        desc = "Replace Surrounding" },
         { opts.mappings.update_n_lines, desc = "Update `MiniSurround.config.n_lines`" },
       }
       mappings = vim.tbl_filter(function(m)
@@ -62,12 +58,12 @@ return {
     end,
     opts = {
       mappings = {
-        add = "gsa", 
-        delete = "gsd", 
-        find = "gsf", 
+        add = "gsa",
+        delete = "gsd",
+        find = "gsf",
         find_left = "gsF",
-        highlight = "gsh", 
-        replace = "gsr", 
+        highlight = "gsh",
+        replace = "gsr",
         update_n_lines = "gsn",
       },
     },
