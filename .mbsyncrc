@@ -1,0 +1,32 @@
+Create Both
+Expunge Both
+SyncState *
+
+IMAPAccount ProtonMail
+Host 127.0.0.1
+Port 1143
+User kirkmatt@proton.me
+#Pass "Hufspv_tVyhcPhlk1MbMrg"
+PassCmd "pass Email/ProtonBridgeNew"
+TLSType None
+SSLType None
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore ProtonMail-remote
+Account ProtonMail
+
+MaildirStore ProtonMail-local
+Subfolders Verbatim
+Path ~/Mail/ProtonMail/
+Inbox ~/Mail/ProtonMail/INBOX/
+
+Channel ProtonMail-default
+Far :ProtonMail-remote:
+Near :ProtonMail-local:
+Patterns * ![Protonmail]*
+Create Both
+SyncState *
+Sync All
+
+Group ProtonMail
+Channel ProtonMail-default

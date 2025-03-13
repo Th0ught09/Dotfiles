@@ -28,8 +28,9 @@ export EDITOR=vim
 export FZF_DEFAULT_OPTS="--tmux center"
 export ZSH="$HOME/.oh-my-zsh"
 # export PATH="$PATH:/home/kirkm/.local/share/JetBrains/Toolbox/scripts:/home/kirkm/.dotnet/tools:/home/kirkm/.local/bin"
+PATH=$PATH:/home/kirkm/.config/emacs/bin
 export DOOMDIR=~/.doom.d
-export LD_LIBRARY_PATH=/opt/lampp:/home/kirkm/.local/share/nvim/mason/bin:/home/kirkm/Programs:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/home/kirkm/.local/share/nvim/mason/bin:/home/kirkm/Programs:/home/kirkm/miniconda3/bin:/home/kirkm/.config/emacs/bin:$LD_LIBRARY_PATH
 
 # SOURCING
 
@@ -57,6 +58,7 @@ alias install="sudo dnf install"
 alias zra="zrc +43"
 alias netsp="speedtest-cli --simple"
 alias gdb="gdb -q"
+alias emacs="emacsclient -c -a 'emacs'"
 
 # FUNCTIONS
 
@@ -90,19 +92,20 @@ xrandr --output HDMI-A-0 --primary --output DisplayPort-1 --right-of HDMI-A-0
 tput cup $LINES
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
-eval "$(thefuck --alias)"
+# eval "$(thefuck --alias)"
 
 
 # >>> conda initialize >>>
-__conda_setup="$('/home/kirkm/.conda/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/kirkm/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/kirkm/.conda/etc/profile.d/conda.sh" ]; then
-# . "/home/kirkm/.conda/etc/profile.d/conda.sh"  # commented out by conda initialize
+    if [ -f "/home/kirkm/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/kirkm/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/kirkm/.conda/bin:$PATH"
+        export PATH="/home/kirkm/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
-
+# <<< conda initialize <<<
