@@ -1,0 +1,108 @@
+pane	ADS	1	0	:	1	nixos	:/home/kirkm/Uni/CurrSem/ADS/Labs/Code	1	zsh	:
+pane	ADS	2	0	:	1	nixos	:/home/kirkm/Projects/ADS/lab5/c	0	zsh	:
+pane	ADS	2	0	:	2	nixos	:/home/kirkm/Projects/ADS/lab5/c	1	zsh	:
+pane	ADS	3	0	:	1	nixos	:/home/kirkm/Projects/ADS/lab5/c	1	zsh	:
+pane	ADS	4	1	:*	1	nixos	:/home/kirkm/Projects/ADS/lab5/Report/new_data	1	zsh	:
+pane	ADS	4	1	:*	2	nixos	:/home/kirkm/Projects/ADS/lab5/Report/new_data	0	zsh	:
+pane	ADS	5	0	:-	1	kirkm@nixos: ~/UniProjects/ADS/lab5/Report	:/home/kirkm/Projects/ADS/lab5	0	zsh	:
+pane	ADS	5	0	:-	2	nixos	:/home/kirkm/Projects/ADS/lab5/c	1	zsh	:
+pane	ADS2	1	0	:	1	nixos	:/home/kirkm/Projects/ADS/lab5/data	1	zsh	:
+pane	ADS2	1	0	:	2	nixos	:/home/kirkm/.local/share/nvim/mason/bin	0	zsh	:
+pane	ADS2	1	0	:	3	nixos	:/home/kirkm/Projects/ADS/lab5/c	0	zsh	:
+pane	ADS2	2	1	:*	1	nixos	:/home/kirkm/Projects/ADS/lab5/c	1	zsh	:
+pane	ADS2	3	0	:-	1	nixos	:/home/kirkm/Projects/ADS/lab5/Report	1	zsh	:
+pane	Boxes	1	1	:*	1	nixos	:/home/kirkm	1	zsh	:
+pane	Boxes	1	1	:*	2	nixos	:/home/kirkm	0	zsh	:
+pane	Cmake	1	1	:*	1	nixos	:/home/kirkm/Coding/CMake/Step3	1	zsh	:
+pane	Cmake	1	1	:*	2	nixos	:/home/kirkm/Coding/CMake/Step3_build	0	zsh	:
+pane	Configs	1	0	:Z	1	nixos	:/home/kirkm	0	zsh	:
+pane	Configs	1	0	:Z	2	nixos	:/home/kirkm	1	zsh	:
+pane	Configs	2	0	:	1	nixos	:/home/kirkm/.config/nvim	1	zsh	:
+pane	Configs	2	0	:	2	nixos	:/home/kirkm/Dotfiles/.config/nvim	0	zsh	:
+pane	Configs	3	0	:	1	nixos	:/home/kirkm/Dotfiles	1	zsh	:
+pane	Configs	3	0	:	2	nixos	:/home/kirkm/Dotfiles	0	zsh	:
+pane	Configs	4	0	:-	1	kirkm@nixos: ~/MyFlake	:/home/kirkm/.config/ranger	1	zsh	:
+pane	Configs	5	0	:	1	nixos	:/home/kirkm/.config/alacritty	1	zsh	:
+pane	Configs	5	0	:	2	nixos	:/home/kirkm/Projects/DS/Ex2	0	zsh	:
+pane	Configs	6	0	:	1	nixos	:/home/kirkm	1	zsh	:
+pane	Configs	7	0	:	1	nixos	:/home/kirkm	1	zsh	:
+pane	Configs	7	0	:	2	nixos	:/home/kirkm/.config/emacs/.local	0	zsh	:
+pane	Configs	8	1	:*	1	nixos	:/nix/store/74cxr9kfgm6xv5zawr3j178796ch78nf-user-environment	1	zsh	:
+pane	Configs	8	1	:*	2	nixos	:/home/kirkm/.config/ranger	0	zsh	:
+pane	Dist	1	1	:*	1	kirkm@nixos: ~/Uni/CurrSem/DistSys/Labs	:/home/kirkm/Uni/CurrSem/DistSys/Labs	0	zsh	:
+pane	Dist	1	1	:*	2	nixos	:/home/kirkm/Uni/CurrSem/DistSys/Practice	1	zsh	:
+pane	Dist	2	0	:-	1	nixos	:/home/kirkm/Uni/Maths/LinearAlgebra/CustomNotes	1	zsh	:
+pane	Dist	2	0	:-	2	nixos	:/home/kirkm/Projects/DS/Ex2	0	zsh	:
+pane	Dist2	1	0	:-	1	nixos	:/home/kirkm/Projects/DS/Ex2	1	zathura	:/nix/store/n0n9ywgxpng1s0pv8jg4rqibsqd65bwp-zathura-0.5.11-bin/bin/zathura ../COMP28112_LabExercise_2_2024_25_v2.pdf
+pane	Dist2	2	1	:*	1	nixos	:/home/kirkm/Projects/DS	1	zsh	:
+pane	Dist2	2	1	:*	2	nixos	:/home/kirkm/Projects/DS	0	zsh	:
+pane	General	1	1	:*	1	nixos	:/home/kirkm/Uni/Languages/GnuPlot	1	zsh	:
+pane	General	1	1	:*	2	nixos	:/home/kirkm/Documents/Vault	0	zsh	:
+pane	General	2	0	:-	1	nixos	:/home/kirkm	1	zsh	:
+pane	General	2	0	:-	2	nixos	:/home/kirkm/.darling	0	zsh	:
+pane	Loupe	1	1	:*	1	root@08cd85f1c5cb: ~/src	:/home/kirkm/Projects/Loupe/loupe_dev	0	zsh	:
+pane	Loupe	1	1	:*	2	root@32a1a7fec929: ~	:/home/kirkm/Projects/Loupe/loupe	1	zsh	:
+pane	PLP	1	1	:*	1	nixos	:/home/kirkm/Projects/Compiler/PythonSol	1	zsh	:
+pane	PLP	1	1	:*	2	nixos	:/home/kirkm/Projects/Compiler/PythonSol	0	zsh	:
+pane	PLP	2	0	:-	1	nixos	:/home/kirkm	1	zsh	:
+pane	Qscores	1	1	:*	1	nixos	:/home/kirkm	1	zsh	:
+pane	Qscores	1	1	:*	2	nixos	:/home/kirkm	0	zsh	:
+pane	RISC-V	1	1	:*	1	nixos	:/home/kirkm/Uni/Languages/RISC-V/Practice	1	zsh	:
+pane	SWE	1	1	:*	1	nixos	:/home/kirkm/Projects/EventLite/GP	1	zsh	:
+pane	SWE	1	1	:*	2	nixos	:/home/kirkm/Projects/EventLite/GP	0	zsh	:
+pane	SWE	2	0	:-	1	nixos	:/home/kirkm	1	zsh	:
+pane	SWE	2	0	:-	2	nixos	:/home/kirkm	0	zsh	:
+pane	SWE	3	0	:	1	nixos	:/home/kirkm/Projects/EventLite	1	zsh	:
+pane	SWE2	1	1	:*	1	nixos	:/home/kirkm	1	zsh	:
+pane	SWE2	1	1	:*	2	nixos	:/home/kirkm	0	zsh	:
+pane	Spawns	1	1	:*	1	/home/kirkm/Music/videoplayback.mp3	:/home/kirkm/Music	0	cmus	:cmus
+pane	Spawns	1	1	:*	2	nixos	:/home/kirkm	1	zsh	:
+pane	Spawns	1	1	:*	3	nixos	:/mnt	0	zsh	:
+pane	Spawns	2	0	:-	1	nixos	:/home/kirkm/Books	1	zsh	:
+pane	Spawns	3	0	:Z	1	nixos	:/home/kirkm/Uni/Hobbies/Emacs	1	ollama	:/home/kirkm/.nix-profile/bin/ollama run mistral
+pane	Spawns	3	0	:Z	2	nixos	:/home/kirkm/Uni/CurrSem/PLP	0	ollama	:/home/kirkm/.nix-profile/bin/ollama serve
+pane	SysA	1	1	:*	1	ncspot	:/home/kirkm	0	zsh	:
+pane	SysA	1	1	:*	2	nixos	:/home/kirkm	1	zsh	:
+pane	SysA2	1	1	:*	1	nixos	:/home/kirkm	0	zsh	:
+pane	SysA2	1	1	:*	2	nixos	:/home/kirkm	1	zsh	:
+pane	SysA2	2	0	:-	1	nixos	:/home/kirkm	1	zsh	:
+window	ADS	1	:pdfs	0	:	d0be,114x49,0,0,1	off
+window	ADS	2	:work	0	:	890d,114x49,0,0{56x49,0,0,2,57x49,57,0,3}	off
+window	ADS	3	:debug	0	:	d0c1,114x49,0,0,4	off
+window	ADS	4	:Report	1	:*	091b,114x49,0,0{56x49,0,0,5,57x49,57,0,6}	off
+window	ADS	5	:Experiment	0	:-	0924,114x49,0,0{56x49,0,0,7,57x49,57,0,8}	off
+window	ADS2	1	:zsh	0	:	2aca,114x49,0,0{56x49,0,0,9,57x49,57,0[57x24,57,0,10,57x24,57,25,11]}	:
+window	ADS2	2	:results	1	:*	6891,114x49,0,0,12	off
+window	ADS2	3	:Report	0	:-	6892,114x49,0,0,13	off
+window	Boxes	1	:zsh	1	:*	4b52,114x49,0,0{56x49,0,0,14,57x49,57,0,15}	:
+window	Cmake	1	:Step 3	1	:*	4b57,114x49,0,0{56x49,0,0,16,57x49,57,0,17}	off
+window	Configs	1	:Configs	0	:Z	4b5c,114x49,0,0{56x49,0,0,18,57x49,57,0,19}	off
+window	Configs	2	:Nvim	0	:	8b49,114x49,0,0{56x49,0,0,20,57x49,57,0,21}	off
+window	Configs	3	:tmux	0	:	8b3e,114x49,0,0{56x49,0,0,22,57x49,57,0,23}	off
+window	Configs	4	:Nixos	0	:-	e893,114x49,0,0,24	off
+window	Configs	5	:Alacritty	0	:	0b56,114x49,0,0{56x49,0,0,25,57x49,57,0,26}	off
+window	Configs	6	:mbsync	0	:	e896,114x49,0,0,27	off
+window	Configs	7	:Emacs	0	:	8fcd,114x49,0,0{57x49,0,0,28,56x49,58,0,29}	off
+window	Configs	8	:Ranger	1	:*	cb4a,114x49,0,0{56x49,0,0,30,57x49,57,0,31}	off
+window	Dist	1	:zsh	1	:*	8024,233x49,0,0{116x49,0,0,32,116x49,117,0,33}	:
+window	Dist	2	:zsh	0	:-	cb54,114x49,0,0{56x49,0,0,34,57x49,57,0,35}	:
+window	Dist2	1	:lampp	0	:-	68a6,233x49,0,0,36	off
+window	Dist2	2	:zsh	1	:*	002a,233x49,0,0{116x49,0,0,67,116x49,117,0,68}	:
+window	General	1	:zsh	1	:*	4b5c,114x49,0,0{56x49,0,0,37,57x49,57,0,38}	off
+window	General	2	:zsh	0	:-	8b5c,114x49,0,0{56x49,0,0,39,57x49,57,0,40}	:
+window	Loupe	1	:zsh	1	:*	0023,233x49,0,0{116x49,0,0,41,116x49,117,0,42}	:
+window	PLP	1	:zsh	1	:*	8b53,114x49,0,0{56x49,0,0,43,57x49,57,0,44}	:
+window	PLP	2	:zsh	0	:-	e895,114x49,0,0,45	:
+window	Qscores	1	:zsh	1	:*	0b5b,114x49,0,0{56x49,0,0,46,57x49,57,0,47}	:
+window	RISC-V	1	:zsh	1	:*	e898,114x49,0,0,48	:
+window	SWE	1	:zsh	1	:*	802a,233x49,0,0{116x49,0,0,49,116x49,117,0,66}	:
+window	SWE	2	:Run	0	:-	8023,233x49,0,0{116x49,0,0,50,116x49,117,0,51}	off
+window	SWE	3	:zsh	0	:	68a3,233x49,0,0,52	:
+window	SWE2	1	:zsh	1	:*	8026,233x49,0,0{116x49,0,0,53,116x49,117,0,54}	:
+window	Spawns	1	:zsh	1	:*	013b,233x49,0,0{116x49,0,0,55,116x49,117,0[116x24,117,0,56,116x24,117,25,57]}	:
+window	Spawns	2	:zsh	0	:-	68a9,233x49,0,0,58	:
+window	Spawns	3	:ollama	0	:Z	c027,233x49,0,0{116x49,0,0,59,116x49,117,0,60}	:
+window	SysA	1	:zsh	1	:*	0b51,114x49,0,0{56x49,0,0,61,57x49,57,0,62}	:
+window	SysA2	1	:zsh	1	:*	0b56,114x49,0,0{56x49,0,0,63,57x49,57,0,64}	:
+window	SysA2	2	:zsh	0	:-	e896,114x49,0,0,65	:
+state	Dist2	SWE

@@ -39,16 +39,15 @@ source <(fzf --zsh)
 
 # ALIASES
 
-alias nv="sudo vi /etc/nixos/configuration.nix"
+alias nv="vi ~/.config/home-manager/home.nix"
 alias zt="zathura"
 alias ta="tmux attach -d -t"
 alias vi="nvim"
-alias entry="vi ~/Uni/Diary/$(date -u +%Y-%m-%d.md)"
 alias zrc="vi ~/.zshrc"
 alias src="source ~/.zshrc"
 alias ls="eza --icons"
 alias clear="clear; tput cup $LINES"
-alias uni="vi ~/Uni"
+alias note="vi ~/Documents/Vault"
 alias update="sudo dnf update && sudo dnf upgrade"
 alias rw="/home/kirkm/.local/share/Steam/steamapps/common/RimWorld/RimWorldLinux" 
 alias ca="conda activate"
@@ -76,6 +75,11 @@ function pip(){
     else
       command pip $@
     fi
+}
+
+# Quick ls grep
+lg(){
+  l | grep $1
 }
 
 # Quick search into language dir

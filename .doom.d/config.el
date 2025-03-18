@@ -40,7 +40,7 @@
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
-(setq org-directory "~/org/")
+(setq org-directory "~/Documents/Org/")
 
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
@@ -138,67 +138,35 @@
       smtpmail-smtp-server "127.0.0.1"
       smtpmail-smtp-service 1025
       smtpmail-stream-type  'plain))
+(require 'ox-publish)
+(setq org-publish-project-alist
+      '(
+        ("org-notes"
+        :base-directory "~/Documents/Org/"
+        :base-extension "org"
+        :publishing-directory "~/public_html/"
+        :recursive t
+        :publishing-function org-html-publish-to-html
+        :headline-levels 4             ; Just the default for this project.
+        :auto-preamble t
+        )
 
-;(require 'org-caldav)
-;
-;;; URL of the caldav server
-;(setq org-caldav-url "https://scientia-eu-v4-api-d3-02.azurewebsites.net//api/ical/b5098763-4476-40a6-8d60-5a08e9c52964/33ff0a46-42c9-fa35-e710-20a89e30a8cd/timetable.ics")
-;
-;;; calendar ID on server
-;(setq org-caldav-calendar-id "MathhewKirk")
-;
-;;; Org filename where new entries from calendar stored
-;(setq org-caldav-inbox "/home/kirkm/Calendar/Uni/inbox.org")
-;
-;;; Additional Org files to check for calendar events
-;(setq org-caldav-files nil)
-;
-;;; Usually a good idea to set the timezone manually
-;(setq org-icalendar-timezone "Europe/Berlin")
-;
-;(use-package! calfw
-;  :defer t
-;  :init
-;  (map! :leader
-;        :prefix "o"
-;        :desc "Calendar" :e "c" #'cfw:open-org-calendar)
-;
-;  :config
-;  (map! :map cfw:calendar-mode-map
-;        :m "C-j" #'cfw:navi-next-month-command
-;        :m "C-k" #'cfw:navi-previous-month-command
-;        :m "C-." #'cfw:navi-goto-today-command
-;        :m "0"   #'cfw:navi-goto-week-begin-command
-;        :m "gd"  #'cfw:org-goto-date
-;        :m "zd"  #'cfw:change-view-day
-;        :m "zw"  #'cfw:change-view-week
-;        :m "zm"  #'cfw:change-view-month
-;        :m "zt"  #'cfw:change-view-two-weeks
-;        :m "T"   #'cfw:change-view-two-weeks)) ;; not active due to evil-snipe and evil-find-char
-;
-;(use-package! org-caldav
-;  :after calfw
-;  :init
-;  (map! :leader
-;        :prefix "n"
-;        :desc "Sync with server" :e "C-s" #'org-caldav-sync)
-;
-;  :config
-;  (setq
-;   org-caldav-url ("https://scientia-eu-v4-api-d3-02.azurewebsites.net//api/ical/b5098763-4476-40a6-8d60-5a08e9c52964/33ff0a46-42c9-fa35-e710-20a89e30a8cd/timetable.ics")
-;   org-caldav-show-sync-results nil
-;   org-caldav-save-directory (expand-file-name ".caldav/" org-directory)
-;   org-caldav-backup-file (expand-file-name "backup.org" org-caldav-save-directory)
-;   org-caldav-location-newline-replacement ","
-;   org-caldav-exclude-tags '("nocal")))
-
+        ("org-static"
+        :base-directory "~/Documents/Org/"
+        :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
+        :publishing-directory "~/public_html/"
+        :recursive t
+        :publishing-function org-publish-attachment
+        )
+        ("org" :components ("org-notes" "org-static"))      ;; ... add all the components here (see below)...
+      ))
 
 (defun calendar-helper () ;; doesn't have to be interactive
   (cfw:open-calendar-buffer
    :contents-sources
    (list
     (cfw:org-create-source "Purple")
-    (cfw:ical-create-source "Uni" "https://scientia-eu-v4-api-d3-02.azurewebsites.net//api/ical/b5098763-4476-40a6-8d60-5a08e9c52964/33ff0a46-42c9-fa35-e710-20a89e30a8cd/timetable.ics" "Grey")
+    (cfw:ical-create-source "Uni" "https://scientia-eu-v4-api-d3-02.azurewebsites.net//api/ical/b5098763-4476-40a6-8d60-5a08e9c52964/33ff0a46-42c9-fa35-e710-20a89e30a8cd/timetable.ics" "Red")
     (cfw:ical-create-source "Life" "https://calendar.proton.me/api/calendar/v1/url/1RZQ6qxSo4AGgUOR_cCVlj9d_KXgckkAdOEN0wszIXMvSXALutYgoIiNWltRW2q5_EUdfmwf4zwM2wYdDIPdCA==/calendar.ics?CacheKey=CuxtvSb__5z15LJQckBW7w%3D%3D&PassphraseKey=cHyl07vC-qgAdoCiCQZZZvcItem-zCk6fYfdCnn1_E4%3D" "Black"))))
     
 (defun calendar-init ()
@@ -221,3 +189,12 @@
     (delete-other-windows)
     (switch-to-buffer (doom-fallback-buffer))
     (calendar-init)))
+
+(setq org-agenda-files (list "~/Documents/Org"))
+
+(setq org-tag-alist (quote ((:startgroup)
+                            ("@uniLibrary". ?u)
+                            ("@home" . ?h)
+                            (:endgroup))))
+
+(setq org-default-notes-file (concat org-directory "/notes.org"))

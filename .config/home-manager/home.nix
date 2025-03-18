@@ -38,6 +38,7 @@
     htop
 
     # File Manipulation
+    ranger
     zip
     bat
     zathura
@@ -52,6 +53,9 @@
     # Term Navigation
     fd
     tree
+
+    # Music
+    cmus
 
     # Build tools
     gnumake
@@ -72,6 +76,7 @@
     ghc
     R
     lua
+    zulu17
 
     ## Servers
     lua-language-server
@@ -133,6 +138,7 @@
     podman
     distrobox
     cmake
+    strace
 
     # LLM
     inputs.nixpkgs.legacyPackages.${pkgs.system}.ollama-rocm
@@ -207,6 +213,7 @@
     epkgs.mu4e
     epkgs.doom
     epkgs.org-caldav
+    epkgs.pdf-tools
   ];
   };
 }
