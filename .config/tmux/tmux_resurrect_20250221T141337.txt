@@ -1,0 +1,56 @@
+pane	9	1	1	:*	1	nixos	:/home/kirkm	1	zsh	:
+pane	ADS	1	0	:-	1	nixos	:/home/kirkm	1	zsh	:
+pane	ADS	2	1	:*	1	nixos	:/home/kirkm/Uni/CurrSem/ADS/Labs/Code	1	zsh	:
+pane	AI	1	1	:*	1	nixos	:/home/kirkm	1	zsh	:
+pane	Cmake	1	1	:*	1	nixos	:/home/kirkm	1	zsh	:
+pane	Cmake	1	1	:*	2	nixos	:/home/kirkm	0	zsh	:
+pane	Compilers	1	1	:*	1	nixos	:/home/kirkm/UniProjects/GP	1	zsh	:
+pane	Configs	1	0	:Z	1	nixos	:/home/kirkm	0	zsh	:
+pane	Configs	1	0	:Z	2	nixos	:/home/kirkm	1	zsh	:
+pane	Configs	2	0	:	1	nixos	:/home/kirkm/Dotfiles/.config/nvim/lua/plugins	1	zsh	:
+pane	Configs	2	0	:	2	nixos	:/home/kirkm/Dotfiles/.config/nvim/lua/plugins	0	zsh	:
+pane	Configs	3	0	:-	1	nixos	:/home/kirkm/Dotfiles	1	zsh	:
+pane	Configs	3	0	:-	2	nixos	:/home/kirkm/Dotfiles	0	zsh	:
+pane	Configs	4	1	:*	1	fedora	:/home/kirkm/Dotfiles	1	zsh	:
+pane	General	1	0	:-Z	1	nixos	:/home/kirkm/Uni	1	zsh	:
+pane	General	1	0	:-Z	2	nixos	:/home/kirkm	0	zsh	:
+pane	General	2	1	:*	1	nixos	:/home/kirkm	1	zsh	:
+pane	General	2	1	:*	2	nixos	:/home/kirkm/Uni	0	zsh	:
+pane	Haskell	1	0	:-	1	nixos	:/home/kirkm/Uni/Languages/Haskell/Practice/Data	1	zsh	:
+pane	Haskell	1	0	:-	2	nixos	:/home/kirkm/Uni/Languages/Haskell/Practice/Data	0	zsh	:
+pane	Haskell	2	1	:*	1	nixos	:/home/kirkm	0	zsh	:
+pane	Haskell	2	1	:*	2	nixos	:/home/kirkm/Dotfiles/.config/tmux	1	zsh	:
+pane	Haskell	3	0	:	1	nixos	:/home/kirkm	0	zsh	:
+pane	Haskell	3	0	:	2	nixos	:/home/kirkm	1	zsh	:
+pane	Haskell	4	0	:	1	nixos	:/home/kirkm	1	zsh	:
+pane	Haskell	4	0	:	2	nixos	:/home/kirkm	0	zsh	:
+pane	Logic	1	1	:*	1	nixos	:/home/kirkm/Uni/Languages/Haskell/Practice	1	zsh	:
+pane	RISC-V	1	1	:*	1	nixos	:/home/kirkm/Dotfiles/.config	1	zsh	:
+pane	RISC-V	2	0	:-	1	fedora	:/home/kirkm	0	zsh	:
+pane	RISC-V	2	0	:-	2	fedora	:/home/kirkm	1	zsh	:
+pane	RISC-V	3	0	:	1	fedora	:/home/kirkm/Uni/Languages/RISC-V/Practice	1	zsh	:
+pane	Spawns	1	1	:*	1	/home/kirkm/Music/videoplayback.mp3	:/home/kirkm	0	zsh	:
+pane	Spawns	1	1	:*	2	nixos	:/home/kirkm	1	zsh	:
+pane	Spawns	1	1	:*	3	nixos	:/home/kirkm	0	zsh	:
+window	9	1	:zsh	1	:*	bd1e,205x44,0,0,1	:
+window	ADS	1	:pdfs	0	:-	bd1f,205x44,0,0,2	off
+window	ADS	2	:zsh	1	:*	bd20,205x44,0,0,3	:
+window	AI	1	:zsh	1	:*	bd21,205x44,0,0,4	:
+window	Cmake	1	:Step 3	1	:*	4095,205x44,0,0{102x44,0,0,5,102x44,103,0,6}	off
+window	Compilers	1	:zsh	1	:*	5ec4,205x44,0,0,34	:
+window	Configs	1	:Configs	0	:Z	4098,205x44,0,0{102x44,0,0,7,102x44,103,0,8}	off
+window	Configs	2	:Nvim	0	:	c0a1,205x44,0,0{102x44,0,0,9,102x44,103,0,10}	off
+window	Configs	3	:tmux	0	:-	c92d,205x44,0,0{102x44,0,0,11,102x44,103,0,12}	off
+window	Configs	4	:Dotfiles	1	:*	5ec2,205x44,0,0,13	off
+window	General	1	:zsh	0	:-Z	c930,205x44,0,0{102x44,0,0,14,102x44,103,0,15}	:
+window	General	2	:zsh	1	:*	c932,205x44,0,0{102x44,0,0,16,102x44,103,0,17}	:
+window	Haskell	1	:zsh	0	:-	c934,205x44,0,0{102x44,0,0,18,102x44,103,0,19}	:
+window	Haskell	2	:pdfs	1	:*	48ad,205x44,0,0{102x44,0,0,20,102x44,103,0,21}	off
+window	Haskell	3	:Work	0	:	492f,205x44,0,0{102x44,0,0,22,102x44,103,0,23}	off
+window	Haskell	4	:tests	0	:	4931,205x44,0,0{102x44,0,0,24,102x44,103,0,25}	off
+window	Logic	1	:slides	1	:*	dec5,205x44,0,0,26	off
+window	RISC-V	1	:zsh	1	:*	dec6,205x44,0,0,27	:
+window	RISC-V	2	:zsh	0	:-	4935,205x44,0,0{102x44,0,0,28,102x44,103,0,29}	:
+window	RISC-V	3	:zsh	0	:	5ec0,205x44,0,0,30	:
+window	Spawns	1	:zsh	1	:*	91e8,205x44,0,0{102x44,0,0,31,102x44,103,0[102x21,103,0,32,102x22,103,22,33]}	:
+state	Compilers	Haskell
