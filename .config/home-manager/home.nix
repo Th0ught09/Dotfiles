@@ -92,6 +92,7 @@
     python312Packages.bpython
 
     # Apps
+    freetube
     whatsapp-for-linux
     libreoffice-qt
     oh-my-git
@@ -117,11 +118,11 @@
     inputs.nixpkgs.legacyPackages.${pkgs.system}.fzf
     
     # Editor
-    jetbrains.pycharm-professional
-    jetbrains.phpstorm
-    jetbrains.datagrip
-    jetbrains.idea-ultimate
-    jetbrains-toolbox
+    # jetbrains.pycharm-professional
+    # jetbrains.phpstorm
+    # jetbrains.datagrip
+    # jetbrains.idea-ultimate
+    # jetbrains-toolbox
     vim
     neovim
     jupyter-all
