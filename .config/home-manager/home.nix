@@ -63,6 +63,8 @@
     maven
 
     # OS essentials
+		speedtest-cli
+		wget
     pinentry-all # For pass
     pass
 
@@ -131,6 +133,7 @@
     tmux
 
     # Dev Tools
+		conda
     git
     ctags
     docker

@@ -30,7 +30,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # export PATH="$PATH:/home/kirkm/.local/share/JetBrains/Toolbox/scripts:/home/kirkm/.dotnet/tools:/home/kirkm/.local/bin"
 PATH=$PATH:/home/kirkm/.config/emacs/bin
 export DOOMDIR=~/.doom.d
-export LD_LIBRARY_PATH=/home/kirkm/.local/share/nvim/mason/bin:/home/kirkm/Programs:/home/kirkm/miniconda3/bin:/home/kirkm/.config/emacs/bin:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/home/kirkm/.local/share/nvim/mason/bin:/home/kirkm/Programs:/home/kirkm/miniconda3/bin:/home/kirkm/.config/emacs/bin:/home/kirkm/Programs:/home/kirkm/miniconda3:$LD_LIBRARY_PATH
 
 # SOURCING
 
@@ -39,6 +39,7 @@ source <(fzf --zsh)
 
 # ALIASES
 
+alias push="git add .; git commit -m 'push for $(date -u +%Y-%m-%dT%H:%M:%S)'; git push"
 alias nv="vi ~/.config/home-manager/home.nix"
 alias zt="zathura"
 alias ta="tmux attach -d -t"
