@@ -63,9 +63,9 @@ alias emacs="emacsclient -c -a 'emacs'"
 # FUNCTIONS
 
 # Force use z
-cd(){
-    echo "Time to use z/fzf"
-  }
+# cd(){
+#     echo "Time to use z/fzf"
+#   }
 
 # Don't install python packages outside of a conda env
 function pip(){

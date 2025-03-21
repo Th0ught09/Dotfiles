@@ -1,0 +1,36 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	Development	//
+) awful.client.swap.byidx	bindings/binds.lua	/^  awful.key({ modkey, "Shift" }, "j", function() awful.client.swap.byidx(1) end,$/;"	f
+) awful.client.swap.byidx	bindings/binds.lua	/^  awful.key({ modkey, "Shift" }, "k", function() awful.client.swap.byidx(-1) end,$/;"	f
+) awful.layout.inc	bindings/binds.lua	/^  awful.key({ modkey, "Shift" }, ";", function() awful.layout.inc(-1) end,$/;"	f
+) awful.layout.inc	bindings/binds.lua	/^  awful.key({ modkey, }, ";", function() awful.layout.inc(1) end,$/;"	f
+) awful.screen.focus_relative	bindings/binds.lua	/^  awful.key({ modkey, }, "i", function() awful.screen.focus_relative(1) end,$/;"	f
+) awful.screen.focused	bindings/binds.lua	/^  awful.key({ modkey }, "r", function() awful.screen.focused().mypromptbox:run() end,$/;"	f
+) awful.spawn	bindings/binds.lua	/^  awful.key({ modkey }, "p", function() awful.spawn("systemctl suspend") end,$/;"	f
+) awful.spawn	bindings/binds.lua	/^  awful.key({ modkey, "Shift" }, "o", function() awful.spawn("xscreensaver-command -lock") end,$/;"	f
+) awful.spawn	bindings/binds.lua	/^  awful.key({ modkey, }, "Delete", function() awful.spawn(terminal) end,$/;"	f
+) awful.spawn	bindings/binds.lua	/^  awful.key({ modkey, }, "d", function() awful.spawn("rofi -show drun -display-drun") end,$/;"	f
+) awful.tag.incmwfact	bindings/binds.lua	/^  awful.key({ modkey, }, "j", function() awful.tag.incmwfact(-0.05) end,$/;"	f
+) awful.tag.incmwfact	bindings/binds.lua	/^  awful.key({ modkey, }, "k", function() awful.tag.incmwfact(0.05) end,$/;"	f
+) awful.tag.incnmaster	bindings/binds.lua	/^  awful.key({ modkey, "Shift" }, "h", function() awful.tag.incnmaster(1, nil, true) end,$/;"	f
+) awful.tag.incnmaster	bindings/binds.lua	/^  awful.key({ modkey, "Shift" }, "l", function() awful.tag.incnmaster(-1, nil, true) end,$/;"	f
+awful.key({ modkey, }, "t", function(c) c.ontop 	bindings/binds.lua	/^  awful.key({ modkey, }, "t", function(c) c.ontop = not c.ontop end,$/;"	f
+c) c:kill	bindings/binds.lua	/^  awful.key({ modkey }, "q", function(c) c:kill() end,$/;"	f
+c) c:move_to_screen	bindings/binds.lua	/^  awful.key({ modkey, }, "o", function(c) c:move_to_screen() end,$/;"	f
+c) c:swap	bindings/binds.lua	/^  awful.key({ modkey, "Control" }, "Return", function(c) c:swap(awful.client.getmaster()) end,$/;"	f
+choose_contrast_color	themes/gtk/theme.lua	/^local function choose_contrast_color(reference, candidate1, candidate2)  -- luacheck: no unused$/;"	f
+create_callback 	themes/gtk/theme.lua	/^    create_callback = function(self, c)$/;"	f
+darker	themes/gtk/theme.lua	/^local function darker(color_value, darker_n)$/;"	f
+darker	themes/xresources/theme.lua	/^local function darker(color_value, darker_n)$/;"	f
+is_dark	themes/gtk/theme.lua	/^local function is_dark(color_value)$/;"	f
+local rounded_rect_shape 	themes/gtk/theme.lua	/^local rounded_rect_shape = function(cr,w,h)$/;"	f
+mix	themes/gtk/theme.lua	/^local function mix(color1, color2, ratio)$/;"	f
+reduce_contrast	themes/gtk/theme.lua	/^local function reduce_contrast(color, ratio)$/;"	f
+set_wallpaper	rc.lua	/^local function set_wallpaper(s)$/;"	f
+theme.wallpaper 	themes/gtk/theme.lua	/^theme.wallpaper = function(s)$/;"	f
+theme.wallpaper 	themes/xresources/theme.lua	/^theme.wallpaper = function(s)$/;"	f
+update_widget	ui/bar/widgets/battery.lua	/^local function update_widget(stdout)$/;"	f

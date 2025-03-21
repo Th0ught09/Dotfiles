@@ -5,7 +5,7 @@ local modkey = "Mod4"
 local terminal = "alacritty"
 
 local globalkeys = gears.table.join(
-  awful.key({ modkey, }, "s", hotkeys_popup.show_help,
+  awful.key({ modkey, "Shift" }, "s", hotkeys_popup.show_help,
     { description = "show help", group = "awesome" }),
   awful.key({ modkey, }, "Left", awful.tag.viewprev,
     { description = "view previous", group = "tag" }),

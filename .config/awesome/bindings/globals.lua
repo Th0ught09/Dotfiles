@@ -3,14 +3,12 @@ local awful = require("awful")
 local modkey = "Mod4"
 local terminal = "alacritty"
 local mymainmenu = require("widgets.mainmenu")
+local hotkeys_popup = require("awful.hotkeys_popup.keys")
 
 local globals = gears.table.join(
-	-- awful.key({ modkey, }, "s", hotkeys_popup.show_help,
-	--   { description = "show help", group = "awesome" }),
-	awful.key({ modkey }, "Left", awful.tag.viewprev, { description = "view previous", group = "tag" }),
-	awful.key({ modkey }, "Right", awful.tag.viewnext, { description = "view next", group = "tag" }),
-	awful.key({ modkey }, "Escape", awful.tag.history.restore, { description = "go back", group = "tag" }),
 
+	-- Switch Client
+	awful.key({ modkey }, "Escape", awful.tag.history.restore, { description = "go back", group = "tag" }),
 	awful.key({ modkey }, "h", function()
 		awful.client.focus.byidx(1)
 	end, { description = "focus next by index", group = "client" }),
@@ -31,10 +29,6 @@ local globals = gears.table.join(
 	awful.key({ modkey }, "i", function()
 		awful.screen.focus_relative(1)
 	end, { description = "focus the next screen", group = "screen" }),
-	-- awful.key({ modkey, "Control" }, "l", function() awful.screen.focus_relative(1) end,
-	--   { description = "focus the next screen", group = "screen" }),
-	-- awful.key({ modkey, "Control" }, "h", function() awful.screen.focus_relative(-1) end,
-	--   { description = "focus the previous screen", group = "screen" }),
 	awful.key({ modkey }, "u", awful.client.urgent.jumpto, { description = "jump to urgent client", group = "client" }),
 	awful.key({ modkey }, "Tab", function()
 		awful.client.focus.history.previous()
@@ -44,6 +38,7 @@ local globals = gears.table.join(
 	end, { description = "go back", group = "client" }),
 
 	-- Standard program
+	awful.key({ modkey, "Shift" }, "s", hotkeys_popup.show_help, { description = "show help", group = "awesome" }),
 	awful.key({ modkey }, "Delete", function()
 		awful.spawn(terminal)
 	end, { description = "open a terminal", group = "launcher" }),
@@ -52,6 +47,8 @@ local globals = gears.table.join(
 	end, { description = "spawn rofi", group = "launcher" }),
 	awful.key({ modkey, "Shift" }, "c", awesome.restart, { description = "reload awesome", group = "awesome" }),
 	awful.key({ modkey, "Shift" }, "e", awesome.quit, { description = "quit awesome", group = "awesome" }),
+
+	-- Client manipulation
 	awful.key({ modkey }, "k", function()
 		awful.tag.incmwfact(0.05)
 	end, { description = "increase master width factor", group = "layout" }),
@@ -60,14 +57,18 @@ local globals = gears.table.join(
 	end, { description = "decrease master width factor", group = "layout" }),
 	awful.key({ modkey, "Shift" }, "h", function()
 		awful.tag.incnmaster(1, nil, true)
+
+		-- Layout manipulation
 	end, { description = "increase the number of master clients", group = "layout" }),
 	awful.key({ modkey, "Shift" }, "l", function()
 		awful.tag.incnmaster(-1, nil, true)
 	end, { description = "decrease the number of master clients", group = "layout" }),
-	-- awful.key({ modkey, "Control" }, "h", function() awful.tag.incncol(1, nil, true) end,
-	--   { description = "increase the number of columns", group = "layout" }),
-	-- awful.key({ modkey, "Control" }, "l", function() awful.tag.incncol(-1, nil, true) end,
-	--   { description = "decrease the number of columns", group = "layout" }),
+	awful.key({ modkey, "Control" }, "Left", function()
+		awful.tag.incncol(1, nil, true)
+	end, { description = "increase the number of columns", group = "layout" }),
+	awful.key({ modkey, "Control" }, "Right", function()
+		awful.tag.incncol(-1, nil, true)
+	end, { description = "decrease the number of columns", group = "layout" }),
 	awful.key({ modkey }, ";", function()
 		awful.layout.inc(1)
 	end, { description = "select next", group = "layout" }),
@@ -115,9 +116,10 @@ local globals = gears.table.join(
 	--   { description = "show the menubar", group = "launcher" })
 	awful.key({ modkey, "Shift" }, "f", function()
 		awful.spawn("alacritty -e ranger")
-	end)
+	end, { description = "File Manager", group = "system" })
 )
 
+-- Switch to client by index
 for i = 1, 9 do
 	globals = gears.table.join(
 		globals,
@@ -157,5 +159,23 @@ for i = 1, 9 do
 		end, { description = "toggle focused client on tag #" .. i, group = "tag" })
 	)
 end
+
+globals = gears.table.join(
+	globals,
+	awful.key({ modkey }, "a", function()
+		local tag = awful.tag.find_by_name(nil, "Scratch")
+		local screen = awful.screen.getbycoord(0, 0)
+		if tag then
+			tag:view_only(tag)
+			awful.screen.focus(screen)
+		end
+	end),
+	awful.key({ modkey, "Shift" }, "a", function()
+		local tag = awful.tag.find_by_name(nil, "Scratch")
+		if tag then
+			client.focus:move_to_tag(tag)
+		end
+	end)
+)
 
 return globals

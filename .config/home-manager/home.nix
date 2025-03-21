@@ -78,6 +78,7 @@
     ghc
     R
     lua
+    luaformatter
     zulu17
 
     ## Servers
@@ -89,11 +90,14 @@
     haskellPackages.hoogle
 
     ## Python
+		tk
     python312Packages.pip
     python312Packages.gitpython
     python312Packages.bpython
+		python312Packages.tkinter
 
     # Apps
+    freetube
     whatsapp-for-linux
     libreoffice-qt
     oh-my-git
@@ -217,6 +221,6 @@
     epkgs.doom
     epkgs.org-caldav
     epkgs.pdf-tools
-  ];
+    ];
   };
 }

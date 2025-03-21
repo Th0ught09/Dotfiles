@@ -11,3 +11,10 @@ vim.o.expandtab = true
 vim.o.foldmethod = "manual"
 vim.o.background = "light"
 vim.g.snacks_animate = false
+
+-- vim.api.nvim_create_autocmd("BufWritePre", {
+--   pattern = "*",
+--   callback = function(args)
+--     require("conform").format({ bufnr = args.buf })
+--   end,
+-- })

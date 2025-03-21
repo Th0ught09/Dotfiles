@@ -1,0 +1,16 @@
+-- awful.spawn(terminal, {
+-- 	tag = "3",
+-- 	screen = 1,
+-- })
+-- awful.spawn(terminal, {
+-- 	tag = "3",
+-- 	screen = 2,
+-- })
+-- awful.spawn("Obsidian", {
+-- 	tag = "2",
+-- 	screen = "HDMI-A-3",
+-- })
+-- awful.spawn("firefox", {
+-- 	tag = "1",
+-- 	screen = "HDMI-A-3",
+-- })
