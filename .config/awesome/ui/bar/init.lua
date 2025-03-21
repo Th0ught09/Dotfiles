@@ -1,1 +1,1 @@
-require 'ui.bar.widgets.battery'
+require 'ui.bar.widgets'
