@@ -66,12 +66,12 @@ awful.screen.connect_for_each_screen(function(s)
 		position = "bottom",
 		screen = s,
 		opacity = 0.8,
-		ontop = true,
+		ontop = false,
 		visible = true,
 		shape = function(cr, w, h)
 			gears.shape.rounded_rect(cr, w, h, 5)
 		end,
-		width = s.geometry.width * 0.95,
+		width = s.geometry.width * 0.8,
 	})
 	-- s.mywibox.x = s.geometry.width
 	s.mywibox.y = s.geometry.height - dpi(25)
