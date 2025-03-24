@@ -119,7 +119,7 @@
       mu4e-update-interval (* 10 60) ; check mail 10 minutes
       mu4e-compose-format-flowed t ; re-flow mail so it's not hard wrapped
       mu4e-get-mail-command "mbsync -a"
-      mu4e-maildir "~/mail/ProtonMail")
+      mu4e-maildir "~/Mail/ProtonMail")
 
   (setq mu4e-drafts-folder "/ProtonMail/Drafts"
       mu4e-sent-folder   "/ProtonMail/Sent"
@@ -138,6 +138,7 @@
       smtpmail-smtp-server "127.0.0.1"
       smtpmail-smtp-service 1025
       smtpmail-stream-type  'plain))
+
 (require 'ox-publish)
 (setq org-publish-project-alist
       '(

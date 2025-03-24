@@ -1,15 +1,12 @@
-Create Both
 Expunge Both
-SyncState *
 
 IMAPAccount ProtonMail
 Host 127.0.0.1
 Port 1143
 User kirkmatt@proton.me
 #Pass "Hufspv_tVyhcPhlk1MbMrg"
-PassCmd "pass Email/ProtonBridgeNew"
+PassCmd "pass Email/ProtonBridge"
 TLSType None
-SSLType None
 CertificateFile /etc/ssl/certs/ca-certificates.crt
 
 IMAPStore ProtonMail-remote
@@ -23,7 +20,7 @@ Inbox ~/Mail/ProtonMail/INBOX/
 Channel ProtonMail-default
 Far :ProtonMail-remote:
 Near :ProtonMail-local:
-Patterns * ![Protonmail]*
+#Patterns * ![ProtonMail]*
 Create Both
 SyncState *
 Sync All
