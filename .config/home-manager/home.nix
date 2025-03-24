@@ -21,6 +21,7 @@
   home.packages = with pkgs; [
     
     # Term QOL
+		rustlings
 		starship
     pinentry
     mu

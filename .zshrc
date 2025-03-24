@@ -58,7 +58,7 @@ alias install="sudo dnf install"
 alias zra="zrc +43"
 alias netsp="speedtest-cli --simple"
 alias gdb="gdb -q"
-alias emacs="emacsclient -c -a 'emacs'"
+# alias emacs="emacsclient -c -a 'emacs'"
 
 # FUNCTIONS
 
