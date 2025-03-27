@@ -5,8 +5,11 @@
  ;; If there is more than one, they won't work right.
  '(org-agenda-files
 <<<<<<< HEAD
+<<<<<<< HEAD
    '("~/Documents/Org")))
 =======
+=======
+>>>>>>> d644fdf (ususal push)
    '("~/Documents/Org/ads.org" "/home/kirkm/Documents/Org/ds.org"
      "/home/kirkm/Documents/Org/plp.org" "/home/kirkm/Documents/Org/rules.org"
      "/home/kirkm/Documents/Org/jv_time.org" "/home/kirkm/Documents/Org/sa.org"
