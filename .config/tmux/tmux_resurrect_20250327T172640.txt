@@ -1,0 +1,3 @@
+pane	ADS	1	0	:	1	nixos	:/home/kirkm	1	zsh	:
+pane	ADS	2	0	:	1	nixos	:/home/kirkm/Projects/ADS/lab5/c	0	zsh	:
+pane	ADS	2	0	:	2	nixos	:/home/kirkm/Projects/ADS/lab5/c	1	zsh	:
