@@ -93,7 +93,7 @@ set -o emacs
 
 # COMMANDS
 
-xrandr --output HDMI-A-0 --primary --output DisplayPort-2 --right-of HDMI-A-0
+xrandr --output HDMI-A-0 --primary --output DisplayPort-1 --right-of HDMI-A-0
 tput cup $LINES
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
