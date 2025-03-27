@@ -42,10 +42,16 @@
   "nvim-treesitter-textobjects": { "branch": "master", "commit": "ad8f0a472148c3e0ae9851e26a722ee4e29b1595" },
   "nvim-ts-autotag": { "branch": "main", "commit": "4c00b86bd1246ba9c4cd50a823d8296cd2eb9663" },
   "obsidian.nvim": { "branch": "main", "commit": "ae1f76a75c7ce36866e1d9342a8f6f5b9c2caf9b" },
+  "orgmode": { "branch": "master", "commit": "0ebe2e3c8a24137a86ac20b9f35c2a574a71035d" },
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
   "persistence.nvim": { "branch": "main", "commit": "f6aad7dde7fcf54148ccfc5f622c6d5badd0cc3d" },
 =======
-  "orgmode": { "branch": "master", "commit": "0ebe2e3c8a24137a86ac20b9f35c2a574a71035d" },
+=======
+>>>>>>> d644fdf (ususal push)
+=======
+>>>>>>> d644fdf (ususal push)
   "persistence.nvim": { "branch": "main", "commit": "166a79a55bfa7a4db3e26fc031b4d92af71d0b51" },
 >>>>>>> d644fdf (ususal push)
   "plenary.nvim": { "branch": "master", "commit": "857c5ac632080dba10aae49dba902ce3abf91b35" },
