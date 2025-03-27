@@ -24,7 +24,7 @@ zstyle ':omz:plugins:alias-finder' cheaper yes # disabled by default
 # export XDG_CURRENT_DESKTOP=Sway
 # export WAYLAND_DISPLAY=wayland-0
 export CALIBRE_USE_DARK_PALETTE=0
-export EDITOR=vim
+export EDITOR=nvim
 export FZF_DEFAULT_OPTS="--tmux center"
 export ZSH="$HOME/.oh-my-zsh"
 # export PATH="$PATH:/home/kirkm/.local/share/JetBrains/Toolbox/scripts:/home/kirkm/.dotnet/tools:/home/kirkm/.local/bin"
@@ -93,7 +93,7 @@ set -o emacs
 
 # COMMANDS
 
-xrandr --output HDMI-A-0 --primary --output DisplayPort-1 --right-of HDMI-A-0
+xrandr --output HDMI-A-0 --primary --output DisplayPort-2 --right-of HDMI-A-0
 tput cup $LINES
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"

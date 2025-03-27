@@ -98,7 +98,6 @@
 		python312Packages.tkinter
 
     # Apps
-    freetube
     whatsapp-for-linux
     libreoffice-qt
     oh-my-git

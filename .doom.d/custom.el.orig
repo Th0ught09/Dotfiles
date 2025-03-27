@@ -5,21 +5,90 @@
  ;; If there is more than one, they won't work right.
  '(org-agenda-files
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
    '("~/Documents/Org")))
-=======
-=======
 >>>>>>> d644fdf (ususal push)
 =======
->>>>>>> d644fdf (ususal push)
-   '("~/Documents/Org/ads.org" "/home/kirkm/Documents/Org/ds.org"
-     "/home/kirkm/Documents/Org/plp.org" "/home/kirkm/Documents/Org/rules.org"
-     "/home/kirkm/Documents/Org/jv_time.org" "/home/kirkm/Documents/Org/sa.org"
+   '("~/Documents/Org/testing.org" "/home/kirkm/Documents/Org/Misc.org"
+     "/home/kirkm/Documents/Org/ads.org"
+     "/home/kirkm/Documents/Org/awesome_config.org"
+     "/home/kirkm/Documents/Org/awm_rc.org"
+     "/home/kirkm/Documents/Org/awn_testing.org"
+     "/home/kirkm/Documents/Org/books.org"
+     "/home/kirkm/Documents/Org/c_compiler.org"
+     "/home/kirkm/Documents/Org/c_control_flow.org"
+     "/home/kirkm/Documents/Org/c_functions.org"
+     "/home/kirkm/Documents/Org/c_math.org"
+     "/home/kirkm/Documents/Org/c_memory.org"
+     "/home/kirkm/Documents/Org/c_selection.org"
+     "/home/kirkm/Documents/Org/c_strings.org"
+     "/home/kirkm/Documents/Org/c_time.org"
+     "/home/kirkm/Documents/Org/c_types.org"
+     "/home/kirkm/Documents/Org/c_variables.org"
+     "/home/kirkm/Documents/Org/cpp_algorithms.org"
+     "/home/kirkm/Documents/Org/cpp_arithmetic.org"
+     "/home/kirkm/Documents/Org/cpp_best_practices.org"
+     "/home/kirkm/Documents/Org/cpp_classes.org"
+     "/home/kirkm/Documents/Org/cpp_containers.org"
+     "/home/kirkm/Documents/Org/cpp_errors.org"
+     "/home/kirkm/Documents/Org/cpp_functional.org"
+     "/home/kirkm/Documents/Org/cpp_functions.org"
+     "/home/kirkm/Documents/Org/cpp_generic_programming.org"
+     "/home/kirkm/Documents/Org/cpp_init_assign.org"
+     "/home/kirkm/Documents/Org/cpp_iterators.org"
+     "/home/kirkm/Documents/Org/cpp_lists.org"
+     "/home/kirkm/Documents/Org/cpp_move_semantics.org"
+     "/home/kirkm/Documents/Org/cpp_range_view.org"
+     "/home/kirkm/Documents/Org/cpp_references.org"
+     "/home/kirkm/Documents/Org/cpp_standard-library.org"
+     "/home/kirkm/Documents/Org/cpp_std_array.org"
+     "/home/kirkm/Documents/Org/cpp_std_barrier.org"
+     "/home/kirkm/Documents/Org/cpp_std_cout.org"
+     "/home/kirkm/Documents/Org/cpp_std_function.org"
+     "/home/kirkm/Documents/Org/cpp_std_map.org"
+     "/home/kirkm/Documents/Org/cpp_std_pair.org"
+     "/home/kirkm/Documents/Org/cpp_std_stream.org"
+     "/home/kirkm/Documents/Org/cpp_std_string.org"
+     "/home/kirkm/Documents/Org/cpp_std_vectors.org"
+     "/home/kirkm/Documents/Org/cpp_templates.org"
+     "/home/kirkm/Documents/Org/cpp_types.org"
+     "/home/kirkm/Documents/Org/cpp_utilities.org"
+     "/home/kirkm/Documents/Org/cpp_variables.org"
+     "/home/kirkm/Documents/Org/cpp_virtual functions.org"
+     "/home/kirkm/Documents/Org/daily.org"
      "/home/kirkm/Documents/Org/data_dependecies.org"
+     "/home/kirkm/Documents/Org/definitions.org"
+     "/home/kirkm/Documents/Org/definitions2.org"
+     "/home/kirkm/Documents/Org/ds.org" "/home/kirkm/Documents/Org/ds_lab.org"
+     "/home/kirkm/Documents/Org/eventlite.org"
+     "/home/kirkm/Documents/Org/git_submodules.org"
+     "/home/kirkm/Documents/Org/gp_animations.org"
      "/home/kirkm/Documents/Org/gp_cli.org"
-     "/home/kirkm/Documents/Org/tasks.org")))
->>>>>>> d644fdf (ususal push)
+     "/home/kirkm/Documents/Org/gp_constants.org"
+     "/home/kirkm/Documents/Org/gp_files.org"
+     "/home/kirkm/Documents/Org/gp_output.org"
+     "/home/kirkm/Documents/Org/gp_plotting.org"
+     "/home/kirkm/Documents/Org/index.org"
+     "/home/kirkm/Documents/Org/investments.org"
+     "/home/kirkm/Documents/Org/journal.org"
+     "/home/kirkm/Documents/Org/jv_time.org" "/home/kirkm/Documents/Org/mc.org"
+     "/home/kirkm/Documents/Org/plp.org"
+     "/home/kirkm/Documents/Org/python_debugging.org"
+     "/home/kirkm/Documents/Org/rules.org" "/home/kirkm/Documents/Org/sa.org"
+     "/home/kirkm/Documents/Org/sh_arithmetic.org"
+     "/home/kirkm/Documents/Org/sh_bash.org"
+     "/home/kirkm/Documents/Org/sh_constants.org"
+     "/home/kirkm/Documents/Org/sh_control_structures.org"
+     "/home/kirkm/Documents/Org/sh_error.org"
+     "/home/kirkm/Documents/Org/sh_io.org"
+     "/home/kirkm/Documents/Org/sh_selection.org"
+     "/home/kirkm/Documents/Org/sh_variables.org"
+     "/home/kirkm/Documents/Org/soft_arch.org"
+     "/home/kirkm/Documents/Org/swe.org" "/home/kirkm/Documents/Org/sysa1.org"
+     "/home/kirkm/Documents/Org/sysa_cw2.org"
+     "/home/kirkm/Documents/Org/tasks.org" "/home/kirkm/Documents/Org/tips.org"
+     "/home/kirkm/Documents/Org/tmux_config.org"))
+ '(org-directory "~/Documents/Org"))
+>>>>>>> 5661346 (ususal push)
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

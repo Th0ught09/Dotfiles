@@ -191,7 +191,12 @@
     (switch-to-buffer (doom-fallback-buffer))
     (calendar-init)))
 
-(setq org-agenda-files (list "~/Documents/Org"))
+;(setq org-agenda-files (list "~/Documents/Org"))
+
+(custom-set-variables
+ '(org-directory "~/Documents/Org")
+ '(org-agenda-files (list org-directory)))
+
 
 (setq org-tag-alist (quote ((:startgroup)
                             ("@uniLibrary". ?u)
@@ -199,3 +204,9 @@
                             (:endgroup))))
 
 (setq org-default-notes-file (concat org-directory "/notes.org"))
+
+;=================================================================
+; VIM BINDINGS
+;=================================================================
+
+(setq-default tab-width 4)
