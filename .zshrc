@@ -58,6 +58,7 @@ alias install="sudo dnf install"
 alias zra="zrc +43"
 alias netsp="speedtest-cli --simple"
 alias gdb="gdb -q"
+alias sp="sudo systemctl suspend"
 # alias emacs="emacsclient -c -a 'emacs'"
 
 # FUNCTIONS
@@ -93,7 +94,7 @@ set -o emacs
 
 # COMMANDS
 
-xrandr --output HDMI-A-0 --primary --output DisplayPort-1 --right-of HDMI-A-0
+# xrandr --output HDMI-A-0 --primary --output DisplayPort-1 --right-of HDMI-A-0
 tput cup $LINES
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"

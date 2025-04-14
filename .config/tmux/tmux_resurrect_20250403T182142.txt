@@ -1,0 +1,1 @@
+pane	2	1	1	:*	1	nixos	:/home/kirkm	1	zsh	:

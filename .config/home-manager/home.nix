@@ -21,6 +21,8 @@
   home.packages = with pkgs; [
     
     # Term QOL
+    hexyl
+    yank
 		rustlings
 		starship
     pinentry
@@ -30,7 +32,9 @@
     pavucontrol
     ncspot
     tldr
-    fastfetch
+    unzip
+    cheat
+    onefetch
     
     # Hardware
     pciutils
@@ -51,6 +55,9 @@
     bc
     gawk
 
+    # Tracking
+    hyperfine
+
     # Term Navigation
     fd
     tree
@@ -64,6 +71,7 @@
     maven
 
     # OS essentials
+    ps_mem
 		speedtest-cli
 		wget
     pinentry-all # For pass
@@ -80,7 +88,9 @@
     R
     lua
     luaformatter
+    luaPackages.ldoc
     zulu17
+    go
 
     ## Servers
     lua-language-server
@@ -91,13 +101,15 @@
     haskellPackages.hoogle
 
     ## Python
-		tk
     python312Packages.pip
     python312Packages.gitpython
     python312Packages.bpython
-		python312Packages.tkinter
+    python312Packages.pyflakes
+    isort
 
     # Apps
+    anki
+    godot_4
     whatsapp-for-linux
     libreoffice-qt
     oh-my-git
@@ -106,7 +118,6 @@
     discord
     protonmail-desktop
     _1password-gui
-    steam
     obsidian
     flameshot
 
@@ -131,6 +142,7 @@
     vim
     neovim
     jupyter-all
+    gdb
 
     # Term
     alacritty
@@ -164,14 +176,26 @@
     mtpfs
 
     # OS
+    dust
+    dict
+    ispell
+    libtool
     time
-    xclip
     xsel
     mesa-demos
     mesa
     pkg-config
     nix-ld
     awesome
+
+    # Misc
+    screenkey
+    xorg.xev
+    xorg.xmodmap
+    kanata
+    steam-tui
+    vimgolf
+    steamcmd
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

@@ -37,7 +37,7 @@ awful.layout.layouts = {
 
 menubar.utils.terminal = terminal -- Set the terminal for applications that require it
 
-require("ui.bar.taskbar") -- Taskbar
+require("ui.bar") -- Taskbar
 
 -- {{{ Mouse bindings
 local mouse_buttons = require("bindings.mouse") -- Mouse bindings

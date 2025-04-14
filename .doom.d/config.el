@@ -95,7 +95,7 @@
 ;(setq smtpmail-smtp-service 1025)
 ;(setq user-full-name "Kirk Matt")
 ;(setq mail-user-agent 'message-user-agent)
-;(setq user-mail-address "kirkmatt@proton.me")
+(setq user-mail-address "kirkmatt@proton.me")
 ;(setq sendmail-program "/home/kirkm/.nix-profile/bin/msmtp"
 ;      send-mail-function 'message-send-mail-with-sendmail)
 ;(setq smtpmail-smtp-user "kirkmatt@proton.me")
@@ -119,7 +119,8 @@
       mu4e-update-interval (* 10 60) ; check mail 10 minutes
       mu4e-compose-format-flowed t ; re-flow mail so it's not hard wrapped
       mu4e-get-mail-command "mbsync -a"
-      mu4e-maildir "~/Mail/ProtonMail")
+      mu4e-maildir "~/Mail/ProtonMail"
+      user-mail-address "kirkmatt@proton.me")
 
   (setq mu4e-drafts-folder "/ProtonMail/Drafts"
       mu4e-sent-folder   "/ProtonMail/Sent"
@@ -209,4 +210,26 @@
 ; VIM BINDINGS
 ;=================================================================
 
-(setq-default tab-width 4)
+(setq tab-width 4)
+;; (setq display-line-numbers
+;; 'relative)
+(setq linum-relative-current-symbol "")
+
+
+;=================================================================
+; Packages
+;=================================================================
+
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+;;; Comment/uncomment this line to enable MELPA Stable if desired.  See `package-archive-priorities`
+;;; and `package-pinned-packages`. Most users will not need or want to do this.
+;;(add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+(package-initialize)
+
+
+;=================================================================
+; Variables
+;=================================================================
+
+(setq yas-snippet-dirs '("~/.config/emacs/snippets"))

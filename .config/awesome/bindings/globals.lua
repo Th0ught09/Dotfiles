@@ -170,6 +170,12 @@ globals = gears.table.join(
 			awful.screen.focus(screen)
 		end
 	end),
+	awful.key({ modkey, "Control" }, "a", function()
+		local tag = awful.tag.find_by_name(nil, "Scratch")
+		if tag then
+			awful.tag.viewtoggle(tag)
+		end
+	end, { description = "toggle Scratch", group = "tag" }),
 	awful.key({ modkey, "Shift" }, "a", function()
 		local tag = awful.tag.find_by_name(nil, "Scratch")
 		if tag then

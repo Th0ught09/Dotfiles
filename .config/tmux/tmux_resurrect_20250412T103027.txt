@@ -1,0 +1,129 @@
+pane	1	1	1	:*	1	nixos	:/home/kirkm/.config/nvim	1	zsh	:
+pane	2	1	1	:*	1	nixos	:/home/kirkm	1	zsh	:
+pane	ADS	1	0	:	1	nixos	:/home/kirkm	1	zsh	:
+pane	ADS	2	0	:	1	nixos	:/home/kirkm/Projects/ADS/lab5/c	0	zsh	:
+pane	ADS	2	0	:	2	nixos	:/home/kirkm/Projects/ADS/lab5/c	1	zsh	:
+pane	ADS	3	0	:	1	nixos	:/home/kirkm/Projects/ADS/lab5/c	1	zsh	:
+pane	ADS	4	1	:*	1	nixos	:/home/kirkm/Projects/ADS/lab5/Report/new_data	1	zsh	:
+pane	ADS	4	1	:*	2	nixos	:/home/kirkm/Projects/ADS/lab5/Report/new_data	0	zsh	:
+pane	ADS	5	0	:-	1	kirkm@nixos: ~/UniProjects/ADS/lab5/Report	:/home/kirkm/Projects/ADS/lab5	0	zsh	:
+pane	ADS	5	0	:-	2	nixos	:/home/kirkm/Projects/ADS/lab5/c	1	zsh	:
+pane	ADS2	1	0	:	1	nixos	:/home/kirkm/Projects/ADS/lab5/data	1	zsh	:
+pane	ADS2	1	0	:	2	nixos	:/home/kirkm/.local/share/nvim/mason/bin	0	zsh	:
+pane	ADS2	1	0	:	3	nixos	:/home/kirkm/Projects/ADS/lab5/c	0	zsh	:
+pane	ADS2	2	1	:*	1	nixos	:/home/kirkm/Projects/ADS/lab5/c	1	zsh	:
+pane	ADS2	3	0	:-	1	nixos	:/home/kirkm/Projects/ADS/lab5/Report	1	zsh	:
+pane	AWM	1	1	:*Z	1	nixos	:/home/kirkm/Projects/Awesome/awesome	0	nvim	:/nix/store/jg3ia0rsj2jd9vyhdx4m7kz4xi7n7wl1-neovim-unwrapped-0.10.4/bin/nvim --cmd lua vim.g.loaded_node_provider=0;vim.g.loaded_perl_provider=0;vim.g.loaded_python_provider=0;vim.g.python3_host_prog='/nix/store/wicp1bzkif3bdpx5j5265nnwmxphid6z-neovim-0.10.4/bin/nvim-python3';vim.g.loaded_ruby_provider=0 awesomerc.lua
+pane	AWM	1	1	:*Z	2	nixos	:/home/kirkm/Projects/Awesome/awesome	1	zsh	:
+pane	AWM2	1	1	:*	1	kirkm@nixos: ~/Projects/Awesome/awesome/build	:/home/kirkm/Projects/Awesome/awesome/build	1	bash	:bash --rcfile /tmp/nix-shell.99EK2C
+pane	Cmake	1	1	:*	1	nixos	:/home/kirkm/Coding/CMake/Step3	1	zsh	:
+pane	Cmake	1	1	:*	2	nixos	:/home/kirkm/Coding/CMake/Step3_build	0	zsh	:
+pane	Config	1	0	:Z	1	nixos	:/home/kirkm	0	zsh	:
+pane	Config	1	0	:Z	2	nixos	:/home/kirkm	1	zsh	:
+pane	Config	2	1	:*Z	1	nixos	:/home/kirkm/.config/nvim	1	zsh	:
+pane	Config	2	1	:*Z	2	nixos	:/home/kirkm/Dotfiles/.config/nvim	0	zsh	:
+pane	Config	3	0	:-	1	kirkm@nixos: ~/MyFlake	:/home/kirkm/.config/ranger	0	zsh	:
+pane	Config	3	0	:-	2	nixos	:/home/kirkm/Dotfiles/.config/home-manager/nvim/plugin	1	zsh	:
+pane	Config	4	0	:	1	nixos	:/home/kirkm/.config/alacritty	1	zsh	:
+pane	Config	5	0	:	1	nixos	:/home/kirkm	1	zsh	:
+pane	Config	6	0	:	1	nixos	:/home/kirkm	1	zsh	:
+pane	Config	6	0	:	2	nixos	:/home/kirkm/.config/emacs/.local	0	zsh	:
+pane	Config	7	0	:	1	nixos	:/nix/store/74cxr9kfgm6xv5zawr3j178796ch78nf-user-environment	1	zsh	:
+pane	Config	7	0	:	2	nixos	:/home/kirkm/.config/ranger	0	zsh	:
+pane	Config	8	0	:	1	nixos	:/home/kirkm/Dotfiles/.config/awesome	1	zsh	:
+pane	Config	8	0	:	2	nixos	:/home/kirkm/Dotfiles/.config/awesome/ui/bar	0	zsh	:
+pane	Config	9	0	:	1	nixos	:/home/kirkm/Dotfiles/.config/awesome	1	zsh	:
+pane	Config	10	0	:	1	nixos	:/home/kirkm	1	zsh	:
+pane	Config	11	0	:	1	nixos	:/home/kirkm/.config/tmux	1	zsh	:
+pane	Config	11	0	:	2	nixos	:/home/kirkm/.config/tmux	0	zsh	:
+pane	DS	1	0	:-Z	1	kirkm@nixos: ~/Uni/CurrSem/DistSys/Labs	:/home/kirkm/Projects/DS	1	zsh	:
+pane	DS	1	0	:-Z	2	nixos	:/home/kirkm	0	zsh	:
+pane	DS	2	1	:*	1	nixos	:/home/kirkm/Projects/DS	1	zsh	:
+pane	DS2	1	0	:	1	nixos	:/home/kirkm/Projects/DS.bak/Ex2	1	zsh	:
+pane	DS2	2	0	:-	1	nixos	:/home/kirkm/Projects/DS.bak/Ex2	1	zsh	:
+pane	DS2	2	0	:-	2	nixos	:/home/kirkm/Projects/DS.bak/Ex2	0	zsh	:
+pane	DS2	2	0	:-	3	nixos	:/home/kirkm/Projects/DS.bak/Ex2	0	zsh	:
+pane	DS2	3	1	:*	1	nixos	:/home/kirkm/Projects/DS.bak	1	zsh	:
+pane	General	1	0	:-Z	1	/home/kirkm/Music/videoplayback.mp3	:/home/kirkm/Books/Emacs	1	zsh	:
+pane	General	1	0	:-Z	2	ncspot	:/home/kirkm/Books/Emacs	0	zsh	:
+pane	General	2	1	:*Z	1	nixos	:/home/kirkm	0	zsh	:
+pane	General	2	1	:*Z	2	nixos	:/home/kirkm/Documents/Org	1	zsh	:
+pane	General	3	0	:	1	nixos	:/home/kirkm/Documents	1	zsh	:
+pane	PLP	1	1	:*	1	nixos	:/home/kirkm/Projects/PLP/Solitidy	0	zsh	:
+pane	PLP	1	1	:*	2	nixos	:/home/kirkm/Projects/PLP/PythonSol	1	zsh	:
+pane	PLP	2	0	:-	1	nixos	:/home/kirkm	1	zsh	:
+pane	SA	1	1	:*	1	nixos	:/home/kirkm/Projects/SysA	0	zsh	:
+pane	SA	1	1	:*	2	nixos	:/home/kirkm/Projects/SysA	1	zsh	:
+pane	SA	2	0	:-	1	nixos	:/home/kirkm/Projects/DS.bak	1	zsh	:
+pane	SA2	1	0	:-	1	nixos	:/home/kirkm/Documents/Org	1	zsh	:
+pane	SA2	2	1	:*	1	nixos	:/home/kirkm/Projects/DS.bak	1	zsh	:
+pane	SWE	1	0	:Z	1	nixos	:/home/kirkm/Projects/EventLite/GP_dev/src/main/java/uk/ac/man/cs/eventlite/entities	1	zsh	:
+pane	SWE	1	0	:Z	2	nixos	:/home/kirkm/Projects/EventLite/GP	0	zsh	:
+pane	SWE	2	0	:-	1	nixos	:/home/kirkm	1	zsh	:
+pane	SWE	2	0	:-	2	nixos	:/home/kirkm	0	zsh	:
+pane	SWE	3	1	:*	1	nixos	:/home/kirkm/Projects/EventLite	1	zsh	:
+pane	SWE2	1	1	:*	1	nixos	:/home/kirkm/Projects/EventLite/GP	1	zsh	:
+pane	SWE2	2	0	:-	1	nixos	:/home/kirkm/Projects/EventLite	1	zsh	:
+pane	SWE2	3	0	:	1	nixos	:/home/kirkm/Projects/EventLite/GP_dev	1	zsh	:
+pane	Spawns	1	1	:*	1	ncspot	:/home/kirkm	1	zsh	:
+pane	Spawns	1	1	:*	2	nixos	:/home/kirkm	0	zsh	:
+pane	Spawns	1	1	:*	3	nixos	:/home/kirkm	0	zsh	:
+pane	Spawns	2	0	:-	1	nixos	:/home/kirkm/Documents/Org	0	zsh	:
+pane	Spawns	2	0	:-	2	nixos	:/home/kirkm/Dotfiles	1	zsh	:
+pane	Spawns	2	0	:-	3	nixos	:/home/kirkm/Books/Emacs	0	zsh	:
+pane	Spawns	3	0	:	1	nixos	:/home/kirkm	1	zsh	:
+pane	x86	1	1	:*	1	nixos	:/home/kirkm/Coding/x86/Chapter6	0	zsh	:
+pane	x86	1	1	:*	2	nixos	:/home/kirkm/Projects/Awesome	1	zsh	:
+pane	x86	2	0	:-	1	nixos	:/home/kirkm/Coding/x86	1	zsh	:
+pane	x86_2	1	1	:*	1	nixos	:/home/kirkm/Coding/x86/Chapter6	1	zsh	:
+window	1	1	:zsh	1	:*	b81d,78x53,0,0,0	:
+window	2	1	:zsh	1	:*	b823,78x53,0,0,6	:
+window	ADS	1	:pdfs	0	:	b81e,78x53,0,0,1	off
+window	ADS	2	:work	0	:	8a84,78x53,0,0{37x53,0,0,2,40x53,38,0,3}	off
+window	ADS	3	:debug	0	:	b821,78x53,0,0,4	off
+window	ADS	4	:Report	1	:*	8a92,78x53,0,0{37x53,0,0,5,40x53,38,0,7}	off
+window	ADS	5	:Experiment	0	:-	8a9f,78x53,0,0{37x53,0,0,8,40x53,38,0,9}	off
+window	ADS2	1	:zsh	0	:	9f4d,78x53,0,0{37x53,0,0,10,40x53,38,0[40x26,38,0,11,40x26,38,27,12]}	:
+window	ADS2	2	:results	1	:*	5c42,78x53,0,0,13	off
+window	ADS2	3	:Report	0	:-	5c43,78x53,0,0,14	off
+window	AWM	1	:zsh	1	:*Z	c002,143x28,0,0{71x28,0,0,15,71x28,72,0,16}	:
+window	AWM2	1	:bash	1	:*	5c46,78x53,0,0,17	:
+window	Cmake	1	:Step 3	1	:*	0a1e,78x53,0,0{37x53,0,0,18,40x53,38,0,19}	off
+window	Config	1	:Configs	0	:Z	4a0b,78x53,0,0{37x53,0,0,20,40x53,38,0,21}	off
+window	Config	2	:Nvim	1	:*Z	4a10,78x53,0,0{37x53,0,0,22,40x53,38,0,23}	off
+window	Config	3	:Nixos	0	:-	4a15,78x53,0,0{37x53,0,0,24,40x53,38,0,25}	off
+window	Config	4	:Alacritty	0	:	dc45,78x53,0,0,26	off
+window	Config	5	:mbsync	0	:	dc46,78x53,0,0,27	off
+window	Config	6	:Emacs	0	:	4f27,78x53,0,0{38x53,0,0,28,39x53,39,0,29}	off
+window	Config	7	:Ranger	0	:	8a0c,78x53,0,0{37x53,0,0,30,40x53,38,0,31}	off
+window	Config	8	:Awesome	0	:	8a11,78x53,0,0{37x53,0,0,32,40x53,38,0,33}	off
+window	Config	9	:zsh	0	:	5c44,78x53,0,0,34	:
+window	Config	10	:Emacs	0	:	5c45,78x53,0,0,35	off
+window	Config	11	:Tmux	0	:	f8d3,78x53,0,0[78x26,0,0,36,78x26,0,27,37]	off
+window	DS	1	:zsh	0	:-Z	c818,78x53,0,0[78x14,0,0,38,78x38,0,15,39]	:
+window	DS	2	:zsh	1	:*	dc40,78x53,0,0,40	:
+window	DS2	1	:zsh	0	:	dc41,78x53,0,0,41	:
+window	DS2	2	:zsh	0	:-	2fdd,78x53,0,0[78x10,0,0,42,78x9,0,11,43,78x32,0,21,44]	:
+window	DS2	3	:zsh	1	:*	dc45,78x53,0,0,45	:
+window	General	1	:zsh	0	:-Z	ca1c,78x53,0,0{37x53,0,0,46,40x53,38,0,47}	off
+window	General	2	:zsh	1	:*Z	ca21,78x53,0,0{37x53,0,0,48,40x53,38,0,49}	:
+window	General	3	:zsh	0	:	5c41,78x53,0,0,50	:
+window	PLP	1	:zsh	1	:*	8a11,78x53,0,0{37x53,0,0,51,40x53,38,0,52}	off
+window	PLP	2	:zsh	0	:-	5c44,78x53,0,0,53	:
+window	SA	1	:zsh	1	:*	05a9,78x53,0,0{36x53,0,0,54,41x53,37,0,55}	:
+window	SA	2	:zsh	0	:-	5c47,78x53,0,0,56	:
+window	SA2	1	:zsh	0	:-	5c48,78x53,0,0,57	:
+window	SA2	2	:zsh	1	:*	5c49,78x53,0,0,58	:
+window	SWE	1	:zsh	0	:Z	ca20,78x53,0,0{37x53,0,0,59,40x53,38,0,60}	:
+window	SWE	2	:Run	0	:-	ca12,78x53,0,0{37x53,0,0,61,40x53,38,0,62}	off
+window	SWE	3	:zsh	1	:*	dc44,78x53,0,0,63	:
+window	SWE2	1	:zsh	1	:*	dc45,78x53,0,0,64	:
+window	SWE2	2	:zsh	0	:-	dc46,78x53,0,0,65	:
+window	SWE2	3	:zsh	0	:	dc47,78x53,0,0,66	:
+window	Spawns	1	:bash	1	:*	ca14,78x53,0,0{37x53,0,0,67,40x53,38,0[40x27,38,0,68,40x25,38,28,69]}	off
+window	Spawns	2	:zsh	0	:-	22f5,78x53,0,0{37x53,0,0[37x26,0,0,70,37x26,0,27,71],40x53,38,0,72}	:
+window	Spawns	3	:zsh	0	:	5c45,78x53,0,0,73	:
+window	x86	1	:zsh	1	:*	8f23,78x53,0,0{38x53,0,0,74,39x53,39,0,75}	:
+window	x86	2	:zsh	0	:-	5c48,78x53,0,0,76	:
+window	x86_2	1	:zsh	1	:*	5c49,78x53,0,0,77	:
+state	AWM	
