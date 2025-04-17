@@ -25,57 +25,63 @@
     yank
 		rustlings
 		starship
-    pinentry
-    mu
     rofi
     porsmo
-    pavucontrol
-    ncspot
     tldr
-    unzip
     cheat
     onefetch
+
+    # Mail
+    msmtp
+    mu
+    isync
+    mtpfs
     
     # Hardware
     pciutils
     usbutils
     lm_sensors # For cpu monitoring?
     htop
+    pavucontrol
 
     # File Manipulation
     ranger
     zip
+    unzip
     bat
     zathura
     stow
     pandoc
 
+    # Security
+    pinentry
+    pinentry-all # For pass
+    pass
+
     # Term Repls
+    gdb
     gnuplot
     bc
     gawk
 
     # Tracking
+    strace
     hyperfine
 
     # Term Navigation
+    zoxide
     fd
     tree
 
     # Music
+    spotify
+    ncspot
     cmus
-
-    # Build tools
-    gnumake
-    ninja
-    maven
 
     # OS essentials
     ps_mem
 		speedtest-cli
 		wget
-    pinentry-all # For pass
-    pass
 
     # Languages
     shellcheck
@@ -96,29 +102,16 @@
     lua-language-server
     haskell-language-server
 
-    ## Haskell
     cabal-install
-    haskellPackages.hoogle
-
-    ## Python
-    python312Packages.pip
-    python312Packages.gitpython
-    python312Packages.bpython
-    python312Packages.pyflakes
-    isort
 
     # Apps
-    anki
-    godot_4
     whatsapp-for-linux
     libreoffice-qt
     oh-my-git
     gtypist
-    spotify
     discord
     protonmail-desktop
     _1password-gui
-    obsidian
     flameshot
 
     # Photography
@@ -127,7 +120,6 @@
     darktable
 
     # Shell
-    zoxide
     eza
     oh-my-zsh
     ripgrep
@@ -142,7 +134,6 @@
     vim
     neovim
     jupyter-all
-    gdb
 
     # Term
     alacritty
@@ -157,14 +148,14 @@
     podman
     distrobox
     cmake
-    strace
 
     # LLM
     inputs.nixpkgs.legacyPackages.${pkgs.system}.ollama-rocm
     
     # Networking
+    psmisc
+    cifs-utils
     cacert
-    msmtp
     nmap
     openssh
     nginx
@@ -172,19 +163,15 @@
     openssl
     protonmail-bridge
     protonmail-bridge-gui
-    isync
-    mtpfs
 
     # OS
+    picom
     dust
     dict
     ispell
     libtool
     time
     xsel
-    mesa-demos
-    mesa
-    pkg-config
     nix-ld
     awesome
 
@@ -192,10 +179,7 @@
     screenkey
     xorg.xev
     xorg.xmodmap
-    kanata
-    steam-tui
     vimgolf
-    steamcmd
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

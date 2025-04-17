@@ -29,7 +29,7 @@ export FZF_DEFAULT_OPTS="--tmux center"
 export ZSH="$HOME/.oh-my-zsh"
 # export PATH="$PATH:/home/kirkm/.local/share/JetBrains/Toolbox/scripts:/home/kirkm/.dotnet/tools:/home/kirkm/.local/bin"
 PATH=$PATH:/home/kirkm/.config/emacs/bin
-export DOOMDIR=~/.doom.d
+export DOOMDIR=~/.config/doom
 export LD_LIBRARY_PATH=/home/kirkm/.local/share/nvim/mason/bin:/home/kirkm/Programs:/home/kirkm/miniconda3/bin:/home/kirkm/.config/emacs/bin:/home/kirkm/Programs:/home/kirkm/miniconda3:$LD_LIBRARY_PATH
 
 # SOURCING
@@ -59,7 +59,7 @@ alias zra="zrc +43"
 alias netsp="speedtest-cli --simple"
 alias gdb="gdb -q"
 alias sp="sudo systemctl suspend"
-# alias emacs="emacsclient -c -a 'emacs'"
+alias emacs="emacsclient -c -a 'emacs'"
 
 # FUNCTIONS
 

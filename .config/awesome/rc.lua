@@ -1,13 +1,9 @@
--- If LuaRocks is installed, make sure that packages installed through it are
--- found (e.g. lgi). If LuaRocks is not installed, do nothing.
 pcall(require, "luarocks.loader")
 
 -- Standard awesome library
 local awful = require("awful")
 require("awful.autofocus")
---
--- Widget and layout library
---
+
 -- Theme handling library
 local beautiful = require("beautiful")
 --
@@ -28,7 +24,7 @@ local terminal = "alacritty"
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
 	awful.layout.suit.tile,
-	-- awful.layout.suit.tile.left,
+	awful.layout.suit.tile.top,
 	-- awful.layout.suit.fair,
 	-- awful.layout.suit.max,
 	awful.layout.suit.max.fullscreen,
