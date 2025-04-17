@@ -92,9 +92,10 @@
     texliveFull
     ghc
     R
-    lua
+    luajit
+    luajitPackages.busted
+    luajitPackages.nlua
     luaformatter
-    luaPackages.ldoc
     zulu17
     go
 
@@ -176,6 +177,8 @@
     awesome
 
     # Misc
+    gromit-mpx
+    stack
     screenkey
     xorg.xev
     xorg.xmodmap

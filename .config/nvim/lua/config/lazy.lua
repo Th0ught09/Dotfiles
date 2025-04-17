@@ -43,3 +43,36 @@ require("lazy").setup({
 require("toggleterm").setup({
   open_mapping = [[<c-\>]],
 })
+
+local dap = require("dap")
+dap.adapters["local-lua"] = {
+  type = "executable",
+  command = "node",
+  args = {
+    "/home/kirkm/Programs/local-lua-debugger-vscode/extension/debugAdapter.js",
+  },
+  enrich_config = function(config, on_config)
+    if not config["extensionPath"] then
+      local c = vim.deepcopy(config)
+      c.extensionPath = "/home/kirkm/Programs/local-lua-debugger-vscode/"
+      on_config(c)
+    else
+      on_config(config)
+    end
+  end,
+}
+
+dap.configurations.lua = {
+  {
+    name = "Current file (local-lua-dbg, lua)",
+    type = "local-lua",
+    request = "launch",
+    cwd = "${workspaceFolder}",
+    program = {
+      lua = "nlua",
+      file = "${file}",
+    },
+    verbose = true,
+    args = {},
+  },
+}
