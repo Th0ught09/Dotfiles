@@ -107,6 +107,8 @@
     haskellPackages.hspec
 
     # Apps
+    kdePackages.kdeconnect-kde
+    audacity
     whatsapp-for-linux
     libreoffice-qt
     oh-my-git
