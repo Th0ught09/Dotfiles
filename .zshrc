@@ -9,7 +9,18 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # PLUGINS
 
-plugins=(git fzf 1password zoxide vi-mode sudo alias-finder zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(
+  git 
+  fzf 
+  1password 
+  zoxide 
+  vi-mode 
+  sudo 
+  alias-finder 
+  zsh-autosuggestions 
+  zsh-syntax-highlighting
+  autoswitch_virtualenv
+)
 
 # ZSTYLES
 
@@ -69,15 +80,15 @@ alias emacs="emacsclient -c -a 'emacs'"
 #   }
 
 # Don't install python packages outside of a conda env
-function pip(){
-    if [[ -z $CONDA_PREFIX || $CONDA_PREFIX == "/usr" ]]
-      then
-        echo "do not install python packages outside of or in a base conda env!!"
-        return
-    else
-      command pip $@
-    fi
-}
+# function pip(){
+#     if [[ -z $CONDA_PREFIX || $CONDA_PREFIX == "/usr" ]]
+#       then
+#         echo "do not install python packages outside of or in a base conda env!!"
+#         return
+#     else
+#       command pip $@
+#     fi
+# }
 
 # Quick ls grep
 lg(){
@@ -90,7 +101,7 @@ function lr () { z Lang $1 }
 
 # SETTINGS  
 
-set -o emacs
+set -o vi
 
 # COMMANDS
 
@@ -103,15 +114,15 @@ eval "$(zoxide init zsh)"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/kirkm/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/kirkm/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/kirkm/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/kirkm/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
+# __conda_setup="$('/home/kirkm/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+# if [ $? -eq 0 ]; then
+#     eval "$__conda_setup"
+# else
+#     if [ -f "/home/kirkm/miniconda3/etc/profile.d/conda.sh" ]; then
+#         . "/home/kirkm/miniconda3/etc/profile.d/conda.sh"
+#     else
+#         export PATH="/home/kirkm/miniconda3/bin:$PATH"
+#     fi
+# fi
+# unset __conda_setup
 # <<< conda initialize <<<

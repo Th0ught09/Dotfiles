@@ -1,0 +1,4 @@
+pane	1	1	1	:*	1	nixos	:/home/kirkm	1	zsh	:
+pane	2	1	1	:*	1	nixos	:/home/kirkm	1	zsh	:
+pane	AWM	1	1	:*Z	1	nixos	:/home/kirkm/Projects/Awesome/awesome	0	zsh	:
+pane	AWM	1	1	:*Z	2	nixos	:/home/kirkm/Projects/Awesome/awesome	1	zsh	:

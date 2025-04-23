@@ -127,8 +127,11 @@ do
 	add_tag({ tag = "WWW" })
 	add_tag({ tag = "DOCS" })
 	add_tag({ tag = "TERM" })
-	add_tag({ tag = "SPWN" })
+	add_tag({ tag = "MISC1" })
 	add_tag({ tag = "IDE" })
+	add_tag({ tag = "MISC2" })
+	add_tag({ tag = "MISC3" })
+	add_tag({ tag = "MISC4" })
 	add_tag({ tag = "MAIL" })
 	--
 	local taglist = awful.widget.taglist({
@@ -199,6 +202,8 @@ if vert_screen then
 	add_vert({ tag = "TERM" })
 	add_vert({ tag = "SPWN" })
 	add_vert({ tag = "CONF" })
+	add_vert({ tag = "MISC1" })
+	add_vert({ tag = "MISC2" })
 	add_vert({ tag = "MAIL" })
 	add_vert({ tag = "EMACS" })
 

@@ -141,6 +141,20 @@ return {
       vscode.json_decode = function(str)
         return vim.json.decode(json.json_strip_comments(str))
       end
+      vscode.getconfigs = function(path)
+        local resolved_path = path or (vim.fn.getcwd() .. "/launch.json")
+        if not vim.loop.fs_stat(resolved_path) then
+          return {}
+        end
+        local lines = {}
+        for line in io.lines(resolved_path) do
+          if not vim.startswith(vim.trim(line), "//") then
+            table.insert(lines, line)
+          end
+        end
+        local contents = table.concat(lines, "\n")
+        return vscode._load_json(contents)
+      end
     end,
   },
   {
@@ -190,29 +204,30 @@ return {
         {
           elements = {
             {
-              id = "scopes",
-              size = 0.33,
-            },
-            {
               id = "breakpoints",
-              size = 0.33,
+              size = 0.5,
             },
             {
               id = "stacks",
-              size = 0.33,
+              size = 0.5,
             },
           },
           position = "left",
-          size = 25,
+          size = 30,
         },
         {
           elements = {
             {
+              id = "scopes",
+              size = 0.5,
+            },
+            {
               id = "watches",
+              size = 0.5,
             },
           },
-          position = "bottom",
-          size = 10,
+          position = "right",
+          size = 30,
         },
       },
       mappings = {

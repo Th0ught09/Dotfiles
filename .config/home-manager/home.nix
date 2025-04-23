@@ -92,9 +92,9 @@
     texliveFull
     ghc
     R
-    luajit
-    luajitPackages.busted
-    luajitPackages.nlua
+    lua
+    lua52Packages.busted
+    lua52Packages.nlua
     luaformatter
     zulu17
     go
@@ -104,6 +104,7 @@
     haskell-language-server
 
     cabal-install
+    haskellPackages.hspec
 
     # Apps
     whatsapp-for-linux
@@ -141,7 +142,8 @@
     tmux
 
     # Dev Tools
-		conda
+    file
+    gnumake
     git
     ctags
     docker
@@ -166,6 +168,11 @@
     protonmail-bridge-gui
 
     # OS
+    sysbench
+    stress-ng
+    fastfetch
+    clinfo
+    mesa
     picom
     dust
     dict

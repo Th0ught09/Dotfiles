@@ -1,0 +1,104 @@
+pane	0	1	1	:*	1	nixos	:/home/kirkm	1	zsh	:
+pane	AWM	1	1	:*Z	1	nixos	:/home/kirkm/Projects/Awesome/awesome	0	zsh	:
+pane	AWM	1	1	:*Z	2	nixos	:/home/kirkm/Projects/Awesome/awesome	1	zsh	:
+pane	AWM2	1	1	:*	1	kirkm@nixos: ~/Projects/Awesome/awesome	:/home/kirkm/Projects/Awesome/awesome	1	zsh	:
+pane	Cmake	1	1	:*	1	nixos	:/home/kirkm/Coding/CMake/Step3	1	zsh	:
+pane	Cmake	1	1	:*	2	nixos	:/home/kirkm/Coding/CMake/Step3_build	0	zsh	:
+pane	CodeWars	1	1	:*Z	1	nixos	:/home/kirkm/Coding/Codewars/Cubes	1	zsh	:
+pane	CodeWars	1	1	:*Z	2	nixos	:/home/kirkm/Coding/Codewars/Cubes	0	zsh	:
+pane	CodeWars	2	0	:-	1	nixos	:/home/kirkm/Coding/Codewars/Cubes	1	zsh	:
+pane	CodeWars_2	1	1	:*	1	root@bc8c3b032324: ~/src	:/home/kirkm/Projects/docs/content/authoring	1	zsh	:
+pane	CodeWars_2	1	1	:*	2	nixos	:/home/kirkm/Coding/Codewars/GoodEvil	0	zsh	:
+pane	Config	1	0	:	1	nixos	:/home/kirkm/Programs/local-lua-debugger-vscode/extension	1	zsh	:
+pane	Config	2	0	:-Z	1	nixos	:/home/kirkm/.cache/nvim	1	tail	:tail -f dap.log
+pane	Config	2	0	:-Z	2	nixos	:/home/kirkm/Programs/local-lua-debugger-vscode/extension	0	zsh	:
+pane	Config	3	1	:*	1	pi@nixos: ~	:/home/kirkm/Projects	1	zsh	:
+pane	Config	4	0	:	1	nixos	:/home/kirkm/.config/alacritty	1	zsh	:
+pane	Config	5	0	:	1	nixos	:/home/kirkm	1	zsh	:
+pane	Config	6	0	:	1	nixos	:/home/kirkm/Dotfiles	1	zsh	:
+pane	Config	6	0	:	2	nixos	:/home/kirkm/Dotfiles	0	zsh	:
+pane	Config	7	0	:	1	nixos	:/nix/store/74cxr9kfgm6xv5zawr3j178796ch78nf-user-environment	1	zsh	:
+pane	Config	7	0	:	2	nixos	:/home/kirkm/.config/ranger	0	zsh	:
+pane	Config	8	0	:	1	nixos	:/home/kirkm/Dotfiles/.config/awesome	1	zsh	:
+pane	Config	9	0	:	1	nixos	:/home/kirkm/Dotfiles/.config/awesome	1	zsh	:
+pane	Config	10	0	:	1	nixos	:/home/kirkm	1	zsh	:
+pane	Config	11	0	:	1	nixos	:/home/kirkm/.config/tmux	1	zsh	:
+pane	Config	11	0	:	2	nixos	:/home/kirkm/.config/tmux	0	zsh	:
+pane	DS	1	0	:-Z	1	kirkm@nixos: ~/Uni/CurrSem/DistSys/Labs	:/home/kirkm/Projects/DS	1	zsh	:
+pane	DS	1	0	:-Z	2	nixos	:/home/kirkm	0	zsh	:
+pane	DS	2	1	:*	1	nixos	:/home/kirkm/Projects/DS	1	zsh	:
+pane	DS2	1	0	:	1	nixos	:/home/kirkm/Projects/DS.bak/Ex2	1	zsh	:
+pane	DS2	2	0	:-	1	nixos	:/home/kirkm/Projects/DS.bak/Ex2	1	zsh	:
+pane	DS2	2	0	:-	2	nixos	:/home/kirkm/Projects/DS.bak/Ex2	0	zsh	:
+pane	DS2	2	0	:-	3	nixos	:/home/kirkm/Projects/DS.bak/Ex2	0	zsh	:
+pane	DS2	3	1	:*	1	nixos	:/home/kirkm/Projects/DS.bak	1	zsh	:
+pane	General	1	0	:	1	/home/kirkm/Music/videoplayback.mp3	:/home/kirkm/Books/Emacs	1	zsh	:
+pane	General	1	0	:	2	ncspot	:/home/kirkm/Books/Emacs	0	zsh	:
+pane	General	2	0	:Z	1	nixos	:/home/kirkm	0	zsh	:
+pane	General	2	0	:Z	2	nixos	:/home/kirkm/Documents/Org	1	zsh	:
+pane	General	3	0	:	1	pi@nixos: ~/Flake	:/home/kirkm	1	zsh	:
+pane	General	4	0	:-	1	pi@nixos: ~	:/home/kirkm/Flakes/RPIFlake	1	zsh	:
+pane	General	4	0	:-	2	pi@nixos: ~	:/home/kirkm/Downloads	0	zsh	:
+pane	General	5	1	:*Z	1	nixos	:/home/kirkm	0	zsh	:
+pane	General	5	1	:*Z	2	root@b265cf69fbc3: ~/src	:/home/kirkm/Projects/Loupe/loupe	1	make	:make docker
+pane	RPI	1	1	:*	1	nixos	:/home/kirkm/Mail	0	zsh	:
+pane	RPI	1	1	:*	2	nixos	:/home/kirkm/Mail	1	zsh	:
+pane	SA	1	1	:*	1	nixos	:/home/kirkm/Projects/SysA	0	zsh	:
+pane	SA	1	1	:*	2	nixos	:/home/kirkm/Projects/SysA	1	zsh	:
+pane	SA	2	0	:-	1	nixos	:/home/kirkm/Projects/DS.bak	1	zsh	:
+pane	SA2	1	0	:-	1	nixos	:/home/kirkm/Documents/Org	1	zsh	:
+pane	SA2	2	1	:*	1	nixos	:/home/kirkm/Projects/DS.bak	1	zsh	:
+pane	Spawns	1	0	:	1	ncspot	:/home/kirkm	0	zsh	:
+pane	Spawns	1	0	:	2	/home/kirkm/Music/videoplayback.mp3	:/home/kirkm/Music	1	zsh	:
+pane	Spawns	2	0	:-Z	1	nixos	:/home/kirkm/Documents/Org	1	zsh	:
+pane	Spawns	2	0	:-Z	2	nixos	:/home/kirkm/Books/Emacs	0	zsh	:
+pane	Spawns	3	1	:*	1	nixos	:/home/kirkm/Books	0	zsh	:
+pane	Spawns	3	1	:*	2	nixos	:/home/kirkm/Books/Langs	1	zsh	:
+pane	x86	1	1	:*	1	nixos	:/home/kirkm/Coding/x86/Chapter6	1	zsh	:
+pane	x86	2	0	:-	1	nixos	:/home/kirkm/Documents/Org	1	zsh	:
+pane	x86	3	0	:	1	nixos	:/home/kirkm/Coding/x86/Chapter6	1	zsh	:
+pane	x86_2	1	0	:-Z	1	nixos	:/home/kirkm/Coding/x86/Chapter6	0	zsh	:
+pane	x86_2	1	0	:-Z	2	nixos	:/home/kirkm/Coding/x86/Chapter6	1	zsh	:
+pane	x86_2	2	1	:*	1	nixos	:/home/kirkm/Coding/x86/Chapter6	1	zsh	:
+window	0	1	:zsh	1	:*	c37e,140x27,0,0,1	:
+window	AWM	1	:zsh	1	:*Z	ec3f,140x27,0,0{69x27,0,0,2,70x27,70,0,3}	:
+window	AWM2	1	:zsh	1	:*	c381,140x27,0,0,4	:
+window	Cmake	1	:Step 3	1	:*	ae6d,140x27,0,0{68x27,0,0,5,71x27,69,0,6}	off
+window	CodeWars	1	:zsh	1	:*Z	6466,140x27,0,0{70x27,0,0,7,69x27,71,0,8}	:
+window	CodeWars	2	:zsh	0	:-	c386,140x27,0,0,9	:
+window	CodeWars_2	1	:zsh	1	:*	0e4d,140x27,0,0[140x13,0,0,10,140x13,0,14,11]	:
+window	Config	1	:Configs	0	:	61f1,140x27,0,0,12	off
+window	Config	2	:Nvim	0	:-Z	7cd1,140x27,0,0[140x12,0,0,13,140x14,0,13,14]	off
+window	Config	3	:Nixos	1	:*	61f4,140x27,0,0,15	off
+window	Config	4	:Alacritty	0	:	61f5,140x27,0,0,16	off
+window	Config	5	:mbsync	0	:	61f6,140x27,0,0,17	off
+window	Config	6	:Emacs	0	:	fcd8,140x27,0,0[140x12,0,0,18,140x14,0,13,19]	off
+window	Config	7	:Ranger	0	:	38b6,140x27,0,0{68x27,0,0,20,71x27,69,0,21}	off
+window	Config	8	:Awesome	0	:	e1f1,140x27,0,0,22	off
+window	Config	9	:zsh	0	:	e1f2,140x27,0,0,23	:
+window	Config	10	:Emacs	0	:	e1f3,140x27,0,0,24	off
+window	Config	11	:Tmux	0	:	3cd5,140x27,0,0[140x12,0,0,25,140x14,0,13,26]	off
+window	DS	1	:zsh	0	:-Z	d467,140x27,0,0[140x1,0,0,27,140x25,0,2,28]	:
+window	DS	2	:zsh	1	:*	e1f8,140x27,0,0,29	:
+window	DS2	1	:zsh	0	:	61f0,140x27,0,0,30	:
+window	DS2	2	:zsh	0	:-	812a,140x27,0,0[140x1,0,0,31,140x1,0,2,32,140x23,0,4,33]	:
+window	DS2	3	:zsh	1	:*	61f4,140x27,0,0,34	:
+window	General	1	:zsh	0	:	f8c3,140x27,0,0{68x27,0,0,35,71x27,69,0,36}	off
+window	General	2	:zsh	0	:Z	f8c8,140x27,0,0{68x27,0,0,37,71x27,69,0,38}	:
+window	General	3	:Books	0	:	61f9,140x27,0,0,39	off
+window	General	4	:Typing	0	:-	4e4f,140x27,0,0[140x13,0,0,40,140x13,0,14,41]	off
+window	General	5	:make	1	:*Z	4e52,140x27,0,0[140x13,0,0,42,140x13,0,14,43]	:
+window	RPI	1	:zsh	1	:*	4e55,140x27,0,0[140x13,0,0,44,140x13,0,14,45]	:
+window	SA	1	:zsh	1	:*	b457,140x27,0,0{67x27,0,0,46,72x27,68,0,47}	:
+window	SA	2	:zsh	0	:-	e1f8,140x27,0,0,48	:
+window	SA2	1	:zsh	0	:-	e1f9,140x27,0,0,49	:
+window	SA2	2	:zsh	1	:*	61f1,140x27,0,0,50	:
+window	Spawns	1	:Work	0	:	9fd1,140x27,0,0[140x14,0,0,51,140x12,0,15,52]	off
+window	Spawns	2	:zsh	0	:-Z	78c1,140x27,0,0{68x27,0,0,53,71x27,69,0,54}	:
+window	Spawns	3	:Books	1	:*	8e57,140x27,0,0[140x13,0,0,55,140x13,0,14,56]	off
+window	x86	1	:zsh	1	:*	61f8,140x27,0,0,57	:
+window	x86	2	:org	0	:-	61f9,140x27,0,0,58	off
+window	x86	3	:zsh	0	:	61fa,140x27,0,0,59	:
+window	x86_2	1	:zsh	0	:-Z	1713,140x27,0,0[140x25,0,0,60,140x1,0,26,61]	:
+window	x86_2	2	:zsh	1	:*	e1f3,140x27,0,0,62	:
+state	General	CodeWars_2
