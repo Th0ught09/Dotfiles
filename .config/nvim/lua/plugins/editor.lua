@@ -20,17 +20,6 @@ return {
     },
   },
   {
-    "williamboman/mason.nvim",
-    opts = {
-      ensure_installed = {
-        "stylua",
-        "shellcheck",
-        "shfmt",
-        "flake8",
-      },
-    },
-  },
-  {
     "ibhagwan/fzf-lua",
     dependencies = { "nvim-tree/nvim-web-devicons" },
     opts = {},
@@ -228,6 +217,16 @@ return {
           },
           position = "right",
           size = 30,
+        },
+        {
+          elements = {
+            {
+              id = "console",
+              size = 1,
+            },
+          },
+          position = "bottom",
+          size = 10,
         },
       },
       mappings = {

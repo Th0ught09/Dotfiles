@@ -45,6 +45,10 @@ require("toggleterm").setup({
 })
 
 local dap = require("dap")
+dap.defaults.fallback.external_terminal = {
+  command = "alacritty",
+  args = { "--hold" },
+}
 dap.adapters["local-lua"] = {
   type = "executable",
   command = "node",
@@ -118,3 +122,10 @@ require("lualine").setup({
   inactive_winbar = {},
   extensions = {},
 })
+
+require("mason-lspconfig").setup({
+  ensure_installed = {},
+  automatic_installation = false,
+})
+
+require("lspconfig").clangd.setup({})

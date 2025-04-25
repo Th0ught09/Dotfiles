@@ -89,6 +89,8 @@
     rustup
     php
     gcc
+    # clang
+    clang-tools
     texliveFull
     ghc
     R
@@ -106,6 +108,9 @@
     cabal-install
     haskellPackages.hspec
 
+    llvmPackages_latest.lldb
+    llvmPackages_latest.libllvm
+    # llvmPackages_latest.clang
     # Apps
     kdePackages.kdeconnect-kde
     audacity
@@ -232,15 +237,15 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
-  programs.emacs = {
-    enable = true;
-    extraPackages = epkgs: [
-    epkgs.nix-mode
-    epkgs.magit
-    epkgs.mu4e
-    epkgs.doom
-    epkgs.org-caldav
-    epkgs.pdf-tools
-    ];
-  };
+#   programs.emacs = {
+#     enable = true;
+#     extraPackages = epkgs: [
+#     epkgs.nix-mode
+#     epkgs.magit
+#     epkgs.mu4e
+#     epkgs.doom
+#     epkgs.org-caldav
+#     epkgs.pdf-tools
+#     ];
+#   };
 }

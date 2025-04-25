@@ -245,7 +245,7 @@
     :custom
         (dashboard-startup-banner 'logo)
         (dashboard-banner-logo-title nil)
-        (dashboard-icon-type 'nerd-icons)
+        ;(dashboard-icon-type 'nerd-icons)
         (dashboard-set-heading-icons t)
         (dashboard-set-file-icons t)
         (dashboard-set-footer nil)
@@ -257,5 +257,3 @@
             (projects . 10)
             (bookmarks . 10)
 )))
-
-emc
