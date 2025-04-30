@@ -13,19 +13,11 @@ return {
     end,
   },
   {
-    "folke/noice.nvim",
-    event = "VeryLazy",
-    opts = {
-    },
-    dependencies = {
-      "MunifTanjim/nui.nvim",
-      "rcarriga/nvim-notify",
-    },
-  },
-  {
     "iamcco/markdown-preview.nvim",
     cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
     ft = { "markdown" },
-    build = function() vim.fn["mkdp#util#install"]() end,
-  }
+    build = function()
+      vim.fn["mkdp#util#install"]()
+    end,
+  },
 }

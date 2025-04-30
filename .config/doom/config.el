@@ -21,8 +21,7 @@
 ;; See 'C-h v doom-font' for documentation and more examples of what they
 ;; accept. For example:
 ;;
-;;(setq doom-font (font-spec :family "Fira Code" :size 12 :weight 'semi-light)
-;;      doom-variable-pitch-font (font-spec :family "Fira Sans" :size 13))
+(setq doom-font (font-spec :family "IosevkaTerm Nerd Font" :size 20 :weight 'semi-light))
 ;;
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
 ;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
@@ -36,7 +35,7 @@
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
-(setq display-line-numbers-type t)
+(setq display-line-numbers-type 'relative)
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
@@ -213,7 +212,6 @@
 (setq tab-width 4)
 ;; (setq display-line-numbers
 ;; 'relative)
-(setq linum-relative-current-symbol "")
 
 
 ;=================================================================
@@ -245,7 +243,7 @@
     :custom
         (dashboard-startup-banner 'logo)
         (dashboard-banner-logo-title nil)
-        ;(dashboard-icon-type 'nerd-icons)
+        (dashboard-icon-type 'nerd-icons)
         (dashboard-set-heading-icons t)
         (dashboard-set-file-icons t)
         (dashboard-set-footer nil)

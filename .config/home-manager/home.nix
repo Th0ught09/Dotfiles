@@ -84,6 +84,8 @@
 		wget
 
     # Languages
+    python312Packages.bpython
+    uv
     shellcheck
     nodejs_23
     rustup
@@ -110,8 +112,10 @@
 
     llvmPackages_latest.lldb
     llvmPackages_latest.libllvm
-    # llvmPackages_latest.clang
+        
     # Apps
+    reveal-md
+    gh
     kdePackages.kdeconnect-kde
     audacity
     whatsapp-for-linux
@@ -129,6 +133,7 @@
     darktable
 
     # Shell
+    nushell
     eza
     oh-my-zsh
     ripgrep
@@ -191,6 +196,7 @@
     awesome
 
     # Misc
+    mpi
     gromit-mpx
     stack
     screenkey
@@ -237,15 +243,15 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
-#   programs.emacs = {
-#     enable = true;
-#     extraPackages = epkgs: [
-#     epkgs.nix-mode
-#     epkgs.magit
-#     epkgs.mu4e
-#     epkgs.doom
-#     epkgs.org-caldav
-#     epkgs.pdf-tools
-#     ];
-#   };
+programs.emacs = {
+  enable = true;
+    extraPackages = epkgs: [
+    epkgs.nix-mode
+    epkgs.magit
+    epkgs.mu4e
+    epkgs.doom
+    epkgs.org-caldav
+    epkgs.pdf-tools
+    ];
+   };
 }
