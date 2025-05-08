@@ -39,7 +39,7 @@ export EDITOR=nvim
 export FZF_DEFAULT_OPTS="--tmux center"
 export ZSH="$HOME/.oh-my-zsh"
 # export PATH="$PATH:/home/kirkm/.local/share/JetBrains/Toolbox/scripts:/home/kirkm/.dotnet/tools:/home/kirkm/.local/bin"
-PATH=$PATH:/home/kirkm/.config/emacs/bin
+PATH=$PATH:/home/kirkm/.config/emacs/bin:/home/kirkm/.scripts
 export DOOMDIR=~/.config/doom
 export LD_LIBRARY_PATH=/home/kirkm/.local/share/nvim/mason/bin:/home/kirkm/Programs:/home/kirkm/miniconda3/bin:/home/kirkm/.config/emacs/bin:/home/kirkm/Programs:/home/kirkm/miniconda3:$LD_LIBRARY_PATH
 

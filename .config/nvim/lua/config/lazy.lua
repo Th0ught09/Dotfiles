@@ -124,10 +124,10 @@ require("lualine").setup({
   extensions = {},
 })
 
-require("mason-lspconfig").setup({
-  ensure_installed = {},
-  automatic_installation = false,
-})
+-- require("mason-lspconfig").setup({
+--   ensure_installed = {},
+--   automatic_installation = false,
+-- })
 
 require("lspconfig").clangd.setup({})
 

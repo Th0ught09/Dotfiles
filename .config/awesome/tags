@@ -18,6 +18,8 @@
 ) awful.tag.incmwfact	bindings/binds.lua	/^  awful.key({ modkey, }, "k", function() awful.tag.incmwfact(0.05) end,$/;"	f
 ) awful.tag.incnmaster	bindings/binds.lua	/^  awful.key({ modkey, "Shift" }, "h", function() awful.tag.incnmaster(1, nil, true) end,$/;"	f
 ) awful.tag.incnmaster	bindings/binds.lua	/^  awful.key({ modkey, "Shift" }, "l", function() awful.tag.incnmaster(-1, nil, true) end,$/;"	f
+add_tag	ui/bar/taskbar.lua	/^	local function add_tag(options)$/;"	f
+add_vert	ui/bar/taskbar.lua	/^	local function add_vert(options)$/;"	f
 awful.key({ modkey, }, "t", function(c) c.ontop 	bindings/binds.lua	/^  awful.key({ modkey, }, "t", function(c) c.ontop = not c.ontop end,$/;"	f
 c) c:kill	bindings/binds.lua	/^  awful.key({ modkey }, "q", function(c) c:kill() end,$/;"	f
 c) c:move_to_screen	bindings/binds.lua	/^  awful.key({ modkey, }, "o", function(c) c:move_to_screen() end,$/;"	f
@@ -30,7 +32,8 @@ is_dark	themes/gtk/theme.lua	/^local function is_dark(color_value)$/;"	f
 local rounded_rect_shape 	themes/gtk/theme.lua	/^local rounded_rect_shape = function(cr,w,h)$/;"	f
 mix	themes/gtk/theme.lua	/^local function mix(color1, color2, ratio)$/;"	f
 reduce_contrast	themes/gtk/theme.lua	/^local function reduce_contrast(color, ratio)$/;"	f
-set_wallpaper	rc.lua	/^local function set_wallpaper(s)$/;"	f
+set_wallpaper	ui/bar/taskbar.lua	/^local function set_wallpaper(s)$/;"	f
+set_wallpaper_vert	ui/bar/taskbar.lua	/^local function set_wallpaper_vert(s)$/;"	f
 theme.wallpaper 	themes/gtk/theme.lua	/^theme.wallpaper = function(s)$/;"	f
 theme.wallpaper 	themes/xresources/theme.lua	/^theme.wallpaper = function(s)$/;"	f
 update_widget	ui/bar/widgets/battery.lua	/^local function update_widget(stdout)$/;"	f

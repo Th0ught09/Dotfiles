@@ -204,6 +204,7 @@
                             (:endgroup))))
 
 (setq org-default-notes-file (concat org-directory "/notes.org"))
+(setq org-agenda-include-diary t)
 
 ;=================================================================
 ; VIM BINDINGS
@@ -255,3 +256,17 @@
             (projects . 10)
             (bookmarks . 10)
 )))
+
+;=================================================================
+; Emms
+; =================================================================
+(emms-all)
+(setq emms-player-list '(emms-player-vlc)
+      emms-info-functions '(emms-info-native))
+
+;=================================================================
+; Hooks
+; =================================================================
+(add-hook 'org-mode-hook 'abbrev-hook)
+(defun abbrev-hook ()
+  (abbrev-mode 1))

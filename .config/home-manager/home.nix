@@ -126,6 +126,9 @@
     protonmail-desktop
     _1password-gui
     flameshot
+    shotcut
+    bottles
+    lutris
 
     # Photography
     gphoto2
@@ -136,6 +139,7 @@
     nushell
     eza
     oh-my-zsh
+    zsh
     ripgrep
     inputs.nixpkgs.legacyPackages.${pkgs.system}.fzf
     
@@ -196,6 +200,12 @@
     awesome
 
     # Misc
+    zoom-us
+    eww
+    lazygit
+    mpv
+    vlc
+    android-tools
     mpi
     gromit-mpx
     stack
@@ -238,6 +248,7 @@
   #
   home.sessionVariables = {
     EDITOR = "nvim";
+    SHELL = "zsh";
   };
 
   # Let Home Manager install and manage itself.

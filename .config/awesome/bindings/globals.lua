@@ -163,7 +163,7 @@ end
 globals = gears.table.join(
 	globals,
 	awful.key({ modkey }, "a", function()
-		local tag = awful.tag.find_by_name(nil, "EMACS")
+		local tag = awful.tag.find_by_name(nil, " ")
 		local screen = awful.screen.getbycoord(1920, 0)
 		if tag then
 			tag:view_only(tag)
@@ -171,13 +171,13 @@ globals = gears.table.join(
 		end
 	end),
 	awful.key({ modkey, "Control" }, "a", function()
-		local tag = awful.tag.find_by_name(nil, "EMACS")
+		local tag = awful.tag.find_by_name(nil, " ")
 		if tag then
 			awful.tag.viewtoggle(tag)
 		end
 	end, { description = "toggle Scratch", group = "tag" }),
 	awful.key({ modkey, "Shift" }, "a", function()
-		local tag = awful.tag.find_by_name(nil, "EMACS")
+		local tag = awful.tag.find_by_name(nil, " ")
 		if tag then
 			client.focus:move_to_tag(tag)
 		end
