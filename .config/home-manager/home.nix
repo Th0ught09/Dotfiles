@@ -200,8 +200,12 @@
     awesome
 
     # Misc
-    zoom-us
-    eww
+    freetube
+    pkg-config
+    gtk4
+    pulseaudioFull
+    alsa-utils
+    alsa-oss
     lazygit
     mpv
     vlc

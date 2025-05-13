@@ -4,7 +4,8 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(org-agenda-files
-   '("/home/kirkm/Documents/Org/cal.org" "/home/kirkm/Projects/SysA/tracking.org"
+   '("~/Documents/Org/sh_slt.org" "/home/kirkm/Documents/Org/cal.org"
+     "/home/kirkm/Projects/SysA/tracking.org"
      "/home/kirkm/Projects/DS/DSD/ds_lab3.org"
      "/home/kirkm/Projects/Loupe/loupe.org"
      "/home/kirkm/Documents/Org/86_dbg.org" "/home/kirkm/Documents/Org/ads.org"
@@ -159,7 +160,6 @@
      "/home/kirkm/Documents/Org/sh_ds.org"
      "/home/kirkm/Documents/Org/sh_error.org"
      "/home/kirkm/Documents/Org/sh_io.org"
-     "/home/kirkm/Documents/Org/sh_selection.org"
      "/home/kirkm/Documents/Org/sh_variables.org"
      "/home/kirkm/Documents/Org/sng.org"
      "/home/kirkm/Documents/Org/sng_tech.org"
@@ -196,9 +196,9 @@
      "/home/kirkm/Documents/Org/x86_work.org"))
  '(org-directory "~/Documents/Org")
  '(package-selected-packages
-   '(ace-window all-the-icons dashboard emms gtk-pomodoro-indicator llm lsp-mode
-     nerd-icons org-pomodoro page-break-lines pomodoro projectile register-list
-     shrface tldr yasnippet)))
+   '(ace-window all-the-icons dashboard emms gnuplot gtk-pomodoro-indicator llm
+     lsp-mode nerd-icons org-pomodoro page-break-lines pomodoro projectile
+     register-list shrface tldr yasnippet)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

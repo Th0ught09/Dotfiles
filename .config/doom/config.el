@@ -41,75 +41,7 @@
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/Documents/Org/")
 
-
-;; Whenever you reconfigure a package, make sure to wrap your config in an
-;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
-;;
-;;   (after! PACKAGE
-;;     (setq x y))
-;;
-;; The exceptions to this rule:
-;;
-;;   - Setting file/directory variables (like `org-directory')
-;;   - Setting variables which explicitly tell you to set them before their
-;;     package is loaded (see 'C-h v VARIABLE' to look up their documentation).
-;;   - Setting doom variables (which start with 'doom-' or '+').
-;;
-;; Here are some additional functions/macros that will help you configure Doom.
-;;
-;; - `load!' for loading external *.el files relative to this one
-;; - `use-package!' for configuring packages
-;; - `after!' for running code after a package has loaded
-;; - `add-load-path!' for adding directories to the `load-path', relative to
-;;   this file. Emacs searches the `load-path' when you load packages with
-;;   `require' or `use-package'.
-;; - `map!' for binding new keys
-;;
-;; To get information about any of these functions/macros, move the cursor over
-;; the highlighted symbol at press 'K' (non-evil users must press 'C-c c k').
-;; This will open documentation for it, including demos of how they are used.
-;; Alternatively, use `C-h o' to look up a symbol (functions, variables, faces,
-;; etc).
-;;
-;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
-;; they are implemented.
-;; Each path is relative to the path of the maildir you passed to mu
-;(set-email-account! "protonmail"
-;  '((mu4e-sent-folder       . "/ProtonMail/Sent")
-;    (mu4e-drafts-folder     . "/ProtonMail/Drafts")
-;    (mu4e-trash-folder      . "/ProtonMail/Trash")
-;    (mu4e-refile-folder     . "/ProtonMail/All Mail")
-;    (smtpmail-smtp-user     . "kirkmatt@proton.me")
-;    (mu4e-compose-signature . "Kind Regards,\nKirkm"))
-;  t)
-;(setq mu4e-smtp-server "127.0.0.1")
-;(setq mu4e-smtp-port 1025)
-;(setq mu4e-smtp-user "kirkmatt@proton.me")
-;(setq mu4e-smtp-auth 'plain)  ;; Or 'login if that works
-;(setq mu4e-smtp-tls nil)
-;(add-to-list 'load-path "/home/kirkm/.config/emacs/.local/straight/build-29.4/evil-collection/modes")
-;(add-to-list 'load-path "/home/kirkm/.config/emacs/.local/straight/build-29.4/evil-collection/modes/mu4e")
-
-;(setq smtpmail-smtp-server "127.0.0.1")
-;(setq smtpmail-smtp-service 1025)
-;(setq user-full-name "Kirk Matt")
-;(setq mail-user-agent 'message-user-agent)
 (setq user-mail-address "kirkmatt@proton.me")
-;(setq sendmail-program "/home/kirkm/.nix-profile/bin/msmtp"
-;      send-mail-function 'message-send-mail-with-sendmail)
-;(setq smtpmail-smtp-user "kirkmatt@proton.me")
-;(setq user-mail-address "kirkmatt@proton.me")
-;(setq mu4e-smtp-server "127.0.0.1"
-;      mu4e-smtp-user "kirkmatt@proton.me"
-;      mu4e-smtp-port 1025
-;      mu4e-smtp-auth 'plain)
-;(setq smtpmail-smtp-user "kirkmatt@proton.me")
-;(setq smtpmail-default-smtp-server "127.0.0.1")
-;(setq smtpmail-smtp-service 1025)
-;(setq sendmail-program "/home/kirkm/.nix-profile/bin/msmtp")
-;(setq send-mail-function 'message-send-mail-with-sendmail)
-;(setq smtpmail-auth-credentials (expand-file-name "~/.msmtprc"))
-;(setq smtpmail-smtp-tls nil) ;; Disable TLS if ProtonMail Bridge does not use it
 (use-package mu4e
   :defer 20 ; Wait until 20 seconds after startup
   :config
@@ -191,8 +123,6 @@
     (switch-to-buffer (doom-fallback-buffer))
     (calendar-init)))
 
-;(setq org-agenda-files (list "~/Documents/Org"))
-
 (custom-set-variables
  '(org-directory "~/Documents/Org")
  '(org-agenda-files (list org-directory)))
@@ -204,16 +134,12 @@
                             (:endgroup))))
 
 (setq org-default-notes-file (concat org-directory "/notes.org"))
-(setq org-agenda-include-diary t)
 
 ;=================================================================
 ; VIM BINDINGS
 ;=================================================================
 
 (setq tab-width 4)
-;; (setq display-line-numbers
-;; 'relative)
-
 
 ;=================================================================
 ; Packages
@@ -221,9 +147,6 @@
 
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
-;;; Comment/uncomment this line to enable MELPA Stable if desired.  See `package-archive-priorities`
-;;; and `package-pinned-packages`. Most users will not need or want to do this.
-;;(add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 (package-initialize)
 
 
@@ -261,7 +184,7 @@
 ; Emms
 ; =================================================================
 (emms-all)
-(setq emms-player-list '(emms-player-vlc)
+(setq emms-player-list '(emms-player-mpv)
       emms-info-functions '(emms-info-native))
 
 ;=================================================================
@@ -270,3 +193,10 @@
 (add-hook 'org-mode-hook 'abbrev-hook)
 (defun abbrev-hook ()
   (abbrev-mode 1))
+
+;=================================================================
+; Constants
+; =================================================================
+(setq! scroll-margin 8)
+(setq evil-shift-width 4)
+(setq org-startup-folded t)
