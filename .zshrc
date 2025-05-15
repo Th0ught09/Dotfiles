@@ -32,13 +32,10 @@ zstyle ':omz:plugins:alias-finder' cheaper yes # disabled by default
 
 # ENVIRONMENT VARIABLES
 
-# export XDG_CURRENT_DESKTOP=Sway
-# export WAYLAND_DISPLAY=wayland-0
 export CALIBRE_USE_DARK_PALETTE=0
 export EDITOR=nvim
 export FZF_DEFAULT_OPTS="--tmux center"
 export ZSH="$HOME/.oh-my-zsh"
-# export PATH="$PATH:/home/kirkm/.local/share/JetBrains/Toolbox/scripts:/home/kirkm/.dotnet/tools:/home/kirkm/.local/bin"
 PATH=$PATH:/home/kirkm/.config/emacs/bin:/home/kirkm/.scripts
 export DOOMDIR=~/.config/doom
 export LD_LIBRARY_PATH=/home/kirkm/.local/share/nvim/mason/bin:/home/kirkm/Programs:/home/kirkm/miniconda3/bin:/home/kirkm/.config/emacs/bin:/home/kirkm/Programs:/home/kirkm/miniconda3:$LD_LIBRARY_PATH
@@ -59,19 +56,18 @@ alias zrc="vi ~/.zshrc"
 alias src="source ~/.zshrc"
 alias ls="eza --icons"
 alias clear="clear; tput cup $LINES"
-alias note="vi ~/Documents/Vault"
 alias update="sudo dnf update && sudo dnf upgrade"
 alias rw="/home/kirkm/.local/share/Steam/steamapps/common/RimWorld/RimWorldLinux" 
 alias ca="conda activate"
 alias ac="conda deactivate"
 alias srch="nix-env -qaP"
-alias install="sudo dnf install"
-alias zra="zrc +43"
+alias zra="zrc +53"
 alias netsp="speedtest-cli --simple"
 alias gdb="gdb -q"
 alias sp="sudo systemctl suspend"
 alias emacs="emacsclient -c -a 'emacs'"
 alias mb="fuck"
+alias opn="xdg-open"
 
 # FUNCTIONS
 
@@ -96,19 +92,14 @@ lg(){
   l | grep $1
 }
 
-# Quick search into language dir
-
-function lr () { z Lang $1 }
-
 # SETTINGS  
 
 set -o vi
 
 # COMMANDS
 
-# xrandr --output HDMI-A-0 --primary --output DisplayPort-1 --right-of HDMI-A-0
 tput cup $LINES
-colorscript random
+/usr/bin/pokemon-colorscripts --no-title -r
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 eval "$(thefuck --alias)"

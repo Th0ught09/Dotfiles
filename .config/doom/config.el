@@ -208,6 +208,7 @@
 ;; (setq mode-line-format '("%e" (:eval (doom-modeline-format--main))))
 (setq mode-line-format nil)
 (setq org-icalendar-timezone "Europe/London")
+(setq emms-repeat-playlist t)
 
 ;=================================================================
 ; keybindings

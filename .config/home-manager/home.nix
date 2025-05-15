@@ -21,7 +21,6 @@
     home.packages = with pkgs; [
         
         # Term QOL
-        dwt1-shell-color-scripts
         thefuck                     # Aliased to mb
         hexyl
         yank
