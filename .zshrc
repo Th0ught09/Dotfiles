@@ -71,6 +71,7 @@ alias netsp="speedtest-cli --simple"
 alias gdb="gdb -q"
 alias sp="sudo systemctl suspend"
 alias emacs="emacsclient -c -a 'emacs'"
+alias mb="fuck"
 
 # FUNCTIONS
 
@@ -107,9 +108,10 @@ set -o vi
 
 # xrandr --output HDMI-A-0 --primary --output DisplayPort-1 --right-of HDMI-A-0
 tput cup $LINES
+colorscript random
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
-# eval "$(thefuck --alias)"
+eval "$(thefuck --alias)"
 
 
 # >>> conda initialize >>>

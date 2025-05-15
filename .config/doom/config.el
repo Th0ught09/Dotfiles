@@ -174,11 +174,13 @@
         (dashboard-projects-backend 'projectile)
         (dashboard-display-icons-p t)
         (dashboard-items '(
-            (recents . 10)
-            (agenda . 10)
-            (projects . 10)
-            (bookmarks . 10)
+            (recents . 5)
+            (agenda . 5)
+            (projects . 5)
+            (bookmarks . 5)
 )))
+(setq dashboard-filter-agenda-entry 'dashboard-filter-agenda-by-todo)
+(setq dashboard-match-agenda-entry "TODO=\"TODO\"")
 
 ;=================================================================
 ; Emms
@@ -191,6 +193,7 @@
 ; Hooks
 ; =================================================================
 (add-hook 'org-mode-hook 'abbrev-hook)
+(add-hook 'pdf-view-mode-hook 'pdf-view-midnight-minor-mode)
 (defun abbrev-hook ()
   (abbrev-mode 1))
 
@@ -200,3 +203,63 @@
 (setq! scroll-margin 8)
 (setq evil-shift-width 4)
 (setq org-startup-folded t)
+(setq emms-source-file-default-directory "~/Music/Playlists/")
+(setq emms-repeat-playlist t)
+;; (setq mode-line-format '("%e" (:eval (doom-modeline-format--main))))
+(setq mode-line-format nil)
+(setq org-icalendar-timezone "Europe/London")
+
+;=================================================================
+; keybindings
+; =================================================================
+;; (define-prefix-command (kbd "\C-p") ctl-x-p-map)
+(define-key ctl-x-map "p" 'emms-pause)
+(define-key ctl-x-map "P" 'org-pomodoro)
+(global-set-key (kbd "M-o") 'ace-window)
+(global-set-key (kbd "C-h") 'windmove-left)
+(global-set-key (kbd "C-j") 'windmove-down)
+(global-set-key (kbd "C-k") 'windmove-up)
+(global-set-key (kbd "C-l") 'windmove-right)
+;; (global-set-key (kbd "M-h") 'previous-buffer)
+;; (global-set-key (kbd "M-l") 'next-buffer)
+;; (define-key )
+
+(desktop-save-mode 1)
+
+;=================================================================
+; Calendar sync
+; =================================================================
+;;; define categories that should be excluded
+(setq org-export-exclude-category (list "google" "private"))
+
+;;; define filter. The filter is called on each entry in the agenda.
+;;; It defines a regexp to search for two timestamps, gets the start
+;;; and end point of the entry and does a regexp search. It also
+;;; checks if the category of the entry is in an exclude list and
+;;; returns either t or nil to skip or include the entry.
+
+(defun org-mycal-export-limit ()
+  "Limit the export to items that have a date, time and a range. Also exclude certain categories."
+  (setq org-tst-regexp "<\\([0-9]\\{4\\}-[0-9]\\{2\\}-[0-9]\\{2\\} ... [0-9]\\{2\\}:[0-9]\\{2\\}[^\r\n>]*?\
+\)>")
+  (setq org-tstr-regexp (concat org-tst-regexp "--?-?" org-tst-regexp))
+  (save-excursion
+    ; get categories
+    (setq mycategory (org-get-category))
+    ; get start and end of tree
+    (org-back-to-heading t)
+    (setq mystart    (point))
+    (org-end-of-subtree)
+    (setq myend      (point))
+    (goto-char mystart)
+    ; search for timerange
+    (setq myresult (re-search-forward org-tstr-regexp myend t))
+    ; search for categories to exclude
+    (setq mycatp (member mycategory org-export-exclude-category))
+    ; return t if ok, nil when not ok
+    (if (and myresult (not mycatp)) t nil)))
+
+;;; activate filter and call export function
+(defun org-mycal-export ()
+  (let ((org-icalendar-verify-function 'org-mycal-export-limit))
+   (org-export-icalendar-combine-agenda-files)))
