@@ -206,9 +206,10 @@
 (setq emms-source-file-default-directory "~/Music/Playlists/")
 (setq emms-repeat-playlist t)
 ;; (setq mode-line-format '("%e" (:eval (doom-modeline-format--main))))
-(setq mode-line-format nil)
+;(setq mode-line-format nil)
 (setq org-icalendar-timezone "Europe/London")
 (setq emms-repeat-playlist t)
+(setq yas-sniipet-dirs '("~/Dotfiles/.config/doom/snippets"))
 
 ;=================================================================
 ; keybindings
@@ -217,7 +218,7 @@
 (define-key ctl-x-map "p" 'emms-pause)
 (define-key ctl-x-map "P" 'org-pomodoro)
 (global-set-key (kbd "M-o") 'ace-window)
-(global-set-key (kbd "C-h") 'windmove-left)
+;(global-set-key (kbd "C-h") 'windmove-left)
 (global-set-key (kbd "C-j") 'windmove-down)
 (global-set-key (kbd "C-k") 'windmove-up)
 (global-set-key (kbd "C-l") 'windmove-right)
@@ -225,7 +226,7 @@
 ;; (global-set-key (kbd "M-l") 'next-buffer)
 ;; (define-key )
 
-(desktop-save-mode 1)
+;(desktop-save-mode 1)
 
 ;=================================================================
 ; Calendar sync

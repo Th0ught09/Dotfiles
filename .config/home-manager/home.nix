@@ -82,8 +82,6 @@
         vlc
 
         # Languages
-        python312Packages.bpython
-        uv
         shellcheck
         nodejs_23
         rustup
@@ -94,6 +92,11 @@
         R
         zulu17
         go
+
+        ## Python
+        python312Packages.bpython
+        virtualenv
+        uv
 
         ## Lua
         lua
@@ -110,10 +113,9 @@
         haskellPackages.hspec
 
         # Apps
-        freetube
+        obs-studio
         whatsapp-for-linux
         libreoffice-qt
-        oh-my-git
         gtypist
         discord
         protonmail-desktop
@@ -124,7 +126,7 @@
 
         # Photography
         gphoto2
-        gimp
+        inputs.nixpkgs.legacyPackages.${pkgs.system}.gimp
         darktable
 
         # Shell
@@ -142,6 +144,7 @@
         jupyter-all
 
         # Games
+        oh-my-git
         lazygit
         vimgolf
 

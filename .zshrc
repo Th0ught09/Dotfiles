@@ -68,6 +68,7 @@ alias sp="sudo systemctl suspend"
 alias emacs="emacsclient -c -a 'emacs'"
 alias mb="fuck"
 alias opn="xdg-open"
+alias time="command time"
 
 # FUNCTIONS
 
