@@ -6,7 +6,7 @@
  '(org-agenda-files (list org-directory))
  '(org-directory "~/Documents/Org")
  '(package-selected-packages
-   '(sqlite3 yasnippet tldr shrface register-list projectile pomodoro page-break-lines org-pomodoro nix-mode nerd-icons lsp-mode llm gtk-pomodoro-indicator gnuplot emms dashboard all-the-icons ace-window)))
+   '(ace-window dashboard emms evil-mu4e iosevka-theme org-pomodoro slime)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

@@ -5,6 +5,7 @@
     # manage.
     home.username = "kirkm";
     home.homeDirectory = "/home/kirkm";
+  home.enableNixpkgsReleaseCheck = false;
 	nixpkgs.config.allowUnfree = true;
 
     # This value determines the Home Manager release that your configuration is
@@ -30,6 +31,7 @@
         tldr
         cheat
         onefetch
+	iosevka
 
         # Mail
         msmtp   # Unsure
@@ -82,8 +84,9 @@
         vlc
 
         # Languages
+        sbcl
         shellcheck
-        nodejs_23
+        nodejs_24
         rustup
         php
         gcc
@@ -199,6 +202,10 @@
         xbanish
         gromit-mpx
         screenkey
+
+        # Misc
+        acpi
+        unetbootin
 
     ];
 

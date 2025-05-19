@@ -21,7 +21,7 @@
 ;; See 'C-h v doom-font' for documentation and more examples of what they
 ;; accept. For example:
 ;;
-(setq doom-font (font-spec :family "IosevkaTerm Nerd Font" :size 20 :weight 'semi-light))
+(setq doom-font (font-spec :family "Iosevka Nerd Font" :size 20 :weight 'semi-light))
 ;;
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
 ;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
@@ -161,26 +161,26 @@
 ; Home page
 ; =================================================================
 
-(use-package dashboard
-    :config
-        (dashboard-setup-startup-hook)
-    :custom
-        (dashboard-startup-banner 'logo)
-        (dashboard-banner-logo-title nil)
-        (dashboard-icon-type 'nerd-icons)
-        (dashboard-set-heading-icons t)
-        (dashboard-set-file-icons t)
-        (dashboard-set-footer nil)
-        (dashboard-projects-backend 'projectile)
-        (dashboard-display-icons-p t)
-        (dashboard-items '(
-            (recents . 5)
-            (agenda . 5)
-            (projects . 5)
-            (bookmarks . 5)
-)))
-(setq dashboard-filter-agenda-entry 'dashboard-filter-agenda-by-todo)
-(setq dashboard-match-agenda-entry "TODO=\"TODO\"")
+; (use-package dashboard
+;     :config
+;         (dashboard-setup-startup-hook)
+;     :custom
+;         (dashboard-startup-banner 'logo)
+;         (dashboard-banner-logo-title nil)
+;         (dashboard-icon-type 'nerd-icons)
+;         (dashboard-set-heading-icons t)
+;         (dashboard-set-file-icons t)
+;         (dashboard-set-footer nil)
+;         (dashboard-projects-backend 'projectile)
+;         (dashboard-display-icons-p t)
+;         (dashboard-items '(
+;             (recents . 5)
+;             (agenda . 5)
+;             (projects . 5)
+;             (bookmarks . 5)
+; )))
+; (setq dashboard-filter-agenda-entry 'dashboard-filter-agenda-by-todo)
+; (setq dashboard-match-agenda-entry "TODO=\"TODO\"")
 
 ;=================================================================
 ; Emms
