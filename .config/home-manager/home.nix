@@ -31,7 +31,7 @@
         tldr
         cheat
         onefetch
-	iosevka
+        iosevka
 
         # Mail
         msmtp   # Unsure
@@ -40,6 +40,8 @@
         mtpfs
 
         # Hardware
+        amdgpu_top
+        stress
         pciutils
         usbutils
         lm_sensors # For cpu monitoring?
@@ -97,6 +99,7 @@
         go
 
         ## Python
+        python313Packages.debugpy
         python312Packages.bpython
         virtualenv
         uv
@@ -114,6 +117,9 @@
         stack
         cabal-install
         haskellPackages.hspec
+        haskellPackages.haskell-dap
+        haskellPackages.ghci-dap
+        haskellPackages.haskell-debug-adapter
 
         # Apps
         obs-studio
@@ -129,8 +135,16 @@
 
         # Photography
         gphoto2
-        inputs.nixpkgs.legacyPackages.${pkgs.system}.gimp
+        gimp3
+        blender
         darktable
+
+        # Chess
+        chessx
+        chessdb
+        chess-tui
+        gnuchess
+        stockfish
 
         # Shell
         nushell

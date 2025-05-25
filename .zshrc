@@ -10,16 +10,17 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # PLUGINS
 
 plugins=(
-  git 
-  fzf 
-  1password 
-  zoxide 
-  vi-mode 
-  sudo 
-  alias-finder 
-  zsh-autosuggestions 
-  zsh-syntax-highlighting
-  autoswitch_virtualenv
+    undollar
+    git 
+    fzf 
+    1password 
+    zoxide 
+    vi-mode 
+    sudo 
+    alias-finder 
+    zsh-autosuggestions 
+    zsh-syntax-highlighting
+    autoswitch_virtualenv
 )
 
 # ZSTYLES

@@ -209,7 +209,7 @@
 ;(setq mode-line-format nil)
 (setq org-icalendar-timezone "Europe/London")
 (setq emms-repeat-playlist t)
-(setq yas-sniipet-dirs '("~/Dotfiles/.config/doom/snippets"))
+(setq yas-snippet-dirs '("~/Dotfiles/.config/doom/snippets"))
 
 ;=================================================================
 ; keybindings

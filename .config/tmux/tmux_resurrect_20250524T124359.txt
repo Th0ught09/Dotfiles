@@ -1,0 +1,5 @@
+pane	0	1	1	:*	1	nixos	:/home/kirkm/Dotfiles/.config/tmux	1	zsh	:
+pane	Spawn	1	1	:*	1	nixos	:/home/kirkm	1	zsh	:
+window	0	1	:zsh	1	:*	cd7d,144x29,0,0,0	:
+window	Spawn	1	:zsh	1	:*	cd7e,144x29,0,0,1	:
+state	Spawn	

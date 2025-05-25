@@ -6,7 +6,7 @@
  '(org-agenda-files (list org-directory))
  '(org-directory "~/Documents/Org")
  '(package-selected-packages
-   '(ace-window dashboard emms evil-mu4e iosevka-theme org-pomodoro slime)))
+   '(ace-window chess dashboard emms evil-mu4e iosevka-theme org-pomodoro slime)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
