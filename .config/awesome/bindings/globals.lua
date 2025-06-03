@@ -115,7 +115,7 @@ local globals = gears.table.join(
 	-- awful.key({ modkey }, "p", function() menubar.show() end,
 	--   { description = "show the menubar", group = "launcher" })
 	awful.key({ modkey, "Shift" }, "f", function()
-		awful.spawn("alacritty -e ranger")
+		awful.spawn("ghostty -e yazi")
 	end, { description = "File Manager", group = "system" })
 )
 

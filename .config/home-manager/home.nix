@@ -176,7 +176,8 @@
 
         # Term
         alacritty
-        tmux
+        ghostty
+	tmux
         mprocs # Watch a bunch of processes
 
         # Dev Tools
