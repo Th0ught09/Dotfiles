@@ -27,6 +27,7 @@ A bit more hassle to install but adds some nice features
 ## Install
 
 Experimental, do not run this script yet
+
 ```
 git clone git@github.com:Th0ught09/Dotfiles.git
 cd ~/.config
@@ -47,3 +48,5 @@ done
 
 ![Plain View](plain.png)
 ![Terminal View](terminal.png)
+
+test

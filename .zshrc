@@ -100,13 +100,16 @@ set -o vi
 
 # COMMANDS
 
-tput cup $LINES
-/usr/bin/pokemon-colorscripts --no-title -r
-eval "$(starship init zsh)"
-eval "$(zoxide init zsh)"
-eval "$(thefuck --alias)"
+# tput cup $LINES
+# /usr/bin/pokemon-colorscripts --no-title -r
+# eval "$(starship init zsh)"
+# eval "$(zoxide init zsh)"
+# eval "$(thefuck --alias)"
 
-
+if [[ $(ps -o command= -p "$PPID" | awk '{print $1}') != 'fish' ]]
+    then
+        exec fish -l
+    fi
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 # __conda_setup="$('/home/kirkm/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
