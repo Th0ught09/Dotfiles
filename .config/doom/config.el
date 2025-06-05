@@ -124,8 +124,8 @@
     (calendar-init)))
 
 (custom-set-variables
- '(org-directory "~/Documents/Org")
- '(org-agenda-files (list org-directory)))
+ '(org-directory "~/Org")
+ '(org-agenda-files (list "~/Org")))
 
 
 (setq org-tag-alist (quote ((:startgroup)
@@ -134,7 +134,7 @@
                             (:endgroup))))
 
 (setq org-default-notes-file (concat org-directory "/notes.org"))
-
+(setq org-roam-directory (file-truename "~/Org"))
 ;=================================================================
 ; VIM BINDINGS
 ;=================================================================
@@ -209,6 +209,7 @@
 ;(setq mode-line-format nil)
 (setq org-icalendar-timezone "Europe/London")
 (setq emms-repeat-playlist t)
+(setq centaur-tabs-mode nil)
 (setq yas-snippet-dirs '("~/Dotfiles/.config/doom/snippets"))
 
 ;=================================================================
@@ -218,15 +219,13 @@
 (define-key ctl-x-map "p" 'emms-pause)
 (define-key ctl-x-map "P" 'org-pomodoro)
 (global-set-key (kbd "M-o") 'ace-window)
-;(global-set-key (kbd "C-h") 'windmove-left)
-(global-set-key (kbd "C-j") 'windmove-down)
-(global-set-key (kbd "C-k") 'windmove-up)
-(global-set-key (kbd "C-l") 'windmove-right)
-;; (global-set-key (kbd "M-h") 'previous-buffer)
-;; (global-set-key (kbd "M-l") 'next-buffer)
+(global-set-key (kbd "C-c f") 'org-roam-node-find)
+(global-set-key (kbd "C-c i") 'org-roam-node-insert)
 ;; (define-key )
 
 ;(desktop-save-mode 1)
+
+(require 's)
 
 ;=================================================================
 ; Calendar sync

@@ -20,7 +20,7 @@
     # The home.packages option allows you to install Nix packages into your
     # environment.
     home.packages = with pkgs; [
-        
+
         # Term QOL
         thefuck                     # Aliased to mb
         hexyl
@@ -164,7 +164,6 @@
         inputs.nixpkgs.legacyPackages.${pkgs.system}.fzf
 
         # Editor
-        emacs
         vim
         neovim
         jupyter-all
@@ -177,7 +176,7 @@
         # Term
         alacritty
         ghostty
-	tmux
+        # tmux
         mprocs # Watch a bunch of processes
 
         # Dev Tools
@@ -232,11 +231,13 @@
         screenkey
 
         # Misc
+        beep
+        mermaid-cli
         presenterm
         wiki-tui
         acpi
         unetbootin
-	evcxr
+        evcxr
 
     ];
 
@@ -251,6 +252,61 @@
     # programs.fish = {
     #     enable = true;
     # };
+    #
+    programs.emacs = {
+        enable = true;
+        extraPackages = epkgs: [
+            epkgs.mu4e
+        ];
+    };
+
+    programs.tmux = {
+        enable = true;
+        baseIndex = 1;
+        keyMode = "vi";
+        plugins = with pkgs.tmuxPlugins; [
+            resurrect
+            open
+            gruvbox
+            continuum
+            yank
+            vim-tmux-navigator
+            sensible
+        ];
+        extraConfig = ''
+bind h select-pane -L
+bind j select-pane -D 
+bind k select-pane -U
+bind l select-pane -R
+
+set-window-option -g pane-base-index 1
+set-option -g renumber-windows on
+
+unbind-key M-Left
+unbind-key M-Right
+unbind-key M-Up
+unbind-key M-Down
+
+bind -n S-Left  previous-window
+bind -n S-Right next-window
+
+bind -n M-H previous-window
+bind -n M-L next-window
+
+bind-key -T copy-mode-vi v send-keys -X begin-selection
+bind-key -T copy-mode-vi C-v send-keys -X rectangle-toggle
+bind-key -T copy-mode-vi y send-keys -X copy-selection-and-cancel
+
+bind '"' split-window -v -c "#{pane_current_path}"
+bind % split-window -h -c "#{pane_current_path}"
+
+set -g @tmux-gruvbox 'light'
+set -g @continuum-restore 'on'
+set -g @continuum-boot 'on'
+set -g @yank_selection 'primary'
+set -g @shell_mode 'vi'
+        '';
+    };
 
     programs.home-manager.enable = true;
 

@@ -6,5 +6,6 @@ end
 
 starship init fish | source
 set -U fish_greeting
+set -Ux EDITOR nvim
 
 bind ctrl-x fg
