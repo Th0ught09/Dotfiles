@@ -236,7 +236,8 @@
         wiki-tui
         acpi
         unetbootin
-	evcxr
+        arc-icon-theme
+        evcxr
 
     ];
 

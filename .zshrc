@@ -10,7 +10,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # PLUGINS
 
 plugins=(
-    undollar
+    # undollar
     git 
     fzf 
     1password 

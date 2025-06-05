@@ -3,6 +3,7 @@ local dpi = require("beautiful.xresources").apply_dpi
 local gears = require("gears")
 local wibox = require("wibox")
 local screen = require("awful.screen")
+local battery_widget = require("awesome-wm-widgets.battery-widget.battery")
 
 -- Create a wibox for each screen and add it
 local taglist_buttons = require("bindings.taglist")
@@ -67,7 +68,7 @@ do
 	end
 	--
 	-- -- Tags
-	local tags = { " ", "󰈙 ", " ", " ", " ", " ", " ", " ", " " }
+	local tags = { " ", "󰈙 ", " ", " ", " ", " ", " ", " ", " " }
 	for tag_index = 1, #tags do
 		add_tag({ tag = tags[tag_index] })
 	end
@@ -111,75 +112,10 @@ do
 			spacing = 10,
 			spacing_widget = wibox.widget.separator,
 			cpu,
+			battery_widget(),
 			wibox.widget.systray(),
 		},
 	})
 end
 
-print(memory.text)
-
-local vert_screen = nil
-if awful.screen.getbycoord(1920, 0) then
-	local vert_screen_index = awful.screen.getbycoord(1920, 0)
-	vert_screen = screens[vert_screen_index]
-end
-
-if vert_screen then
-	set_wallpaper_vert(vert_screen)
-	local function add_tag(options)
-		local gap = options.gap or 0
-		local layout = options.layout or awful.layout.suit.tile.top
-		awful.tag.add(options.tag, {
-			screen = vert_screen,
-			gap = gap,
-			layout = layout,
-		})
-	end
-
-	-- Tags
-	local tags = { " ", "󰈙 ", " ", " ", " ", " ", " ", " ", " " }
-	for tag_index = 1, #tags do
-		add_tag({ tag = tags[tag_index] })
-	end
-
-	local taglist = awful.widget.taglist({
-		screen = vert_screen,
-		filter = awful.widget.taglist.filter.all,
-	})
-	local tasklist = awful.widget.tasklist({
-		screen = vert_screen,
-		filter = awful.widget.tasklist.filter.currenttags,
-		style = {
-			tasklist_disable_icon = true,
-		},
-	})
-
-	local mywibox = awful.wibar({
-		position = "top",
-		screen = vert_screen,
-		opacity = 0.8,
-		ontop = false,
-		visible = true,
-		height = 30,
-	})
-	mywibox:setup({
-		layout = wibox.layout.align.horizontal,
-		{
-			wibox.widget({
-				markup = "<b>   </b>",
-				widget = wibox.widget.textbox,
-			}),
-			spacing = 10,
-			spacing_widget = wibox.widget.separator,
-			layout = wibox.layout.fixed.horizontal,
-			taglist,
-		},
-		tasklist,
-		{
-			layout = wibox.layout.fixed.horizontal,
-			wibox.widget.systray(),
-		},
-	})
-end
-
--- }}}
+-- Tags
