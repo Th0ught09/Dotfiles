@@ -6,7 +6,7 @@
     home.username = "kirkm";
     home.homeDirectory = "/home/kirkm";
     home.enableNixpkgsReleaseCheck = false;
-	nixpkgs.config.allowUnfree = true;
+    nixpkgs.config.allowUnfree = true;
 
     # This value determines the Home Manager release that your configuration is
     # compatible with. This helps avoid breakage when a new Home Manager release
@@ -98,12 +98,13 @@
         clang-tools
         texliveFull
         R
-        zulu17
+        jdk21
         go
 
         ## Rust
         bacon
         rusty-man
+        rust-script
 
         ## Python
         python313Packages.debugpy
@@ -130,22 +131,19 @@
         haskellPackages.hoogle
 
         # Apps
-        obs-studio
-        whatsapp-for-linux
+        obs-studio # Recording
         libreoffice-qt
-        gtypist
+        gtypist # Typing help
         discord
         protonmail-desktop
         _1password-gui
         flameshot
-        shotcut
-        lutris
+        shotcut # Video Editing
 
         # Photography
-        gphoto2
-        gimp3
-        blender
-        darktable
+        gphoto2 # Get photos from camera
+        gimp3 # Photoshop
+        darktable # More detailed photoshop
 
         # Chess
         chessx
@@ -155,57 +153,58 @@
         stockfish
 
         # Shell
-        nushell
-        eza
-        oh-my-zsh
-        zsh
-        fish
-        ripgrep
+        nushell     # Parsing Data
+        eza         # Better ls
+        oh-my-zsh   # BC
+        zsh         # BC
+        fish        # Modern Shell
+        ripgrep     # Faster Grep
         inputs.nixpkgs.legacyPackages.${pkgs.system}.fzf
 
         # Editor
-        vim
-        neovim
-        jupyter-all
+        vim         # NeoVim is broken
+        neovim      # Main Editor
+        jupyter-all # Data Science
+        jetbrains.idea-ultimate # Java Errors
+        jetbrains.pycharm-professional #  Java Errors
 
         # Games
-        oh-my-git
-        lazygit
-        vimgolf
+        oh-my-git   # Git Good
+        lazygit     # Interactive Git
+        vimgolf     # Vim Practice
 
         # Term
-        alacritty
-        ghostty
-        # tmux
-        mprocs # Watch a bunch of processes
+        alacritty   # Main Terminal
+        ghostty     # Image Rendering
+        mprocs      # Watch a bunch of processes
 
         # Dev Tools
-        tokei
-        fselect
-        file
-        gnumake
-        git
-        delta
-        ctags
-        docker
-        docker-compose
-        podman
-        distrobox
-        cmake
+        tokei       # View directory info
+        fselect     # Query files using sql
+        file        # View file type
+        gnumake     # Makefiles
+        git         # Git
+        delta       # Compare files
+        ctags       # Tag File
+        docker      # Docker
+        docker-compose # TODO
+        podman      # Container Stuff
+        distrobox   # Emulate Other distros
+        cmake       # Making Makefiles
 
         # Networking
-        wget
-        speedtest-cli
+        wget            # Query Internet
+        speedtest-cli   # Test Speed
         psmisc
         cifs-utils
         cacert
-        nmap
-        openssh
-        nginx
+        nmap            # Query Network
+        openssh         # SSH
+        nginx           # (Needed?)
         inetutils
         openssl
-        protonmail-bridge
-        protonmail-bridge-gui
+        protonmail-bridge # Mail Server
+        protonmail-bridge-gui # GUI
 
         # OS
         ps_mem
@@ -230,7 +229,12 @@
         gromit-mpx
         screenkey
 
+        # Jetbrains
+
         # Misc
+        r2modman
+        xcolor
+        graphviz
         beep
         mermaid-cli
         presenterm
@@ -238,6 +242,11 @@
         acpi
         unetbootin
         evcxr
+		libtool
+        mask
+        just
+        jq
+        rpi-imager
 
     ];
 
@@ -246,12 +255,29 @@
 
     home.sessionVariables = {
         EDITOR = "nvim";
-        SHELL = "fish";
+        SHELL = "zsh";
     };
 
-    # programs.fish = {
+    # programs.zsh = {
     #     enable = true;
     # };
+
+    programs.fish = {
+        interactiveShellInit = ''
+        set fish_greeting # Disable greeting
+        starship init fish | source
+        '';
+        plugins = [
+            {
+                name = "plugin-git";
+                src = pkgs.fishPlugins.plugin-git.src;
+            }
+            {
+                name = "transient-fish";
+                src = pkgs.fishPlugins.transient-fish;
+            }
+        ];
+    };
     #
     programs.emacs = {
         enable = true;

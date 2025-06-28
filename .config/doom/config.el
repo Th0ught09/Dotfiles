@@ -21,7 +21,7 @@
 ;; See 'C-h v doom-font' for documentation and more examples of what they
 ;; accept. For example:
 ;;
-(setq doom-font (font-spec :family "Iosevka Nerd Font" :size 20 :weight 'semi-light))
+(setq doom-font (font-spec :family "Iosevka Nerd Font" :size 24 :weight 'semi-light))
 ;;
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
 ;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
@@ -39,7 +39,7 @@
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
-(setq org-directory "~/Documents/Org/")
+(setq org-directory "~/Org/")
 
 (setq user-mail-address "kirkmatt@proton.me")
 (use-package mu4e
@@ -75,7 +75,7 @@
 (setq org-publish-project-alist
       '(
         ("org-notes"
-        :base-directory "~/Documents/Org/"
+        :base-directory "~/Org/"
         :base-extension "org"
         :publishing-directory "~/public_html/"
         :recursive t
@@ -85,7 +85,7 @@
         )
 
         ("org-static"
-        :base-directory "~/Documents/Org/"
+        :base-directory "~/Org/"
         :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
         :publishing-directory "~/public_html/"
         :recursive t
@@ -155,6 +155,7 @@
 ;=================================================================
 
 (setq yas-snippet-dirs '("~/.config/emacs/snippets"))
+(setq x86-lookup-pdf "~/Books/Manuals/x86-manual.pdf")
 
 
 ;=================================================================
@@ -211,6 +212,7 @@
 (setq emms-repeat-playlist t)
 (setq centaur-tabs-mode nil)
 (setq yas-snippet-dirs '("~/Dotfiles/.config/doom/snippets"))
+(setq ob-mermaid-cli-path "/home/kirkm/.nix-profile/bin/mmdc")
 
 ;=================================================================
 ; keybindings
@@ -218,6 +220,7 @@
 ;; (define-prefix-command (kbd "\C-p") ctl-x-p-map)
 (define-key ctl-x-map "p" 'emms-pause)
 (define-key ctl-x-map "P" 'org-pomodoro)
+(define-key ctl-x-map (kbd "C-r") 'rgrep)
 (global-set-key (kbd "M-o") 'ace-window)
 (global-set-key (kbd "C-c f") 'org-roam-node-find)
 (global-set-key (kbd "C-c i") 'org-roam-node-insert)

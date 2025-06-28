@@ -44,7 +44,7 @@ return {
     config = function()
       -- Setup orgmode
       require("orgmode").setup({
-        org_agenda_files = "~/Documents/Org/**/*",
+        org_agenda_files = "~/Org/**/*",
       })
       -- NOTE: If you are using nvim-treesitter with ~ensure_installed = "all"~ option
       -- add ~org~ to ignore_install

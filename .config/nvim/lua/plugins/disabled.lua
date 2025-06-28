@@ -6,4 +6,5 @@ return {
   { "Exafunction/codeium.vim", enabled = false },
   { "karb94/neoscroll.nvim", enabled = false },
   { "Saghen/blink.cmp", enabled = false },
+  { "epwalsh/obsidian.nvim", enabled = false },
 }
