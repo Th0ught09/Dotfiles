@@ -3,11 +3,14 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(org-agenda-files (list org-directory))
- '(org-directory "~/Documents/Org")
+ '(diary-file "~/Org/diary.org")
+ '(org-agenda-files (list "~/Org"))
+ '(org-directory "~/Org")
+ '(org-trello-current-prefix-keybinding "C-c o" nil (org-trello))
  '(package-selected-packages
-   '(ace-window chess dashboard emms ess evil-mu4e iosevka-theme mu4e-overview
-     org-pomodoro org-roam pdf-tools slime)))
+   '(ace-window chess dashboard emms ess evil-mu4e iosevka-theme markdown-mode
+     markdown-soma mu4e-overview mu4e-views ob-mermaid org-pomodoro org-roam
+     org-trello pandoc pdf-tools pyvenv-auto s slime uv-mode)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

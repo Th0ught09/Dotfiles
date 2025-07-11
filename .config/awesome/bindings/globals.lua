@@ -164,7 +164,7 @@ globals = gears.table.join(
 	globals,
 	awful.key({ modkey }, "a", function()
 		local tag = awful.tag.find_by_name(nil, " ")
-		local screen = awful.screen.getbycoord(1920, 0)
+		local screen = awful.screen.getbycoord(0, 0)
 		if tag then
 			tag:view_only(tag)
 			awful.screen.focus(screen)

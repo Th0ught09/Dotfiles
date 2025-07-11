@@ -110,6 +110,7 @@
         python312Packages.bpython
         virtualenv
         uv
+        streamlit
 
         ## Lua
         lua
@@ -148,11 +149,10 @@
         darktable
 
         # Chess
-        chessx
-        chessdb
         chess-tui
         gnuchess
         stockfish
+        scid
 
         # Shell
         nushell
@@ -177,7 +177,7 @@
         # Term
         alacritty
         ghostty
-	tmux
+        tmux
         mprocs # Watch a bunch of processes
 
         # Dev Tools
@@ -238,6 +238,16 @@
         unetbootin
         arc-icon-theme
         evcxr
+        maven
+        openblas
+        mask
+        just
+        gh
+        jq
+        styluslabs-write
+        delta
+        glibc
+        nix-index
 
     ];
 

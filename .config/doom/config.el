@@ -39,7 +39,7 @@
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
-(setq org-directory "~/Documents/Org/")
+(setq org-directory "~/Org/")
 
 (setq user-mail-address "kirkmatt@proton.me")
 (use-package mu4e
@@ -75,7 +75,7 @@
 (setq org-publish-project-alist
       '(
         ("org-notes"
-        :base-directory "~/Documents/Org/"
+        :base-directory "~/Org/"
         :base-extension "org"
         :publishing-directory "~/public_html/"
         :recursive t
@@ -85,7 +85,7 @@
         )
 
         ("org-static"
-        :base-directory "~/Documents/Org/"
+        :base-directory "~/Org/"
         :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
         :publishing-directory "~/public_html/"
         :recursive t
@@ -124,8 +124,9 @@
     (calendar-init)))
 
 (custom-set-variables
- '(org-directory "~/Documents/Org")
- '(org-agenda-files (list org-directory)))
+ '(org-directory "~/Org")
+ '(org-agenda-files (list "~/Org"))
+ '(diary-file "~/Org/diary.org"))
 
 
 (setq org-tag-alist (quote ((:startgroup)
@@ -134,12 +135,13 @@
                             (:endgroup))))
 
 (setq org-default-notes-file (concat org-directory "/notes.org"))
-
+(setq org-roam-directory (file-truename "~/Org"))
 ;=================================================================
 ; VIM BINDINGS
 ;=================================================================
 
 (setq tab-width 4)
+(setq evil-shift-width 4)
 
 ;=================================================================
 ; Packages
@@ -209,6 +211,7 @@
 ;(setq mode-line-format nil)
 (setq org-icalendar-timezone "Europe/London")
 (setq emms-repeat-playlist t)
+(setq centaur-tabs-mode nil)
 (setq yas-snippet-dirs '("~/Dotfiles/.config/doom/snippets"))
 
 ;=================================================================
@@ -218,15 +221,13 @@
 (define-key ctl-x-map "p" 'emms-pause)
 (define-key ctl-x-map "P" 'org-pomodoro)
 (global-set-key (kbd "M-o") 'ace-window)
-;(global-set-key (kbd "C-h") 'windmove-left)
-(global-set-key (kbd "C-j") 'windmove-down)
-(global-set-key (kbd "C-k") 'windmove-up)
-(global-set-key (kbd "C-l") 'windmove-right)
-;; (global-set-key (kbd "M-h") 'previous-buffer)
-;; (global-set-key (kbd "M-l") 'next-buffer)
+(global-set-key (kbd "C-c f") 'org-roam-node-find)
+(global-set-key (kbd "C-c i") 'org-roam-node-insert)
 ;; (define-key )
 
 ;(desktop-save-mode 1)
+
+(require 's)
 
 ;=================================================================
 ; Calendar sync
