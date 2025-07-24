@@ -162,10 +162,10 @@ require("lualine").setup({
   extensions = {},
 })
 
--- require("mason-lspconfig").setup({
---   ensure_installed = {},
---   automatic_installation = false,
--- })
+require("mason-lspconfig").setup({
+  ensure_installed = {},
+  automatic_installation = false,
+})
 
 require("lspconfig").clangd.setup({})
 
@@ -190,7 +190,6 @@ require("conform").setup({
     end,
   },
 })
-
 require("noice").setup({
   lsp = {
     -- override markdown rendering so that **cmp** and other plugins use **Treesitter**

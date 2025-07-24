@@ -47,7 +47,7 @@ color_red = '#cc241d'
 color_yellow = '#d79921'
 
 [palettes.gruvbox_light]
-color_bg1 = '#fbf1c7'
+color_bg1 = '#f2e5bc'
 color_fg0 = '#3c3836'
 color_bg3 = '#bdae93'
 color_black   = '#282828'

@@ -38,8 +38,8 @@ size = 20
 # Default colors
 [colors.primary]
 # hard contrast background = = '#f9f5d7'
-background = '#f9f5d7'
-# soft contrast background = = '#f2e5bc'
+# background = '#f9f5d7'
+background = '#f2e5bc'
 foreground = '#3c3836'
 
 # Normal colors

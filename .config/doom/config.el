@@ -181,8 +181,6 @@
 ;             (projects . 5)
 ;             (bookmarks . 5)
 ; )))
-; (setq dashboard-filter-agenda-entry 'dashboard-filter-agenda-by-todo)
-; (setq dashboard-match-agenda-entry "TODO=\"TODO\"")
 
 ;=================================================================
 ; Emms
@@ -219,8 +217,10 @@
 ; =================================================================
 ;; (define-prefix-command (kbd "\C-p") ctl-x-p-map)
 (define-key ctl-x-map "p" 'emms-pause)
+(define-key ctl-x-map "p" 'emms-pause)
 (define-key ctl-x-map "P" 'org-pomodoro)
-(global-set-key (kbd "M-o") 'ace-window)
+;; (global-set-key (kbd "C-o ") (lambda () (interactive) ('emms-play-directory "~/Music/Crypt of the Necrodancer Soundtrack")))
+(global-set-key (kbd "M-i") 'ace-window)
 (global-set-key (kbd "C-c f") 'org-roam-node-find)
 (global-set-key (kbd "C-c i") 'org-roam-node-insert)
 ;; (define-key )
@@ -266,3 +266,34 @@
 (defun org-mycal-export ()
   (let ((org-icalendar-verify-function 'org-mycal-export-limit))
    (org-export-icalendar-combine-agenda-files)))
+
+;=================================================================
+; Org
+; =================================================================
+(add-to-list 'org-agenda-custom-commands
+             '("b" agenda "Today's Deadlines"
+               ((org-agenda-span 'day)
+                (org-agenda-skip-function '(org-agenda-skip-deadline-if-not-today))
+                (org-agenda-entry-types '(:deadline))
+                (org-agenda-overriding-header "Today's Deadlines "))))
+
+(defun org-agenda-skip-deadline-if-not-today ()
+"If this function returns nil, the current match should not be skipped.
+Otherwise, the function must return a position from where the search
+should be continued."
+  (ignore-errors
+    (let ((subtree-end (save-excursion (org-end-of-subtree t)))
+          (deadline-day
+            (time-to-days
+              (org-time-string-to-time
+                (org-entry-get nil "DEADLINE"))))
+          (now (time-to-days (current-time))))
+       (and deadline-day
+            (not (= deadline-day now))
+            subtree-end))))
+
+;=================================================================
+; TODO
+; =================================================================
+(setq org-todo-keywords '((sequence "TODO" "|" "DONE" "HOLD")
+                          (sequence "PRAC" "|" "COMP")))

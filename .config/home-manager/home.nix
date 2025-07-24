@@ -6,7 +6,7 @@
     home.username = "kirkm";
     home.homeDirectory = "/home/kirkm";
     home.enableNixpkgsReleaseCheck = false;
-	nixpkgs.config.allowUnfree = true;
+    nixpkgs.config.allowUnfree = true;
 
     # This value determines the Home Manager release that your configuration is
     # compatible with. This helps avoid breakage when a new Home Manager release
@@ -110,7 +110,7 @@
         python312Packages.bpython
         virtualenv
         uv
-        streamlit
+        inputs.nixpkgs.legacyPackages.${pkgs.system}.streamlit
 
         ## Lua
         lua
@@ -130,17 +130,20 @@
         haskellPackages.haskell-debug-adapter
         haskellPackages.hoogle
 
+        ## C
+        ccls
+
         # Apps
-        obs-studio
-        whatsapp-for-linux
         libreoffice-qt
         gtypist
         discord
         protonmail-desktop
         _1password-gui
         flameshot
+
+        # Video
         shotcut
-        lutris
+        obs-studio
 
         # Photography
         gphoto2
@@ -164,7 +167,7 @@
         inputs.nixpkgs.legacyPackages.${pkgs.system}.fzf
 
         # Editor
-        emacs
+        jetbrains.pycharm-professional
         vim
         neovim
         jupyter-all
@@ -232,13 +235,15 @@
         screenkey
 
         # Misc
+        graphviz # for plantuml
+        plantuml # understanding python files
+        jqp
         presenterm
         wiki-tui
         acpi
         unetbootin
         arc-icon-theme
         evcxr
-        maven
         openblas
         mask
         just
@@ -248,6 +253,9 @@
         delta
         glibc
         nix-index
+        impala
+        systemctl-tui
+        libtool
 
     ];
 
@@ -255,13 +263,35 @@
     };
 
     home.sessionVariables = {
-        EDITOR = "nvim";
+        EDITOR = "emacsclient -c -a emacs";
         SHELL = "fish";
     };
 
-    # programs.fish = {
-    #     enable = true;
-    # };
+    xdg.desktopEntries = {
+        yazi = {
+            name = "Yazi";
+            genericName = "File Browser";
+            exec = "ghostty -e yazi";
+            terminal = false;
+            categories = [ "Application" "Network" "WebBrowser" ];
+        };
+        emacs = {
+            name = "emacs";
+            genericName = "text editor";
+            exec = "emacsclient -c -a emacs";
+            terminal = false;
+        };
+    };
+    xdg.mimeApps.defaultApplications = {
+        "inode/directory"="yazi.desktop";
+        "application/pdf"="zathura.desktop";
+    };
+    programs.emacs = {
+        enable = true;
+        extraPackages = epkgs: [
+            epkgs.mu4e
+        ];
+    };
 
     programs.home-manager.enable = true;
 
