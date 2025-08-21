@@ -4,8 +4,8 @@ IMAPAccount ProtonMail
 Host 127.0.0.1
 Port 1143
 User kirkmatt@proton.me
-#Pass "Hufspv_tVyhcPhlk1MbMrg"
-PassCmd "pass Email/ProtonBridge"
+Pass "9gN-2NHfar9dWxnAyiu3YA"
+# PassCmd "pass Email/ProtonBridge"
 TLSType None
 CertificateFile /etc/ssl/certs/ca-certificates.crt
 

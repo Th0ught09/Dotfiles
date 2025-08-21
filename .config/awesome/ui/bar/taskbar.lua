@@ -62,7 +62,7 @@ do
 		awful.tag.add(options.tag, {
 			screen = screen,
 			gap = gap,
-			layout = awful.layout.suit.floating,
+			layout = awful.layout.suit.tile.left,
 		})
 	end
 	--
@@ -128,7 +128,7 @@ if vert_screen then
 	set_wallpaper_vert(vert_screen)
 	local function add_tag(options)
 		local gap = options.gap or 0
-		local layout = options.layout or awful.layout.suit.tile.top
+		local layout = options.layout or awful.layout.suit.tile.left
 		awful.tag.add(options.tag, {
 			screen = vert_screen,
 			gap = gap,

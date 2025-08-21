@@ -9,6 +9,6 @@ end
 
 starship init fish | source
 set -U fish_greeting
-set -Ux EDITOR nvim
+set -Ux EDITOR "emacsclient -c"
 
 bind ctrl-x fg

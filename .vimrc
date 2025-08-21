@@ -11,3 +11,10 @@ set laststatus=2
 set showmode
 set showcmd
 set smartindent
+
+call plug#begin()
+
+Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-surround'
+
+call plug#end()

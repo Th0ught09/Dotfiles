@@ -21,7 +21,7 @@
 ;; See 'C-h v doom-font' for documentation and more examples of what they
 ;; accept. For example:
 ;;
-(setq doom-font (font-spec :family "Iosevka Nerd Font" :size 24 :weight 'semi-light))
+(setq doom-font (font-spec :family "IosevkaTerm Nerd Font" :size 20 :weight 'semi-light))
 ;;
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
 ;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
@@ -39,7 +39,7 @@
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
-(setq org-directory "~/Org/")
+(setq org-directory "~/org/")
 
 (setq user-mail-address "kirkmatt@proton.me")
 (use-package mu4e
@@ -53,17 +53,17 @@
       mu4e-maildir "~/Mail/ProtonMail"
       user-mail-address "kirkmatt@proton.me")
 
-  (setq mu4e-drafts-folder "/ProtonMail/Drafts"
-      mu4e-sent-folder   "/ProtonMail/Sent"
-      mu4e-refile-folder "/ProtonMail/All Mail"
-      mu4e-trash-folder  "/ProtonMail/Trash")
+  (setq mu4e-drafts-folder "/Drafts"
+      mu4e-sent-folder   "/Sent"
+      mu4e-refile-folder "/All Mail"
+      mu4e-trash-folder  "/Trash")
 
   (setq mu4e-maildir-shortcuts
-      '(("/ProtonMail/inbox"     . ?i)
-        ("/ProtonMail/Sent"      . ?s)
-        ("/ProtonMail/Trash"     . ?t)
-        ("/ProtonMail/Drafts"    . ?d)
-        ("/ProtonMail/All Mail"  . ?a)))
+      '(("/inbox"     . ?i)
+        ("/Sent"      . ?s)
+        ("/Trash"     . ?t)
+        ("/Drafts"    . ?d)
+        ("/All Mail"  . ?a)))
 
   (setq message-send-mail-function 'smtpmail-send-it
       auth-sources '("~/.authinfo") ;need to use gpg version but only local smtp stored for now
@@ -75,7 +75,7 @@
 (setq org-publish-project-alist
       '(
         ("org-notes"
-        :base-directory "~/Org/"
+        :base-directory "~/org/"
         :base-extension "org"
         :publishing-directory "~/public_html/"
         :recursive t
@@ -85,7 +85,7 @@
         )
 
         ("org-static"
-        :base-directory "~/Org/"
+        :base-directory "~/org/"
         :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
         :publishing-directory "~/public_html/"
         :recursive t
@@ -124,8 +124,9 @@
     (calendar-init)))
 
 (custom-set-variables
- '(org-directory "~/Org")
- '(org-agenda-files (list "~/Org")))
+ '(org-directory "~/org")
+ '(org-agenda-files (list "~/org"))
+ '(diary-file "~/org/diary.org"))
 
 
 (setq org-tag-alist (quote ((:startgroup)
@@ -134,12 +135,13 @@
                             (:endgroup))))
 
 (setq org-default-notes-file (concat org-directory "/notes.org"))
-(setq org-roam-directory (file-truename "~/Org"))
+(setq org-roam-directory (file-truename "~/org"))
 ;=================================================================
 ; VIM BINDINGS
 ;=================================================================
 
 (setq tab-width 4)
+(setq evil-shift-width 4)
 
 ;=================================================================
 ; Packages
@@ -155,7 +157,6 @@
 ;=================================================================
 
 (setq yas-snippet-dirs '("~/.config/emacs/snippets"))
-(setq x86-lookup-pdf "~/Books/Manuals/x86-manual.pdf")
 
 
 ;=================================================================
@@ -180,8 +181,6 @@
 ;             (projects . 5)
 ;             (bookmarks . 5)
 ; )))
-; (setq dashboard-filter-agenda-entry 'dashboard-filter-agenda-by-todo)
-; (setq dashboard-match-agenda-entry "TODO=\"TODO\"")
 
 ;=================================================================
 ; Emms
@@ -204,7 +203,7 @@
 (setq! scroll-margin 8)
 (setq evil-shift-width 4)
 (setq org-startup-folded t)
-(setq emms-source-file-default-directory "~/Music/Playlists/")
+(setq emms-source-file-default-directory "~/music/")
 (setq emms-repeat-playlist t)
 ;; (setq mode-line-format '("%e" (:eval (doom-modeline-format--main))))
 ;(setq mode-line-format nil)
@@ -212,18 +211,19 @@
 (setq emms-repeat-playlist t)
 (setq centaur-tabs-mode nil)
 (setq yas-snippet-dirs '("~/Dotfiles/.config/doom/snippets"))
-(setq ob-mermaid-cli-path "/home/kirkm/.nix-profile/bin/mmdc")
 
 ;=================================================================
 ; keybindings
 ; =================================================================
 ;; (define-prefix-command (kbd "\C-p") ctl-x-p-map)
 (define-key ctl-x-map "p" 'emms-pause)
+(define-key ctl-x-map "p" 'emms-pause)
 (define-key ctl-x-map "P" 'org-pomodoro)
-(define-key ctl-x-map (kbd "C-r") 'rgrep)
-(global-set-key (kbd "M-o") 'ace-window)
+;; (global-set-key (kbd "C-o ") (lambda () (interactive) ('emms-play-directory "~/Music/Crypt of the Necrodancer Soundtrack")))
+(global-set-key (kbd "M-i") 'ace-window)
 (global-set-key (kbd "C-c f") 'org-roam-node-find)
 (global-set-key (kbd "C-c i") 'org-roam-node-insert)
+(windmove-default-keybindings)
 ;; (define-key )
 
 ;(desktop-save-mode 1)
@@ -267,3 +267,37 @@
 (defun org-mycal-export ()
   (let ((org-icalendar-verify-function 'org-mycal-export-limit))
    (org-export-icalendar-combine-agenda-files)))
+
+;=================================================================
+; Org
+; =================================================================
+(add-to-list 'org-agenda-custom-commands
+             '("b" agenda "Today's Deadlines"
+               ((org-agenda-span 'day)
+                (org-agenda-skip-function '(org-agenda-skip-deadline-if-not-today))
+                (org-agenda-entry-types '(:deadline))
+                (org-agenda-overriding-header "Today's Deadlines "))))
+
+(defun org-agenda-skip-deadline-if-not-today ()
+"If this function returns nil, the current match should not be skipped.
+Otherwise, the function must return a position from where the search
+should be continued."
+  (ignore-errors
+    (let ((subtree-end (save-excursion (org-end-of-subtree t)))
+          (deadline-day
+            (time-to-days
+              (org-time-string-to-time
+                (org-entry-get nil "DEADLINE"))))
+          (now (time-to-days (current-time))))
+       (and deadline-day
+            (not (= deadline-day now))
+            subtree-end))))
+
+;; (defun get-pdf-page ()
+;;   )
+
+;=================================================================
+; TODO
+; =================================================================
+(setq org-todo-keywords '((sequence "TODO" "|" "DONE" "HOLD")
+                          (sequence "PRAC" "|" "COMP")))

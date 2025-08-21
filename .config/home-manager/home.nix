@@ -1,5 +1,8 @@
 { config, pkgs, inputs, ... }:
-
+with pkgs;
+let
+  R-with-my-packages = rWrapper.override{ packages = with rPackages; [ ggplot2 dplyr xts ]; };
+in
 {
     # Home Manager needs a bit of information about you and the paths it should
     # manage.
@@ -22,7 +25,8 @@
     home.packages = with pkgs; [
 
         # Term QOL
-        thefuck                     # Aliased to mb
+        tmux
+        thefuck  # Aliased to mb
         hexyl
         yank
         rustlings
@@ -51,15 +55,18 @@
 
         # File Manipulation
         ripgrep-all
-        poppler_utils # Displaying pdfs
-        ranger
         yazi
         zip
         unzip
-        bat
-        zathura
         stow
         pandoc
+
+        # file rendering
+        delta       # Compare files
+        zathura
+        bat
+        presenterm
+        poppler_utils # Displaying pdfs
 
         # Security
         pinentry-all # For pass
@@ -87,9 +94,11 @@
         audacity
         mpv
         vlc
+        soulseekqt
 
         # Languages
-        sbcl
+        mariadb 
+        sbcl # rust
         shellcheck
         nodejs_24
         rustup
@@ -97,9 +106,18 @@
         gcc
         clang-tools
         texliveFull
-        R
+        R-with-my-packages
         jdk21
         go
+
+        # C#
+        ilspycmd
+        # dotnet-sdk
+        # inputs.nixpkgs.legacyPackages.${pkgs.system}.msbuild
+
+        ## Json
+        jq
+        jqp
 
         ## Rust
         bacon
@@ -111,6 +129,7 @@
         python312Packages.bpython
         virtualenv
         uv
+        streamlit
 
         ## Lua
         lua
@@ -137,8 +156,16 @@
         discord
         protonmail-desktop
         _1password-gui
+        _1password-cli
         flameshot
         shotcut # Video Editing
+
+        # internet
+        wiki-tui
+        impala
+
+        # tuis
+        discordo
 
         # Photography
         gphoto2 # Get photos from camera
@@ -165,12 +192,11 @@
         vim         # NeoVim is broken
         neovim      # Main Editor
         jupyter-all # Data Science
+        emacsPackages.mu4e
         jetbrains.idea-ultimate # Java Errors
         jetbrains.pycharm-professional #  Java Errors
 
         # Games
-        oh-my-git   # Git Good
-        lazygit     # Interactive Git
         vimgolf     # Vim Practice
 
         # Term
@@ -178,13 +204,18 @@
         ghostty     # Image Rendering
         mprocs      # Watch a bunch of processes
 
+        # git
+        git
+        oh-my-git
+        lazygit
+        gh
+
         # Dev Tools
+        just        # better make
         tokei       # View directory info
         fselect     # Query files using sql
         file        # View file type
         gnumake     # Makefiles
-        git         # Git
-        delta       # Compare files
         ctags       # Tag File
         docker      # Docker
         docker-compose # TODO
@@ -207,6 +238,7 @@
         protonmail-bridge-gui # GUI
 
         # OS
+        systemctl-tui
         ps_mem
         sysbench
         stress-ng
@@ -219,7 +251,10 @@
         ispell
         time # Manually link
         xsel
+
+        # nix
         nix-ld
+        nix-index
 
         # WM
         awesome
@@ -229,24 +264,23 @@
         gromit-mpx
         screenkey
 
-        # Jetbrains
+        # libs
+        libtool
+        pkg-config
 
         # Misc
+        gosmore # maps
         r2modman
         xcolor
         graphviz
         beep
         mermaid-cli
-        presenterm
-        wiki-tui
         acpi
         unetbootin
         evcxr
-		libtool
-        mask
-        just
-        jq
         rpi-imager
+        wasistlos
+        mangohud # fps
 
     ];
 
@@ -254,13 +288,10 @@
     };
 
     home.sessionVariables = {
-        EDITOR = "nvim";
+        EDITOR = "emacsclient -c";
         SHELL = "zsh";
+        PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig";
     };
-
-    # programs.zsh = {
-    #     enable = true;
-    # };
 
     programs.fish = {
         interactiveShellInit = ''
@@ -278,60 +309,22 @@
             }
         ];
     };
-    #
-    programs.emacs = {
-        enable = true;
-        extraPackages = epkgs: [
-            epkgs.mu4e
-        ];
-    };
+    # programs.emacs = {
+    #     enable = true;
+    #     extraPackages = epkgs: [
+    #         epkgs.mu4e
+    #     ];
+    # };
 
-    programs.tmux = {
-        enable = true;
-        baseIndex = 1;
-        keyMode = "vi";
-        plugins = with pkgs.tmuxPlugins; [
-            resurrect
-            open
-            gruvbox
-            continuum
-            yank
-            vim-tmux-navigator
-            sensible
-        ];
-        extraConfig = ''
-bind h select-pane -L
-bind j select-pane -D 
-bind k select-pane -U
-bind l select-pane -R
-
-set-window-option -g pane-base-index 1
-set-option -g renumber-windows on
-
-unbind-key M-Left
-unbind-key M-Right
-unbind-key M-Up
-unbind-key M-Down
-
-bind -n S-Left  previous-window
-bind -n S-Right next-window
-
-bind -n M-H previous-window
-bind -n M-L next-window
-
-bind-key -T copy-mode-vi v send-keys -X begin-selection
-bind-key -T copy-mode-vi C-v send-keys -X rectangle-toggle
-bind-key -T copy-mode-vi y send-keys -X copy-selection-and-cancel
-
-bind '"' split-window -v -c "#{pane_current_path}"
-bind % split-window -h -c "#{pane_current_path}"
-
-set -g @tmux-gruvbox 'light'
-set -g @continuum-restore 'on'
-set -g @continuum-boot 'on'
-set -g @yank_selection 'primary'
-set -g @shell_mode 'vi'
-        '';
+    xdg = {
+        desktopEntries = {
+            emacs = {
+                name = "emacs client";
+                genericName = "text editor";
+                exec = "emacsclient -c";
+                terminal = false;
+            };
+        };
     };
 
     programs.home-manager.enable = true;

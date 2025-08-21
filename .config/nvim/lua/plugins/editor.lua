@@ -44,7 +44,7 @@ return {
     config = function()
       -- Setup orgmode
       require("orgmode").setup({
-        org_agenda_files = "~/Org/**/*",
+        org_agenda_files = "~/org/**/*",
       })
       -- NOTE: If you are using nvim-treesitter with ~ensure_installed = "all"~ option
       -- add ~org~ to ignore_install
@@ -202,20 +202,20 @@ return {
         expanded = "",
       },
       layouts = {
-        {
-          elements = {
-            {
-              id = "breakpoints",
-              size = 0.5,
-            },
-            {
-              id = "stacks",
-              size = 0.5,
-            },
-          },
-          position = "left",
-          size = 30,
-        },
+        -- {
+        -- elements = {
+        --     {
+        --       id = "breakpoints",
+        --       size = 0.5,
+        --     },
+        --     {
+        --       id = "console",
+        --       size = 0.5,
+        --     },
+        --   },
+        --   position = "left",
+        --   size = 30,
+        -- },
         {
           elements = {
             {
@@ -223,7 +223,7 @@ return {
               size = 0.5,
             },
             {
-              id = "watches",
+              id = "stacks",
               size = 0.5,
             },
           },
@@ -233,7 +233,7 @@ return {
         {
           elements = {
             {
-              id = "console",
+              id = "watches",
               size = 1,
             },
           },
