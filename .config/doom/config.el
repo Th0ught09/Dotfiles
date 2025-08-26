@@ -193,6 +193,7 @@
 ; Hooks
 ; =================================================================
 (add-hook 'org-mode-hook 'abbrev-hook)
+(add-hook 'minibuffer-mode-hook 'abbrev-hook)
 (add-hook 'pdf-view-mode-hook 'pdf-view-midnight-minor-mode)
 (defun abbrev-hook ()
   (abbrev-mode 1))
@@ -200,10 +201,12 @@
 ;=================================================================
 ; Constants
 ; =================================================================
+(setq! abbrev-file-name "~/Dotfiles/.config/doom/abbrev_defs")
 (setq! scroll-margin 8)
+(setq! find-file-visit-truename nil)
 (setq evil-shift-width 4)
-(setq org-startup-folded t)
 (setq emms-source-file-default-directory "~/music/")
+(setq company-mode nil)
 (setq emms-repeat-playlist t)
 ;; (setq mode-line-format '("%e" (:eval (doom-modeline-format--main))))
 ;(setq mode-line-format nil)
@@ -215,19 +218,25 @@
 ;=================================================================
 ; keybindings
 ; =================================================================
-;; (define-prefix-command (kbd "\C-p") ctl-x-p-map)
-(define-key ctl-x-map "p" 'emms-pause)
 (define-key ctl-x-map "p" 'emms-pause)
 (define-key ctl-x-map "P" 'org-pomodoro)
-;; (global-set-key (kbd "C-o ") (lambda () (interactive) ('emms-play-directory "~/Music/Crypt of the Necrodancer Soundtrack")))
 (global-set-key (kbd "M-i") 'ace-window)
 (global-set-key (kbd "C-c f") 'org-roam-node-find)
 (global-set-key (kbd "C-c i") 'org-roam-node-insert)
-(windmove-default-keybindings)
-;; (define-key )
-
-;(desktop-save-mode 1)
-
+(global-set-key (kbd "C-c d m") 'org-roam-dailies-goto-tomorrow)
+(global-set-key (kbd "C-c d t") 'org-roam-dailies-goto-today)
+(global-set-key (kbd "C-c p d") 'org-pdfview-store-link)
+(global-set-key (kbd "M-C-h") help-map)
+(global-set-key (kbd "C-h") 'windmove-left)
+(global-set-key (kbd "C-l") 'windmove-right)
+(global-set-key (kbd "C-j") 'windmove-down)
+(global-set-key (kbd "C-k") 'windmove-up)
+(global-set-key (kbd "L") 'centaur-tabs-forward)
+(global-set-key (kbd "H") 'centaur-tabs-backward)
+(local-unset-key (kbd "C-j"))
+(local-unset-key (kbd "C-k"))
+(local-unset-key (kbd "S-l"))
+(local-unset-key (kbd "S-h"))
 (require 's)
 
 ;=================================================================
@@ -271,6 +280,19 @@
 ;=================================================================
 ; Org
 ; =================================================================
+(add-hook 'org-mode-hook
+          (lambda ()
+            (evil-define-key 'normal org-mode-map (kbd "C-k") nil)
+            (evil-define-key 'normal org-mode-map (kbd "C-j") nil)))
+
+(add-hook 'evil-mode-hook
+          (lambda ()
+            (evil-define-key 'normal evil-org-mode-map (kbd "S-h") nil)
+            (evil-define-key 'normal evil-org-mode-map (kbd "S-l") nil)))
+
+(define-key evil-motion-state-map (kbd "H") nil)
+(define-key evil-motion-state-map (kbd "L") nil)
+
 (add-to-list 'org-agenda-custom-commands
              '("b" agenda "Today's Deadlines"
                ((org-agenda-span 'day)
@@ -301,3 +323,52 @@ should be continued."
 ; =================================================================
 (setq org-todo-keywords '((sequence "TODO" "|" "DONE" "HOLD")
                           (sequence "PRAC" "|" "COMP")))
+
+;=================================================================
+; roam refile
+; =================================================================
+
+(defun roam-tomorrow-refile ()(org-refile ('format-time-string "~/org/%Y-%m-%d.org" (time-add (current-time) (days-to-time 1)))))
+(defun org-pdfview-store-link ()
+  "Store a link to a pdfview buffer."
+  (interactive)
+  (when (eq major-mode 'pdf-view-mode)
+    ;; This buffer is in pdf-view-mode
+    (let* ((path buffer-file-name)
+           (page (pdf-isearch-current-page))
+           (link (concat "pdf:" path "::" (number-to-string page))))
+      (org-link-store-props
+       :type "pdf"
+       :link link
+       :description  (concat path " :: Page #" (number-to-string page))))))
+
+(defun pdf-find()
+  (interactive)
+  (find-file "~/books/"))
+
+(defvar my-keys-minor-mode-map
+  (let ((map (make-sparse-keymap)))
+    (define-key map (kbd "C-j") 'windmove-down)
+    (define-key map (kbd "C-k") 'windmove-up)
+    map)
+  "my-keys-minor-mode keymap.")
+
+(define-key my-keys-minor-mode-map (kbd "C-j") nil)
+
+;; (define-minor-mode my-keys-minor-mode
+;;   "A minor mode so that my key settings override annoying major modes."
+;;   :init-value t
+;;   :lighter " my-keys")
+
+(my-keys-minor-mode 0)
+(defun kill-other-buffers ()
+    "Kill all other buffers."
+    (interactive)
+    (mapc 'kill-buffer
+          (delq (current-buffer)
+                (remove-if-not 'buffer-file-name (buffer-list)))))
+
+;; (defun my-minibuffer-setup-hook ()
+;;   (my-keys-minor-mode 0))
+
+;; (add-hook 'minibuffer-setup-hook 'my-minibuffer-setup-hook)

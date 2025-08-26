@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: chapter outline
+# uuid:
+# key: chap
+# condition: t
+# --
+
+** TODO read chapter
+** TODO make notes
+** TODO do exercises
+** TODO revise knowledge
+** TODO make perm notes

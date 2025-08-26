@@ -59,7 +59,7 @@ in
         zip
         unzip
         stow
-        pandoc
+        inputs.nixpkgs.legacyPackages.${pkgs.system}.pandoc
 
         # file rendering
         delta       # Compare files
@@ -269,6 +269,12 @@ in
         pkg-config
 
         # Misc
+        inkscape
+        pandoc-lua-filters
+        librsvg # cairo for pdf
+        texlivePackages.utf8add
+        texlivePackages.media9
+        icu # markdown
         gosmore # maps
         r2modman
         xcolor

@@ -1,9 +1,23 @@
 ;;-*-coding: utf-8;-*-
 (define-abbrev-table 'global-abbrev-table
   '(
-    ("ths" "this" nil :count 1)
-    ("vi" "vim" nil :count 0)
-    ("vis" "visterm" nil :count 1)
-    ("wth" "with" nil :count 0)
+    ("sw" "software" nil :count 8)
+   ))
+
+(define-abbrev-table 'minibuffer-mode-abbrev-table
+  '(
+    ("sw" "software" nil :count 4)
+   ))
+
+(define-abbrev-table 'org-mode-abbrev-table
+  '(
+    ("dir" "directory" nil :count 2)
+    ("env" "environment" nil :count 2)
+    ("fnd" "find" nil :count 0)
+    ("pcs" "processes" nil :count 0)
+    ("prj" "project" nil :count 0)
+    ("ref" "References" nil :count 10)
+    ("sys" "system" nil :count 1)
+    ("thn" "then" nil :count 0)
    ))
 
