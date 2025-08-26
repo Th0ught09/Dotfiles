@@ -1,5 +1,9 @@
 { config, pkgs, inputs, ... }:
 
+with pkgs;
+let
+    R-with-my-packages = rWrapper.override{ packages = with rPackages; [ ggplot2 dplyr xts onsr ]; };
+in
 {
     # Home Manager needs a bit of information about you and the paths it should
     # manage.
@@ -97,9 +101,11 @@
         gcc
         clang-tools
         texliveFull
-        R
         zulu17
         go
+
+        # R
+        R-with-my-packages
 
         ## Rust
         bacon
@@ -235,6 +241,7 @@
         screenkey
 
         # Misc
+        evince # touchscreen pdf
         graphviz # for plantuml
         plantuml # understanding python files
         jqp
@@ -290,6 +297,7 @@
         enable = true;
         extraPackages = epkgs: [
             epkgs.mu4e
+            pkgs.rPackages.onsr
         ];
     };
 

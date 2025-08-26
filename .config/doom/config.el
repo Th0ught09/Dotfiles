@@ -203,7 +203,7 @@
 (setq! scroll-margin 8)
 (setq evil-shift-width 4)
 (setq org-startup-folded t)
-(setq emms-source-file-default-directory "~/Music/Playlists/")
+(setq emms-source-file-default-directory "~/Music/")
 (setq emms-repeat-playlist t)
 ;; (setq mode-line-format '("%e" (:eval (doom-modeline-format--main))))
 ;(setq mode-line-format nil)
