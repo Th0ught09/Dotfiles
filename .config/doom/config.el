@@ -101,7 +101,7 @@
     (cfw:org-create-source "Purple")
     (cfw:ical-create-source "Uni" "https://scientia-eu-v4-api-d3-02.azurewebsites.net//api/ical/b5098763-4476-40a6-8d60-5a08e9c52964/33ff0a46-42c9-fa35-e710-20a89e30a8cd/timetable.ics" "Red")
     (cfw:ical-create-source "Life" "https://calendar.proton.me/api/calendar/v1/url/1RZQ6qxSo4AGgUOR_cCVlj9d_KXgckkAdOEN0wszIXMvSXALutYgoIiNWltRW2q5_EUdfmwf4zwM2wYdDIPdCA==/calendar.ics?CacheKey=CuxtvSb__5z15LJQckBW7w%3D%3D&PassphraseKey=cHyl07vC-qgAdoCiCQZZZvcItem-zCk6fYfdCnn1_E4%3D" "Black"))))
-    
+
 (defun calendar-init ()
   ;; switch to existing calendar buffer if applicable
   (if-let (win (cl-find-if (lambda (b) (string-match-p "^\\*cfw:" (buffer-name b)))
@@ -125,7 +125,7 @@
 
 (custom-set-variables
  '(org-directory "~/org")
- '(org-agenda-files (list "~/org"))
+ '(org-agenda-files (list "~/org/agenda/"))
  '(diary-file "~/org/diary.org"))
 
 
@@ -214,9 +214,10 @@
 (setq emms-repeat-playlist t)
 (setq centaur-tabs-mode nil)
 (setq yas-snippet-dirs '("~/Dotfiles/.config/doom/snippets"))
+(setq ob-mermaid-cli-path "~/.nix-profile/bin/keybindings")
 
 ;=================================================================
-; keybindings
+; mmdc
 ; =================================================================
 (define-key ctl-x-map "p" 'emms-pause)
 (define-key ctl-x-map "P" 'org-pomodoro)
@@ -231,8 +232,8 @@
 (global-set-key (kbd "C-l") 'windmove-right)
 (global-set-key (kbd "C-j") 'windmove-down)
 (global-set-key (kbd "C-k") 'windmove-up)
-(global-set-key (kbd "L") 'centaur-tabs-forward)
-(global-set-key (kbd "H") 'centaur-tabs-backward)
+(global-set-key (kbd "<normal state> L") 'centaur-tabs-forward)
+(global-set-key (kbd "<normal state> H") 'centaur-tabs-backward)
 (local-unset-key (kbd "C-j"))
 (local-unset-key (kbd "C-k"))
 (local-unset-key (kbd "S-l"))
@@ -355,10 +356,10 @@ should be continued."
 
 (define-key my-keys-minor-mode-map (kbd "C-j") nil)
 
-;; (define-minor-mode my-keys-minor-mode
-;;   "A minor mode so that my key settings override annoying major modes."
-;;   :init-value t
-;;   :lighter " my-keys")
+(define-minor-mode my-keys-minor-mode
+  "A minor mode so that my key settings override annoying major modes."
+  :init-value t
+  :lighter " my-keys")
 
 (my-keys-minor-mode 0)
 (defun kill-other-buffers ()
@@ -366,9 +367,32 @@ should be continued."
     (interactive)
     (mapc 'kill-buffer
           (delq (current-buffer)
-                (remove-if-not 'buffer-file-name (buffer-list)))))
+                (seq-filter 'buffer-file-name (buffer-list)))))
 
 ;; (defun my-minibuffer-setup-hook ()
 ;;   (my-keys-minor-mode 0))
 
 ;; (add-hook 'minibuffer-setup-hook 'my-minibuffer-setup-hook)
+  (advice-remove #'org-babel-do-load-languages #'ignore)
+  (org-babel-do-load-languages
+   'org-babel-load-languages
+   '((emacs-lisp . t) ;; Other languages
+     (shell . t)
+     (python . t)
+     (jupyter . t)))
+
+(require 'org-src)
+(require 'ob-async)
+(require 'ob-ipython-autoloads)
+(require 'ob-jupyter)
+(require 'jupyter)
+(require 'jupyter-org-client)
+
+(after! (ob-jupyter)
+  (org-babel-jupyter-aliases-from-kernelspecs))
+;;config.el
+(require 'ob-python)
+(use-package jupyter
+  :demand t
+  :after (:all org python)
+)

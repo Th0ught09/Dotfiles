@@ -14,6 +14,7 @@ SETUVAR --export LUA_DIR:/nix/store/cdfp4f5dbymv1j4d0ksvh6vm2di8mmi4\x2dhome\x2d
 SETUVAR --export NIXPKGS_ALLOW_BROKEN:1
 SETUVAR --export NIXPKGS_ALLOW_INSECURE:1
 SETUVAR --export NIXPKGS_ALLOW_UNSUPPORTED_SYSTEM:1
+SETUVAR --export OPENSSL_DIR:/home/kirkm/\x2enix\x2dprofile/bin/openssl
 SETUVAR __fish_initialized:3800
 SETUVAR fish_color_autosuggestion:brblack
 SETUVAR fish_color_cancel:\x2dr

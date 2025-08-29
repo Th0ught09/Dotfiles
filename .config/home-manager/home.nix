@@ -97,6 +97,7 @@ in
         soulseekqt
 
         # Languages
+        sqlite
         mariadb 
         sbcl # rust
         shellcheck
@@ -233,7 +234,7 @@ in
         openssh         # SSH
         nginx           # (Needed?)
         inetutils
-        openssl
+        openssl # rust packages
         protonmail-bridge # Mail Server
         protonmail-bridge-gui # GUI
 
