@@ -4,3 +4,6 @@
 [submodule ".config/awesome"]
 	path = .config/awesome
 	url = git@github.com:Th0ught09/awesome-dots.git
+[submodule ".config/doom"]
+	path = .config/doom
+	url = git@github.com:Th0ught09/doom.git
