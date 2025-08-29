@@ -2,7 +2,7 @@
 
 with pkgs;
 let
-    R-with-my-packages = rWrapper.override{ packages = with rPackages; [ ggplot2 dplyr xts onsr ]; };
+    R-with-my-packages = rWrapper.override{ packages = with rPackages; [ ggplot2 dplyr xts onsr rmarkdown knitr]; };
 in
 {
     # Home Manager needs a bit of information about you and the paths it should
@@ -93,6 +93,7 @@ in
         vlc
 
         # Languages
+        sqlite
         sbcl
         shellcheck
         nodejs_24
@@ -113,6 +114,7 @@ in
 
         ## Python
         python313Packages.debugpy
+        python313Packages.ipykernel
         python312Packages.bpython
         virtualenv
         uv

@@ -1,9 +1,14 @@
 ;;-*-coding: utf-8;-*-
-(define-abbrev-table 'global-abbrev-table
+(define-abbrev-table 'minibuffer-mode-abbrev-table
   '(
-    ("ths" "this" nil :count 1)
-    ("vi" "vim" nil :count 0)
-    ("vis" "visterm" nil :count 1)
-    ("wth" "with" nil :count 0)
+    ("sw" "software" nil :count 1)
+   ))
+
+(define-abbrev-table 'org-mode-abbrev-table
+  '(
+    ("entr" "Enter" nil :count 0)
+    ("initd" "initiated" nil :count 0)
+    ("lnx" "linux" nil :count 0)
+    ("sys" "system" nil :count 0)
    ))
 
