@@ -225,6 +225,7 @@ in
         cmake       # Making Makefiles
 
         # Networking
+        trippy          # monitoring tool
         wget            # Query Internet
         speedtest-cli   # Test Speed
         psmisc
@@ -270,6 +271,8 @@ in
         pkg-config
 
         # Misc
+        unityhub
+        xorg.transset # transparent
         inkscape
         pandoc-lua-filters
         librsvg # cairo for pdf
