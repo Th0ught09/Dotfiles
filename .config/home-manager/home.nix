@@ -195,6 +195,7 @@ in
         jupyter-all # Data Science
         emacsPackages.mu4e
         jetbrains.idea-ultimate # Java Errors
+        jetbrains.rider # Java Errors
         jetbrains.pycharm-professional #  Java Errors
 
         # Games
@@ -271,7 +272,8 @@ in
         pkg-config
 
         # Misc
-        unityhub
+        godot
+        roslyn-ls
         xorg.transset # transparent
         inkscape
         pandoc-lua-filters
