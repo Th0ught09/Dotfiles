@@ -3,7 +3,7 @@
 Welcome to my dotfiles! A mix of blue and pink for background colors and gruvbox light for everything productive. Currently a work in progress but wanted to share what I had :) \\
 Sway was previously used but I main drive awesome now, however the sway, `waybar` and `mako` dotfiles are still included for those interested
 
-## Dependancies
+## Dependencies
 
 ### Essential
 
@@ -42,11 +42,9 @@ done
 ## Features
 
 - Most Keybinds are made in accordance to the Kinesis Advantage 2 if they seem a bit weird!
-- `Ctrl + S` for a flameshot screenshot
+- `Super + S` for a flameshot screenshot
 
 ## Screenshots
 
 ![Plain View](plain.png)
 ![Terminal View](terminal.png)
-
-test
