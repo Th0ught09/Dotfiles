@@ -243,6 +243,9 @@ in
         screenkey
 
         # Misc
+        slop
+        wacomtablet
+        mermaid-cli
         evince # touchscreen pdf
         graphviz # for plantuml
         plantuml # understanding python files

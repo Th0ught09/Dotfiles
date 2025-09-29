@@ -11,3 +11,7 @@ set laststatus=2
 set showmode
 set showcmd
 set smartindent
+
+function! My_func(args)
+    echom a:args
+endfunction

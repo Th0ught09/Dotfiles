@@ -10,7 +10,7 @@ local taglist_buttons = require("bindings.taglist")
 local tasklist_buttons = require("bindings.tasklist")
 
 local function set_wallpaper(s)
-	gears.wallpaper.maximized("/home/kirkm/Pictures/nixos.png", s, true)
+	gears.wallpaper.maximized("/home/kirkm/Pictures/background.png", s, true)
 end
 local function set_wallpaper_vert(s)
 	gears.wallpaper.maximized("/home/kirkm/Pictures/nixos.png", s, true)
