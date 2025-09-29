@@ -191,7 +191,7 @@ in
 
         # Editor
         vim         # NeoVim is broken
-        neovim      # Main Editor
+        inputs.nixpkgs.legacyPackages.${pkgs.system}.neovim
         jupyter-all # Data Science
         emacsPackages.mu4e
         jetbrains.idea-ultimate # Java Errors
@@ -272,6 +272,9 @@ in
         pkg-config
 
         # Misc
+        calibre
+        kdePackages.kdenlive
+        nixpkgs-review
         godot
         roslyn-ls
         xorg.transset # transparent
@@ -321,12 +324,12 @@ in
             }
         ];
     };
-    # programs.emacs = {
-    #     enable = true;
-    #     extraPackages = epkgs: [
-    #         epkgs.mu4e
-    #     ];
-    # };
+    programs.emacs = {
+        enable = true;
+        extraPackages = epkgs: [
+            epkgs.mu4e
+        ];
+    };
 
     xdg = {
         desktopEntries = {

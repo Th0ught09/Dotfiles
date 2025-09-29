@@ -15,7 +15,7 @@ family = "IosevkaTerm Nerd Font"
 style = "Regular"
 
 [font]
-size = 16
+size = 20
 
 # [font.bold]
 # family = "MesloLGS NF"
