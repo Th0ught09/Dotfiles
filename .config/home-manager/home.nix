@@ -272,7 +272,14 @@ in
         pkg-config
 
         # Misc
-        calibre
+        taskjuggler # task management
+        bison # lfs
+        harfbuzz # text shaping?
+        opencv # for nix index?
+        cairo # 2D graphics
+        pango # rendering
+        manim # 3b1b
+        calibre # converting
         kdePackages.kdenlive
         nixpkgs-review
         godot
