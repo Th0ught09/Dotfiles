@@ -195,6 +195,7 @@ in
         jupyter-all # Data Science
         emacsPackages.mu4e
         jetbrains.idea-ultimate # Java Errors
+        jetbrains.dataspell
         jetbrains.rider # Java Errors
         jetbrains.pycharm-professional #  Java Errors
 
@@ -223,7 +224,7 @@ in
         docker-compose # TODO
         podman      # Container Stuff
         distrobox   # Emulate Other distros
-        cmake       # Making Makefiles
+        # cmake       # Making Makefiles
 
         # Networking
         trippy          # monitoring tool
@@ -269,13 +270,18 @@ in
 
         # libs
         libtool
-        pkg-config
 
         # Misc
-        taskjuggler # task management
+        prismlauncher
+        jetbrains.dataspell
+        blender # objects
+        castero # podcasts
+        wikit
+        valgrind # memory leaks
         bison # lfs
         harfbuzz # text shaping?
         opencv # for nix index?
+        openvpn
         cairo # 2D graphics
         pango # rendering
         manim # 3b1b
@@ -345,6 +351,12 @@ in
                 genericName = "text editor";
                 exec = "emacsclient -c";
                 terminal = false;
+            };
+        };
+        mimeApps = {
+                enable = true;
+                defaultApplications = {
+                "video/mp4" = "vlc.desktop";
             };
         };
     };

@@ -4,3 +4,4 @@ set recolor-darkcolor \#3c3836
 set recolor-keephue
 set default-bg \#fbf1c7
 set default-fg \#3c3836
+set selection-clipboard clipboard
