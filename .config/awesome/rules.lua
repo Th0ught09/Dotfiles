@@ -1,8 +1,6 @@
 local beautiful = require("beautiful")
 local awful = require("awful")
-local gears = require("gears")
 local clientkeys = require("bindings.clients")
-local clientbuttons = require("bindings.buttons")
 return {
 
 	{
@@ -13,7 +11,6 @@ return {
 			focus = awful.client.focus.filter,
 			raise = true,
 			keys = clientkeys,
-			buttons = clientbuttons,
 			screen = awful.screen.preferred,
 			placement = awful.placement.no_overlap + awful.placement.no_offscreen,
 		},

@@ -1,13 +1,9 @@
 local awful = require("awful")
-local dpi = require("beautiful.xresources").apply_dpi
 local gears = require("gears")
 local wibox = require("wibox")
-local screen = require("awful.screen")
 local battery_widget = require("awesome-wm-widgets.battery-widget.battery")
 
 -- Create a wibox for each screen and add it
-local taglist_buttons = require("bindings.taglist")
-local tasklist_buttons = require("bindings.tasklist")
 
 local function set_wallpaper(s)
 	gears.wallpaper.maximized("/home/kirkm/Pictures/background.png", s, true)
@@ -30,7 +26,6 @@ gears.timer({
 	call_now = true,
 	autostart = true,
 	callback = function()
-		print("called")
 		io.input("/proc/meminfo")
 		A = io.read("*a")
 		local total = A:match("%d+", string.find(A, "MemTotal"))
@@ -42,37 +37,26 @@ gears.timer({
 		A = io.read("*a")
 		local pm = A:match("%d.%d+")
 		local cpu_per = (pm / 8) * 100
-		print(pm)
 		cpu_per = string.format("   %d%%", cpu_per)
 		cpu.text = cpu_per
 	end,
 })
 
--- local screens = {}
-
 awful.screen.connect_for_each_screen(function(screen)
-	-- screens[#screens + 1] = s
-	-- end)
-	--
-	-- do
-	-- 	screen = awful.screen.getbycoord(0, 0)
-	-- 	screen = screens[screen]
 	set_wallpaper(screen)
 	local function add_tag(options)
 		local gap = options.gap or 0
 		awful.tag.add(options.tag, {
 			screen = screen,
 			gap = gap,
-			layout = awful.layout.suit.floating,
+			layout = awful.layout.suit.fair,
 		})
 	end
-	--
-	-- -- Tags
+	-- Tags
 	local tags = { " ", "󰈙 ", " ", " ", " ", " ", " ", " ", " " }
 	for tag_index = 1, #tags do
 		add_tag({ tag = tags[tag_index] })
 	end
-	--
 	local taglist = awful.widget.taglist({
 		screen = screen,
 		filter = awful.widget.taglist.filter.all,

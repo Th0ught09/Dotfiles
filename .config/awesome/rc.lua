@@ -35,10 +35,6 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 
 require("ui.bar") -- Taskbar
 
--- {{{ Mouse bindings
-local mouse_buttons = require("bindings.mouse") -- Mouse bindings
-root.buttons(mouse_buttons)
-
 local globalkeys = require("bindings.globals") -- All keys
 root.keys(globalkeys)
 

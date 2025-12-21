@@ -2,7 +2,7 @@
 
 with pkgs;
 let
-    R-with-my-packages = rWrapper.override{ packages = with rPackages; [ ggplot2 dplyr xts onsr rmarkdown knitr]; };
+    R-with-my-packages = rWrapper.override{ packages = with rPackages; [ ggplot2 dplyr xts onsr rmarkdown knitr lmtest]; };
 in
 {
     # Home Manager needs a bit of information about you and the paths it should
@@ -97,7 +97,6 @@ in
         sbcl
         shellcheck
         nodejs_24
-        rustup
         php
         gcc
         clang-tools
@@ -109,6 +108,8 @@ in
         R-with-my-packages
 
         ## Rust
+        cargo
+        rust-analyzer
         bacon
         rusty-man
 
@@ -243,6 +244,13 @@ in
         screenkey
 
         # Misc
+        transmission_4
+        kdePackages.kdenlive
+        pdftowrite
+        godot
+        openvpn # connect to home pc
+        wikit # wikipedia
+        anki # flash cards
         slop
         wacomtablet
         mermaid-cli
