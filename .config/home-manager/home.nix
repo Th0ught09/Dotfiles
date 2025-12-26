@@ -244,6 +244,8 @@ in
         screenkey
 
         # Misc
+        nixpkgs-review
+        w3m
         transmission_4
         kdePackages.kdenlive
         pdftowrite
