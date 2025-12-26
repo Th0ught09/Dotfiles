@@ -10,5 +10,6 @@ end
 starship init fish | source
 set -U fish_greeting
 set -Ux EDITOR "emacsclient -c"
+set -Ux LFS /mnt/lfs
 
 bind ctrl-x fg

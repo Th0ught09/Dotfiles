@@ -54,6 +54,7 @@ in
         dust
 
         # File Manipulation
+        imagemagick
         ripgrep-all
         poppler_utils # Displaying pdfs
         ranger
