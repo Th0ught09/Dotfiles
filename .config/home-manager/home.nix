@@ -54,6 +54,7 @@ in
         dust
 
         # File Manipulation
+
         imagemagick
         ripgrep-all
         poppler_utils # Displaying pdfs
@@ -120,7 +121,6 @@ in
         python312Packages.bpython
         virtualenv
         uv
-        inputs.nixpkgs.legacyPackages.${pkgs.system}.streamlit
 
         ## Lua
         lua
