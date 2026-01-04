@@ -79,7 +79,7 @@ local globals = gears.table.join(
 		awful.spawn("systemctl suspend")
 	end, { description = "Suspend", group = "system" }),
 	awful.key({ modkey, "Shift" }, "o", function()
-		awful.spawn("i3lock-color -k -B 4")
+		awful.spawn("i3lock-color -k -B 30")
 	end, { description = "Lock", group = "system" }),
 
 	awful.key({ modkey, "Control" }, "n", function()

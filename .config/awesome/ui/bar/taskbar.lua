@@ -6,7 +6,7 @@ local battery_widget = require("awesome-wm-widgets.battery-widget.battery")
 -- Create a wibox for each screen and add it
 
 local function set_wallpaper(s)
-	gears.wallpaper.maximized("/home/kirkm/Pictures/background.png", s, true)
+	gears.wallpaper.maximized("/home/kirkm/Pictures/background.ppm", s, true)
 end
 local function set_wallpaper_vert(s)
 	gears.wallpaper.maximized("/home/kirkm/Pictures/nixos.png", s, true)
