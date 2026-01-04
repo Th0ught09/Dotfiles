@@ -245,6 +245,8 @@ in
         screenkey
 
         # Misc
+        castero
+        gnome-keyring # protonmail bridge
         nixpkgs-review
         w3m
         transmission_4
@@ -253,7 +255,6 @@ in
         godot
         openvpn # connect to home pc
         wikit # wikipedia
-        anki # flash cards
         slop
         wacomtablet
         mermaid-cli
