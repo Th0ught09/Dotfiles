@@ -2,7 +2,7 @@
 
 with pkgs;
 let
-    R-with-my-packages = rWrapper.override{ packages = with rPackages; [ ggplot2 dplyr xts onsr rmarkdown knitr lmtest]; };
+    R-with-my-packages = rWrapper.override{ packages = with rPackages; [ ggplot2 dplyr xts onsr rmarkdown knitr lmtest data_table]; };
 in
 {
     # Home Manager needs a bit of information about you and the paths it should
@@ -11,7 +11,6 @@ in
     home.homeDirectory = "/home/kirkm";
     home.enableNixpkgsReleaseCheck = false;
     nixpkgs.config.allowUnfree = true;
-
     # This value determines the Home Manager release that your configuration is
     # compatible with. This helps avoid breakage when a new Home Manager release
     # introduces backwards incompatible changes.
@@ -26,7 +25,6 @@ in
     home.packages = with pkgs; [
         
         # Term QOL
-        thefuck                     # Aliased to mb
         hexyl
         yank
         rustlings
@@ -57,7 +55,7 @@ in
 
         imagemagick
         ripgrep-all
-        poppler_utils # Displaying pdfs
+        poppler-utils # Displaying pdfs
         ranger
         yazi
         zip
@@ -100,7 +98,8 @@ in
         shellcheck
         nodejs_24
         php
-        gcc
+        # gcc
+        gccgo # for rust pre-commit
         clang-tools
         texliveFull
         zulu17
@@ -110,15 +109,18 @@ in
         R-with-my-packages
 
         ## Rust
+        # rustup
+        # rust-analyzer
         cargo
-        rust-analyzer
+        rustfmt
         bacon
         rusty-man
+        clippy
 
         ## Python
         python313Packages.debugpy
         python313Packages.ipykernel
-        python312Packages.bpython
+        # python312Packages.bpython
         virtualenv
         uv
 
@@ -158,14 +160,14 @@ in
         # Photography
         gphoto2
         gimp3
-        blender
+        # blender
         darktable
 
         # Chess
-        chess-tui
-        gnuchess
-        stockfish
-        scid
+        # chess-tui
+        # gnuchess
+        # stockfish
+        # scid
 
         # Shell
         nushell
@@ -177,7 +179,6 @@ in
         inputs.nixpkgs.legacyPackages.${pkgs.system}.fzf
 
         # Editor
-        jetbrains.pycharm-professional
         vim
         neovim
         jupyter-all
@@ -245,6 +246,17 @@ in
         screenkey
 
         # Misc
+        phpunit # unit testing
+        speedread
+        nasm # assembly stuff
+        exercism
+        prismlauncher
+        typst
+        whatsapp-electron
+        comaps
+        youtube-tui
+        prek # rust pre-commit
+        pre-commit
         castero
         gnome-keyring # protonmail bridge
         nixpkgs-review
@@ -256,11 +268,11 @@ in
         openvpn # connect to home pc
         wikit # wikipedia
         slop
-        wacomtablet
+        kdePackages.wacomtablet
         mermaid-cli
-        evince # touchscreen pdf
-        graphviz # for plantuml
-        plantuml # understanding python files
+        # evince # touchscreen pdf
+        # graphviz # for plantuml
+        # plantuml # understanding python files
         jqp
         presenterm
         wiki-tui
@@ -289,6 +301,7 @@ in
     home.sessionVariables = {
         EDITOR = "emacsclient -c -a emacs";
         SHELL = "fish";
+        PATH = "$PATH:/home/kirkm/cargo/bin";
     };
 
     xdg.desktopEntries = {

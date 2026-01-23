@@ -75,6 +75,15 @@ local globals = gears.table.join(
 	awful.key({ modkey, "Shift" }, ";", function()
 		awful.layout.inc(-1)
 	end, { description = "select previous", group = "layout" }),
+
+	-- other
+
+	awful.key({ modkey, "Shift" }, "d", function()
+		awful.spawn("nmcli radio wifi off")
+	end, { description = "Wifi off", group = "system" }),
+	awful.key({ modkey, "Shift" }, "u", function()
+		awful.spawn("nmcli radio wifi on")
+	end, { description = "Wifi off", group = "system" }),
 	awful.key({ modkey }, "p", function()
 		awful.spawn("systemctl suspend")
 	end, { description = "Suspend", group = "system" }),
