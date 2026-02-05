@@ -110,7 +110,7 @@ in
 
         ## Rust
         # rustup
-        # rust-analyzer
+        rust-analyzer
         cargo
         rustfmt
         bacon
@@ -246,6 +246,8 @@ in
         screenkey
 
         # Misc
+        xclip
+        rustc
         phpunit # unit testing
         speedread
         nasm # assembly stuff
