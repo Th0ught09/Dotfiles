@@ -13,7 +13,7 @@ local themes_path = require("gears.filesystem").get_themes_dir()
 local theme = {}
 theme.font = "sans 8"
 
-theme.bg_focus = "#e2eeea"
+theme.bg_focus = "#fbf1c7"
 theme.bg_normal = "#fbf1c7"
 theme.bg_urgent = "#fce94f"
 theme.bg_minimize = "#0067ce"
