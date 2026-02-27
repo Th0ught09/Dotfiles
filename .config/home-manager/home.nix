@@ -246,6 +246,10 @@ in
         screenkey
 
         # Misc
+        kaggle
+        invidious
+        yt-dlp
+        jetbrains.pycharm
         xclip
         rustc
         phpunit # unit testing
