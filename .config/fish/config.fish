@@ -13,4 +13,5 @@ set -Ux EDITOR "emacsclient -c"
 set -Ux LFS /mnt/lfs
 bind -M insert up history-prefix-search-backward
 bind -M insert ctrl-x fg
+bind -M insert alt-r ripper end-of-line
 set -U fish_history_search_prefix_only true
