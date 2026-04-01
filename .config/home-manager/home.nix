@@ -246,6 +246,7 @@ in
         screenkey
 
         # Misc
+        protonvpn-gui
         kaggle
         invidious
         yt-dlp
