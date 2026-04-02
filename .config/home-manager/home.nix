@@ -246,6 +246,7 @@ in
         screenkey
 
         # Misc
+        zenity
         protonvpn-gui
         kaggle
         invidious
