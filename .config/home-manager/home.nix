@@ -260,7 +260,7 @@ in
         exercism
         prismlauncher
         typst
-        whatsapp-electron
+        # whatsapp-electron
         comaps
         youtube-tui
         prek # rust pre-commit
