@@ -8,7 +8,7 @@ local net_speed_widget = require("awesome-wm-widgets.net-speed-widget.net-speed"
 local weather_widget = require("awesome-wm-widgets.weather-api-widget.weather")
 
 local function set_wallpaper(s)
-	gears.wallpaper.maximized("/home/kirkm/Pictures/background.ppm", s, true)
+	gears.wallpaper.maximized("/home/kirkm/Pictures/nixos.png", s, true)
 end
 local function set_wallpaper_vert(s)
 	gears.wallpaper.maximized("/home/kirkm/Pictures/nixos.png", s, true)
