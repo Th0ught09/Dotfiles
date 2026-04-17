@@ -3,8 +3,9 @@ local awful = require("awful")
 local modkey = "Mod4"
 local terminal = "alacritty"
 local mymainmenu = require("widgets.mainmenu")
-local hotkeys_popup = require("awful.hotkeys_popup.keys")
+local hotkeys_popup = require("awful.hotkeys_popup")
 
+require("awful.hotkeys_popup.keys")
 local globals = gears.table.join(
 
 	-- Switch Client
@@ -83,7 +84,7 @@ local globals = gears.table.join(
 	end, { description = "Wifi off", group = "system" }),
 	awful.key({ modkey, "Shift" }, "u", function()
 		awful.spawn("nmcli radio wifi on")
-	end, { description = "Wifi off", group = "system" }),
+	end, { description = "Wifi on", group = "system" }),
 	awful.key({ modkey }, "p", function()
 		awful.spawn("systemctl suspend")
 	end, { description = "Suspend", group = "system" }),
@@ -100,18 +101,18 @@ local globals = gears.table.join(
 	end, { description = "restore minimized", group = "client" }),
 
 	-- Prompt
-	-- awful.key({ modkey }, "r", function()
-	-- 	awful.screen.focused().mypromptbox:run()
-	-- end, { description = "run prompt", group = "launcher" }),
+	awful.key({ modkey }, "r", function()
+		awful.screen.focused().mypromptbox:run()
+	end, { description = "run prompt", group = "launcher" }),
 
-	-- awful.key({ modkey }, "x", function()
-	-- 	awful.prompt.run({
-	-- 		prompt = "Run Lua code: ",
-	-- 		textbox = awful.screen.focused().mypromptbox.widget,
-	-- 		exe_callback = awful.util.eval,
-	-- 		history_path = awful.util.get_cache_dir() .. "/history_eval",
-	-- 	})
-	-- end, { description = "lua execute prompt", group = "awesome" }),
+	awful.key({ modkey }, "x", function()
+		awful.prompt.run({
+			prompt = " Run Lua code: ",
+			textbox = awful.screen.focused().mypromptbox.widget,
+			-- exe_callback = awful.util.eval,
+			history_path = awful.util.get_cache_dir() .. "/history_eval",
+		})
+	end, { description = "lua execute prompt", group = "awesome" }),
 	awful.key({ modkey }, "s", function()
 		awful.spawn("flameshot gui")
 	end, { description = "flameshot", group = "awesome" }),
