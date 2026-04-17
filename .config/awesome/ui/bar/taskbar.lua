@@ -54,6 +54,7 @@ awful.screen.connect_for_each_screen(function(screen)
 			layout = awful.layout.suit.fair,
 		})
 	end
+	screen.mypromptbox = awful.widget.prompt()
 	-- Tags
 	local tags = { " ", "󰈙 ", " ", " ", " ", " ", " ", " ", " " }
 	for tag_index = 1, #tags do
@@ -94,6 +95,7 @@ awful.screen.connect_for_each_screen(function(screen)
 		{
 			layout = wibox.layout.fixed.horizontal,
 			github_contributions_widget({ username = "Th0ught09", days = 30 }),
+			screen.mypromptbox,
 			net_speed_widget(),
 			tasklist,
 		},
@@ -108,6 +110,8 @@ awful.screen.connect_for_each_screen(function(screen)
 				api_key = "ab1c75e6f62141f29a7152054262701",
 				coordinates = { 53.436066, -2.215692 },
 			}),
+			-- wibox.widget.textclock(" %a %b %d"),
+			wibox.widget.textclock("%H:%M"),
 			wibox.widget.systray(),
 		},
 	})
