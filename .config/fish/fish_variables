@@ -1,7 +1,9 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR --export AWESOME_IGNORE_LGI:1
+SETUVAR --export DISPLAY:\x3a2
 SETUVAR --export EDITOR:emacsclient\x20\x2dc
+SETUVAR --export EMACSDIR:\x7e/\x2econfig/emacs
 SETUVAR --export FAB_ROOT:\x1d
 SETUVAR FZF_DEFAULT_OPTS:\x2d\x2dheight\x2040\x25
 SETUVAR FZF_DISABLE_KEYBINDINGS:0
