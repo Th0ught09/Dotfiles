@@ -260,7 +260,8 @@ in
         exercism
         prismlauncher
         typst
-        # whatsapp-electron
+        whatsapp-electron
+        prismlauncher
         comaps
         youtube-tui
         prek # rust pre-commit
@@ -279,11 +280,11 @@ in
         kdePackages.wacomtablet
         mermaid-cli
         # evince # touchscreen pdf
-        # graphviz # for plantuml
+        graphviz # for plantuml
         # plantuml # understanding python files
         jqp
         presenterm
-        wiki-tui
+        wike
         acpi
         unetbootin
         arc-icon-theme
