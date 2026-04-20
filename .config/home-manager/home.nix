@@ -285,6 +285,7 @@ in
         jqp
         presenterm
         wike
+        feh
         acpi
         unetbootin
         arc-icon-theme
