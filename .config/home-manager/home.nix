@@ -97,7 +97,6 @@ in
         sbcl
         shellcheck
         nodejs_24
-        php
         gccgo # for rust pre-commit
         clang-tools
         texliveFull
@@ -154,6 +153,7 @@ in
         # Video
         shotcut
         obs-studio
+        kdePackages.kdenlive
 
         # Photography
         gphoto2
@@ -175,6 +175,11 @@ in
         jupyter-all
         jetbrains.pycharm
         jetbrains.idea
+
+        # web dev
+        phpunit # unit testing
+        php
+        nginx
 
         # Games
         oh-my-git
@@ -210,13 +215,13 @@ in
         cacert
         nmap
         openssh
-        nginx
         inetutils
         openssl
         protonmail-bridge
         protonmail-bridge-gui
 
         # OS
+        xclip # system copying
         ps_mem
         sysbench
         stress-ng
@@ -244,25 +249,22 @@ in
         zenity # notification daemon
         kaggle # data science
         yt-dlp # video/audio downloader
-        xclip # system copying
-        phpunit # unit testing
         speedread
         nasm # assembly stuff
         exercism
         prismlauncher
         typst
         whatsapp-electron
-        prismlauncher
-        comaps
-        youtube-tui
+        prismlauncher # minecraft
+        comaps # maps
+        youtube-tui # social
         prek # rust pre-commit
         pre-commit
-        castero
+        castero # podcasts
         gnome-keyring # protonmail bridge
         nixpkgs-review
         w3m
         transmission_4
-        kdePackages.kdenlive
         pdftowrite
         godot
         openvpn # connect to home pc
