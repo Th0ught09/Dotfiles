@@ -27,7 +27,6 @@ in
         # Term QOL
         hexyl
         yank
-        rustlings
         starship
         rofi
         tldr
@@ -52,6 +51,8 @@ in
         dust
 
         # File Manipulation
+        calibre # book format
+        feh # display image
         imagemagick
         ripgrep-all
         poppler-utils # Displaying pdfs
@@ -105,6 +106,8 @@ in
         R-with-my-packages
 
         ## Rust
+        evcxr
+        rustlings
         prek # rust pre-commit
         gccgo # for rust pre-commit
         rust-analyzer
@@ -141,6 +144,13 @@ in
 
         ## C
         ccls
+        glibc
+
+        # work tools
+        mermaid-cli
+        kdePackages.wacomtablet
+        pdftowrite
+        styluslabs-write # writing using pen
 
         # Apps
         libreoffice-qt
@@ -169,6 +179,11 @@ in
         ripgrep
         inputs.nixpkgs.legacyPackages.${pkgs.system}.fzf
 
+        # nix
+        nixpkgs-review
+        nix-ld
+        nix-index
+
         # Editor
         vim
         neovim
@@ -182,6 +197,7 @@ in
         nginx
 
         # Games
+        godot
         exercism
         speedread
         kaggle # data science
@@ -197,6 +213,7 @@ in
         mprocs # Watch a bunch of processes
 
         # Dev Tools
+        jqp
         pre-commit
         nasm # assembly stuff
         tokei
@@ -204,6 +221,8 @@ in
         file
         gnumake
         git
+        gh
+        just
         delta
         ctags
         docker
@@ -213,6 +232,9 @@ in
         cmake
 
         # Networking
+        transmission_4 # bittorrent
+        openvpn # connect to home pc
+        gnome-keyring # protonmail bridge
         protonvpn-gui # vpn
         wget
         speedtest-cli
@@ -227,6 +249,9 @@ in
         protonmail-bridge-gui
 
         # OS
+        acpi # battery
+        unetbootin # create live bootable drive
+        systemctl-tui # system stuff via tui
         zenity # notification daemon
         xclip # system copying
         ps_mem
@@ -241,7 +266,11 @@ in
         ispell
         time # Manually link
         xsel
-        nix-ld
+
+        # file viewing
+        presenterm
+        delta
+        jq
 
         # WM
         awesome
@@ -252,6 +281,8 @@ in
         screenkey
 
         # media
+        castero # podcasts
+        wikit # wikipedia
         comaps # maps
         yt-dlp # video/audio downloader
         youtube-tui # social
@@ -259,39 +290,9 @@ in
         wike
 
         # Misc
-        castero # podcasts
-        gnome-keyring # protonmail bridge
-        nixpkgs-review
-        w3m
-        transmission_4
-        pdftowrite
-        godot
-        openvpn # connect to home pc
-        wikit # wikipedia
-        slop
-        kdePackages.wacomtablet
-        mermaid-cli
-        graphviz # for plantuml
-        jqp
-        presenterm
-        feh
-        acpi
-        unetbootin
-        arc-icon-theme
-        evcxr
-        openblas
-        mask
-        just
-        gh
-        jq
-        styluslabs-write
-        delta
-        glibc
-        nix-index
-        impala
-        systemctl-tui
-        libtool
-        calibre
+        # slop # depedency?
+        # arc-icon-theme # dep?
+        # libtool # dependency?
 
         # latex packages
         texlivePackages.smartdiagram
