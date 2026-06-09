@@ -98,7 +98,6 @@ in
         shellcheck
         nodejs_24
         php
-        # gcc
         gccgo # for rust pre-commit
         clang-tools
         texliveFull
@@ -109,18 +108,17 @@ in
         R-with-my-packages
 
         ## Rust
-        # rustup
         rust-analyzer
         cargo
         rustfmt
         bacon
         rusty-man
         clippy
+        rustc # debugging?
 
         ## Python
         python313Packages.debugpy
         python313Packages.ipykernel
-        # python312Packages.bpython
         virtualenv
         uv
 
@@ -160,14 +158,7 @@ in
         # Photography
         gphoto2
         gimp3
-        # blender
         darktable
-
-        # Chess
-        # chess-tui
-        # gnuchess
-        # stockfish
-        # scid
 
         # Shell
         nushell
@@ -182,6 +173,8 @@ in
         vim
         neovim
         jupyter-all
+        jetbrains.pycharm
+        jetbrains.idea
 
         # Games
         oh-my-git
@@ -209,6 +202,7 @@ in
         cmake
 
         # Networking
+        protonvpn-gui # vpn
         wget
         speedtest-cli
         psmisc
@@ -246,16 +240,11 @@ in
         screenkey
 
         # Misc
-        slipstream
-        zenity
-        protonvpn-gui
-        kaggle
-        invidious
-        yt-dlp
-        jetbrains.pycharm
-        jetbrains.idea
-        xclip
-        rustc
+        slipstream # ftl mod manager
+        zenity # notification daemon
+        kaggle # data science
+        yt-dlp # video/audio downloader
+        xclip # system copying
         phpunit # unit testing
         speedread
         nasm # assembly stuff
@@ -281,9 +270,7 @@ in
         slop
         kdePackages.wacomtablet
         mermaid-cli
-        # evince # touchscreen pdf
         graphviz # for plantuml
-        # plantuml # understanding python files
         jqp
         presenterm
         wike
@@ -306,7 +293,7 @@ in
         libtool
         calibre
 
-        # tmp
+        # latex packages
         texlivePackages.smartdiagram
         texlivePackages.enumitem
         texlivePackages.ragged2e
