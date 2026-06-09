@@ -246,12 +246,14 @@ in
         screenkey
 
         # Misc
+        slipstream
         zenity
         protonvpn-gui
         kaggle
         invidious
         yt-dlp
         jetbrains.pycharm
+        jetbrains.idea
         xclip
         rustc
         phpunit # unit testing
@@ -302,6 +304,20 @@ in
         impala
         systemctl-tui
         libtool
+        calibre
+
+        # tmp
+        texlivePackages.smartdiagram
+        texlivePackages.enumitem
+        texlivePackages.ragged2e
+        texlivePackages.geometry
+        texlivePackages.fancyhdr
+        texlivePackages.xcolor
+        texlivePackages.xifthen
+        texlivePackages.etoolbox
+        texlivePackages.setspace
+        texlivePackages.unicode-math
+        texlivePackages.parskip
 
     ];
 
@@ -330,7 +346,7 @@ in
         };
     };
     xdg.mimeApps.defaultApplications = {
-        "inode/directory"="yazi.desktop";
+        "inode/directory"="nautilus.desktop";
         "application/pdf"="zathura.desktop";
     };
     programs.emacs = {
