@@ -52,7 +52,6 @@ in
         dust
 
         # File Manipulation
-
         imagemagick
         ripgrep-all
         poppler-utils # Displaying pdfs
@@ -97,7 +96,6 @@ in
         sbcl
         shellcheck
         nodejs_24
-        gccgo # for rust pre-commit
         clang-tools
         texliveFull
         zulu17
@@ -107,6 +105,8 @@ in
         R-with-my-packages
 
         ## Rust
+        prek # rust pre-commit
+        gccgo # for rust pre-commit
         rust-analyzer
         cargo
         rustfmt
@@ -182,6 +182,10 @@ in
         nginx
 
         # Games
+        exercism
+        speedread
+        kaggle # data science
+        slipstream # ftl mod manager
         oh-my-git
         lazygit
         vimgolf
@@ -193,6 +197,8 @@ in
         mprocs # Watch a bunch of processes
 
         # Dev Tools
+        pre-commit
+        nasm # assembly stuff
         tokei
         fselect
         file
@@ -221,6 +227,7 @@ in
         protonmail-bridge-gui
 
         # OS
+        zenity # notification daemon
         xclip # system copying
         ps_mem
         sysbench
@@ -244,22 +251,14 @@ in
         gromit-mpx
         screenkey
 
-        # Misc
-        slipstream # ftl mod manager
-        zenity # notification daemon
-        kaggle # data science
-        yt-dlp # video/audio downloader
-        speedread
-        nasm # assembly stuff
-        exercism
-        prismlauncher
-        typst
-        whatsapp-electron
-        prismlauncher # minecraft
+        # media
         comaps # maps
+        yt-dlp # video/audio downloader
         youtube-tui # social
-        prek # rust pre-commit
-        pre-commit
+        whatsapp-electron
+        wike
+
+        # Misc
         castero # podcasts
         gnome-keyring # protonmail bridge
         nixpkgs-review
@@ -275,7 +274,6 @@ in
         graphviz # for plantuml
         jqp
         presenterm
-        wike
         feh
         acpi
         unetbootin
