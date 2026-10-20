@@ -208,7 +208,8 @@ in
         vimgolf
 
         # Term
-        alacritty
+        # alacritty
+        (pkgs.callPackage ./alacritty { })
         ghostty
         tmux
         mprocs # Watch a bunch of processes

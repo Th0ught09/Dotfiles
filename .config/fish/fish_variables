@@ -18,6 +18,6 @@ SETUVAR --export NIXPKGS_ALLOW_BROKEN:1
 SETUVAR --export NIXPKGS_ALLOW_INSECURE:1
 SETUVAR --export NIXPKGS_ALLOW_UNSUPPORTED_SYSTEM:1
 SETUVAR --export TERM:xterm\x2ddirect
-SETUVAR __fish_initialized:4300
+SETUVAR __fish_initialized:3800
 SETUVAR fish_greeting:\x1d
 SETUVAR fish_history_search_prefix_only:true
