@@ -9,7 +9,8 @@ end
 
 starship init fish | source
 set -U fish_greeting
-set -Ux EDITOR "emacsclient -c"
+set -Ux EDITOR "emacsclient -tc"
+set -Ux TERM xterm-direct
 set -Ux EMACSDIR "~/.config/emacs"
 set -Ux LFS /mnt/lfs
 bind -M insert up history-prefix-search-backward

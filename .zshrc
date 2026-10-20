@@ -34,7 +34,7 @@ zstyle ':omz:plugins:alias-finder' cheaper yes # disabled by default
 # ENVIRONMENT VARIABLES
 
 export CALIBRE_USE_DARK_PALETTE=0
-export EDITOR=nvim
+export EDITOR="emacsclient -t"
 export FZF_DEFAULT_OPTS="--tmux center"
 export ZSH="$HOME/.oh-my-zsh"
 PATH=$PATH:/home/kirkm/.config/emacs/bin:/home/kirkm/.scripts

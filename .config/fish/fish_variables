@@ -2,7 +2,7 @@
 # VERSION: 3.0
 SETUVAR --export AWESOME_IGNORE_LGI:1
 SETUVAR --export DISPLAY:\x3a2
-SETUVAR --export EDITOR:emacsclient\x20\x2dc
+SETUVAR --export EDITOR:emacsclient\x20\x2dtc
 SETUVAR --export EMACSDIR:\x7e/\x2econfig/emacs
 SETUVAR --export FAB_ROOT:\x1d
 SETUVAR FZF_DEFAULT_OPTS:\x2d\x2dheight\x2040\x25
@@ -17,6 +17,7 @@ SETUVAR --export LUA_DIR:/nix/store/cdfp4f5dbymv1j4d0ksvh6vm2di8mmi4\x2dhome\x2d
 SETUVAR --export NIXPKGS_ALLOW_BROKEN:1
 SETUVAR --export NIXPKGS_ALLOW_INSECURE:1
 SETUVAR --export NIXPKGS_ALLOW_UNSUPPORTED_SYSTEM:1
+SETUVAR --export TERM:xterm\x2ddirect
 SETUVAR __fish_initialized:4300
 SETUVAR fish_greeting:\x1d
 SETUVAR fish_history_search_prefix_only:true
