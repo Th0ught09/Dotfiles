@@ -33,6 +33,7 @@ in
         cheat
         onefetch
         iosevka
+        pastel
 
         # Mail
         msmtp   # Unsure
@@ -313,7 +314,7 @@ in
     };
 
     home.sessionVariables = {
-        EDITOR = "emacsclient -c -a emacs";
+        EDITOR = "emacsclient -t -a emacs -t";
         SHELL = "fish";
         PATH = "$PATH:/home/kirkm/cargo/bin";
     };
@@ -327,8 +328,8 @@ in
             categories = [ "Application" "Network" "WebBrowser" ];
         };
         emacs = {
-            name = "emacs";
-            genericName = "text editor";
+            name = "Emacs Client";
+            genericName = "Text Editor";
             exec = "emacsclient -c -a emacs";
             terminal = false;
         };
