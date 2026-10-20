@@ -261,6 +261,7 @@ in
         fastfetch
         clinfo
         mesa
+        mesa-demos
         picom
         dust
         dict
