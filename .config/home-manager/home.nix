@@ -198,6 +198,7 @@ in
         nginx
 
         # Games
+        flightgear
         godot
         exercism
         speedread
@@ -251,6 +252,7 @@ in
         protonmail-bridge-gui
 
         # OS
+        deno # yt-dlp
         acpi # battery
         unetbootin # create live bootable drive
         systemctl-tui # system stuff via tui
